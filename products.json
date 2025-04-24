@@ -14,7 +14,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "Low Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 24,
       "images": [
         "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
@@ -35,7 +35,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 32,
       "images": [
         "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
@@ -98,7 +98,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 46,
       "images": [
         "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
@@ -119,7 +119,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 20,
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png",
@@ -188,7 +188,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "Low Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 9,
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png",
@@ -211,7 +211,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 10,
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
@@ -280,7 +280,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/1.png",
@@ -303,7 +303,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/1.png",
@@ -455,7 +455,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 7,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png"
@@ -497,7 +497,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 43,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"
@@ -518,7 +518,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 49,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"
@@ -539,7 +539,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png"
@@ -560,7 +560,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 43,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png"
@@ -602,7 +602,7 @@
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/1.png",
@@ -731,7 +731,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 8,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Nescafe%20Coffee/1.png"
@@ -773,7 +773,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 39,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/1.png"
@@ -857,7 +857,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 38,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Strawberry/1.png"
@@ -878,7 +878,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Tissue%20Paper%20Box/1.png",
@@ -921,7 +921,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/home-decoration/Decoration%20Swing/1.png",
@@ -1012,7 +1012,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
         "https://cdn.dummyjson.com/products/images/home-decoration/Table%20Lamp/1.png"
@@ -1076,7 +1076,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 30,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/1.png"
@@ -1097,7 +1097,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 18,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/1.png",
@@ -1121,7 +1121,7 @@
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "Low Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 16,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Carbon%20Steel%20Wok/1.png"
@@ -1163,7 +1163,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 12,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Citrus%20Squeezer%20Yellow/1.png"
@@ -1205,7 +1205,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Electric%20Stove/1.png",
@@ -1250,7 +1250,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Fork/1.png"
@@ -1292,7 +1292,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 22,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Grater%20Black/1.png"
@@ -1334,7 +1334,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 11,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Ice%20Cube%20Tray/1.png"
@@ -1442,7 +1442,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 36,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Mug%20Tree%20Stand/1.png",
@@ -1464,7 +1464,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Pan/1.png"
@@ -1548,7 +1548,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 11,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Slotted%20Turner/1.png"
@@ -1569,7 +1569,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 15,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spice%20Rack/1.png"
@@ -1653,7 +1653,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 45,
       "images": [
         "https://cdn.dummyjson.com/products/images/kitchen-accessories/Yellow%20Peeler/1.png"
@@ -1674,7 +1674,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/1.png",
@@ -1697,7 +1697,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/1.png",
@@ -1743,7 +1743,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%20920/1.png",
@@ -1813,7 +1813,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
@@ -1837,7 +1837,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
@@ -1981,7 +1981,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20&%20Red/1.png",
@@ -2005,7 +2005,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/1.png",
@@ -2075,7 +2075,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Date%20Black%20Dial/1.png",
@@ -2098,7 +2098,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Cellini%20Moonphase/1.png",
@@ -2297,7 +2297,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 4,
       "images": [
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20MagSafe%20Battery%20Pack/1.png",
@@ -2363,7 +2363,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 19,
       "images": [
         "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/1.png",
@@ -2387,7 +2387,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Monopod/1.png",
@@ -2496,7 +2496,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/1.png",
@@ -2520,7 +2520,7 @@
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/1.png",
@@ -2592,7 +2592,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 32,
       "images": [
         "https://cdn.dummyjson.com/products/images/skin-care/Attitude%20Super%20Leaves%20Hand%20Soap/1.png",
@@ -2615,7 +2615,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 23,
       "images": [
         "https://cdn.dummyjson.com/products/images/skin-care/Olay%20Ultra%20Moisture%20Shea%20Butter%20Body%20Wash/1.png",
@@ -2661,7 +2661,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/1.png",
@@ -2730,7 +2730,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/1.png",
@@ -2753,7 +2753,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/1.png",
@@ -2776,7 +2776,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/1.png",
@@ -2799,7 +2799,7 @@
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/1.png",
@@ -2823,7 +2823,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/1.png",
@@ -2892,7 +2892,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/1.png",
@@ -2915,7 +2915,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/1.png",
@@ -2938,7 +2938,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S10/1.png",
@@ -2984,7 +2984,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/1.png",
@@ -3007,7 +3007,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "Out of Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
         "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/1.png",
@@ -3030,7 +3030,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 23,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/American%20Football/1.png"
@@ -3051,7 +3051,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 38,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Baseball%20Ball/1.png"
@@ -3095,7 +3095,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Basketball/1.png"
@@ -3179,7 +3179,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 18,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Helmet/1.png",
@@ -3287,7 +3287,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "Low Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 13,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Iron%20Golf/1.png"
@@ -3329,7 +3329,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 34,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Ball/1.png"
@@ -3350,7 +3350,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 20,
       "images": [
         "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Racket/1.png"
@@ -3392,7 +3392,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 18,
       "images": [
         "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/1.png",
@@ -3415,7 +3415,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/sunglasses/Classic%20Sun%20Glasses/1.png",
@@ -3507,7 +3507,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
         "https://cdn.dummyjson.com/products/images/tablets/iPad%20Mini%202021%20Starlight/1.png",
@@ -3531,7 +3531,7 @@
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/tablets/Samsung%20Galaxy%20Tab%20S8%20Plus%20Grey/1.png",
@@ -3603,7 +3603,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
         "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/1.png",
@@ -3627,7 +3627,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
         "https://cdn.dummyjson.com/products/images/tops/Gray%20Dress/1.png",
@@ -3675,7 +3675,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 11,
       "images": [
         "https://cdn.dummyjson.com/products/images/tops/Tartan%20Dress/1.png",
@@ -3699,7 +3699,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/vehicle/300%20Touring/1.png",
@@ -3725,7 +3725,7 @@
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/vehicle/Charger%20SXT%20RWD/1.png",
@@ -3777,7 +3777,7 @@
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "Out of Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/vehicle/Durango%20SXT%20RWD/1.png",
@@ -3898,7 +3898,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 16,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-bags/White%20Faux%20Leather%20Backpack/1.png",
@@ -3921,7 +3921,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-bags/Women%20Handbag%20Black/1.png",
@@ -3992,7 +3992,7 @@
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/1.png",
@@ -4040,7 +4040,7 @@
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-dresses/Marni%20Red%20&%20Black%20Suit/1.png",
@@ -4064,7 +4064,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "Low Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 17,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-jewellery/Green%20Crystal%20Earring/1.png",
@@ -4087,7 +4087,7 @@
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 7,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-jewellery/Green%20Oval%20Earring/1.png",
@@ -4110,7 +4110,7 @@
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 27,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-jewellery/Tropical%20Earring/1.png",
@@ -4181,7 +4181,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/1.png",
@@ -4229,7 +4229,7 @@
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "30",
+      "returnPolicy": 30,
       "minimumOrderQuantity": 17,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-shoes/Red%20Shoes/1.png",
@@ -4253,7 +4253,7 @@
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-watches/IWC%20Ingenieur%20Automatic%20Steel/1.png",
@@ -4322,7 +4322,7 @@
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
       "availabilityStatus": "In Stock",
-      "returnPolicy": "0",
+      "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
         "https://cdn.dummyjson.com/products/images/womens-watches/Watch%20Gold%20for%20Women/1.png",
