@@ -13,7 +13,6 @@
       "dimensions": { "width": 23.17, "height": 14.43, "depth": 28.01 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 24,
       "images": [
@@ -34,7 +33,6 @@
       "dimensions": { "width": 12.42, "height": 8.63, "depth": 29.13 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 32,
       "images": [
@@ -55,7 +53,6 @@
       "dimensions": { "width": 24.16, "height": 10.7, "depth": 11.07 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 25,
       "images": [
@@ -76,7 +73,6 @@
       "dimensions": { "width": 14.37, "height": 13.94, "depth": 14.6 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 6,
       "images": [
@@ -97,7 +93,6 @@
       "dimensions": { "width": 8.11, "height": 10.89, "depth": 29.06 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 46,
       "images": [
@@ -118,7 +113,6 @@
       "dimensions": { "width": 11.53, "height": 14.44, "depth": 6.81 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 20,
       "images": [
@@ -141,7 +135,6 @@
       "dimensions": { "width": 21.27, "height": 28, "depth": 11.89 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 5,
       "images": [
@@ -164,7 +157,6 @@
       "dimensions": { "width": 21.51, "height": 7, "depth": 26.51 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 8,
       "images": [
@@ -187,7 +179,6 @@
       "dimensions": { "width": 17, "height": 24.57, "depth": 13.3 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 9,
       "images": [
@@ -210,7 +201,6 @@
       "dimensions": { "width": 22.28, "height": 17.81, "depth": 27.18 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 10,
       "images": [
@@ -233,7 +223,6 @@
       "dimensions": { "width": 28.75, "height": 26.88, "depth": 24.47 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -256,7 +245,6 @@
       "dimensions": { "width": 20.97, "height": 19.11, "depth": 25.81 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -279,7 +267,6 @@
       "dimensions": { "width": 25.43, "height": 20.2, "depth": 24.95 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
@@ -302,7 +289,6 @@
       "dimensions": { "width": 16.59, "height": 21.46, "depth": 29.07 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
@@ -325,7 +311,6 @@
       "dimensions": { "width": 7.32, "height": 22.64, "depth": 12.37 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -348,7 +333,6 @@
       "dimensions": { "width": 8.29, "height": 5.58, "depth": 12.41 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 44,
       "images": [
@@ -369,7 +353,6 @@
       "dimensions": { "width": 23.35, "height": 13.48, "depth": 26.4 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 21,
       "images": [
@@ -390,7 +373,6 @@
       "dimensions": { "width": 15.4, "height": 13.97, "depth": 25.13 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 48,
       "images": [
@@ -411,7 +393,6 @@
       "dimensions": { "width": 15.96, "height": 29.24, "depth": 26.25 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 46,
       "images": [
@@ -433,7 +414,6 @@
       "dimensions": { "width": 8.18, "height": 27.45, "depth": 27.88 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 2,
       "images": [
@@ -454,7 +434,6 @@
       "dimensions": { "width": 11.04, "height": 20.5, "depth": 8.18 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 7,
       "images": [
@@ -475,7 +454,6 @@
       "dimensions": { "width": 29.39, "height": 29.77, "depth": 20.54 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 29,
       "images": [
@@ -496,7 +474,6 @@
       "dimensions": { "width": 12.3, "height": 10.99, "depth": 15.53 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 43,
       "images": [
@@ -517,7 +494,6 @@
       "dimensions": { "width": 20.14, "height": 8.4, "depth": 10.01 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 49,
       "images": [
@@ -538,7 +514,6 @@
       "dimensions": { "width": 7.32, "height": 14.31, "depth": 21.38 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -559,7 +534,6 @@
       "dimensions": { "width": 18.67, "height": 21.17, "depth": 25.26 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 43,
       "images": [
@@ -580,7 +554,6 @@
       "dimensions": { "width": 26.53, "height": 27.11, "depth": 6.63 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -601,7 +574,6 @@
       "dimensions": { "width": 17.66, "height": 24.49, "depth": 25.98 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
@@ -625,7 +597,6 @@
       "dimensions": { "width": 8.97, "height": 12.26, "depth": 15.05 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 26,
       "images": [
@@ -646,7 +617,6 @@
       "dimensions": { "width": 27.3, "height": 7.48, "depth": 15.08 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 8,
       "images": [
@@ -667,7 +637,6 @@
       "dimensions": { "width": 25.97, "height": 27.47, "depth": 6.31 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -688,7 +657,6 @@
       "dimensions": { "width": 22.42, "height": 20.9, "depth": 12.48 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 41,
       "images": [
@@ -709,7 +677,6 @@
       "dimensions": { "width": 11.12, "height": 27.3, "depth": 27.57 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 50,
       "images": [
@@ -730,7 +697,6 @@
       "dimensions": { "width": 11.21, "height": 24.54, "depth": 15.05 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 8,
       "images": [
@@ -751,7 +717,6 @@
       "dimensions": { "width": 20, "height": 6.44, "depth": 20.07 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 29,
       "images": [
@@ -772,7 +737,6 @@
       "dimensions": { "width": 5.62, "height": 7.88, "depth": 23.48 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 39,
       "images": [
@@ -793,7 +757,6 @@
       "dimensions": { "width": 14.05, "height": 17.13, "depth": 14.05 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 40,
       "images": [
@@ -814,7 +777,6 @@
       "dimensions": { "width": 28.86, "height": 6.26, "depth": 11.04 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 18,
       "images": [
@@ -835,7 +797,6 @@
       "dimensions": { "width": 15.73, "height": 24.93, "depth": 27.19 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 41,
       "images": [
@@ -856,7 +817,6 @@
       "dimensions": { "width": 20.82, "height": 15.81, "depth": 14.89 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 38,
       "images": [
@@ -877,7 +837,6 @@
       "dimensions": { "width": 24.1, "height": 19.74, "depth": 5.48 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -899,7 +858,6 @@
       "dimensions": { "width": 25.46, "height": 25.86, "depth": 18.06 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 46,
       "images": [
@@ -920,7 +878,6 @@
       "dimensions": { "width": 20.75, "height": 11.18, "depth": 7.92 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
@@ -943,7 +900,6 @@
       "dimensions": { "width": 15.46, "height": 26.32, "depth": 17.1 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 16,
       "images": [
@@ -964,7 +920,6 @@
       "dimensions": { "width": 27.15, "height": 14.43, "depth": 10.05 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 7,
       "images": [
@@ -987,7 +942,6 @@
       "dimensions": { "width": 16.28, "height": 8.72, "depth": 18.47 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 44,
       "images": [
@@ -1011,7 +965,6 @@
       "dimensions": { "width": 29.6, "height": 19.68, "depth": 10.12 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
@@ -1032,7 +985,6 @@
       "dimensions": { "width": 27.97, "height": 21.77, "depth": 21.38 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 26,
       "images": [
@@ -1053,7 +1005,6 @@
       "dimensions": { "width": 7.48, "height": 23.98, "depth": 12.84 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 5,
       "images": [
@@ -1075,7 +1026,6 @@
       "dimensions": { "width": 21.06, "height": 15.46, "depth": 13.28 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 30,
       "images": [
@@ -1096,7 +1046,6 @@
       "dimensions": { "width": 16.73, "height": 10.93, "depth": 14.75 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 18,
       "images": [
@@ -1120,7 +1069,6 @@
       "dimensions": { "width": 14.69, "height": 11.23, "depth": 28.05 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 16,
       "images": [
@@ -1141,7 +1089,6 @@
       "dimensions": { "width": 24.38, "height": 26.51, "depth": 6.93 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 9,
       "images": [
@@ -1162,7 +1109,6 @@
       "dimensions": { "width": 21.74, "height": 7.6, "depth": 18.04 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 12,
       "images": [
@@ -1183,7 +1129,6 @@
       "dimensions": { "width": 17.18, "height": 11.58, "depth": 11.79 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 23,
       "images": [
@@ -1204,7 +1149,6 @@
       "dimensions": { "width": 28.07, "height": 11.43, "depth": 20.68 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
@@ -1228,7 +1172,6 @@
       "dimensions": { "width": 5.19, "height": 9.64, "depth": 20.53 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 32,
       "images": [
@@ -1249,7 +1192,6 @@
       "dimensions": { "width": 23.61, "height": 25.62, "depth": 5.67 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
@@ -1270,7 +1212,6 @@
       "dimensions": { "width": 14.7, "height": 18.98, "depth": 21.93 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 25,
       "images": [
@@ -1291,7 +1232,6 @@
       "dimensions": { "width": 12.6, "height": 28.86, "depth": 21.12 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 22,
       "images": [
@@ -1312,7 +1252,6 @@
       "dimensions": { "width": 13.3, "height": 6.21, "depth": 16.77 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 7,
       "images": [
@@ -1333,7 +1272,6 @@
       "dimensions": { "width": 27.19, "height": 20.42, "depth": 17.45 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 11,
       "images": [
@@ -1354,7 +1292,6 @@
       "dimensions": { "width": 22.94, "height": 11.91, "depth": 20.47 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -1375,7 +1312,6 @@
       "dimensions": { "width": 11.63, "height": 23.99, "depth": 24.62 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 47,
       "images": [
@@ -1396,7 +1332,6 @@
       "dimensions": { "width": 13.76, "height": 18.36, "depth": 27.9 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 49,
       "images": [
@@ -1417,7 +1352,6 @@
       "dimensions": { "width": 9.61, "height": 25.64, "depth": 12.31 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 8,
       "images": [
@@ -1441,7 +1375,6 @@
       "dimensions": { "width": 7.37, "height": 13.1, "depth": 12 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 36,
       "images": [
@@ -1463,7 +1396,6 @@
       "dimensions": { "width": 19.51, "height": 17.96, "depth": 23.24 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
@@ -1484,7 +1416,6 @@
       "dimensions": { "width": 14.77, "height": 21.78, "depth": 29.1 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 2,
       "images": [
@@ -1505,7 +1436,6 @@
       "dimensions": { "width": 27.38, "height": 20.49, "depth": 26.65 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 27,
       "images": [
@@ -1526,7 +1456,6 @@
       "dimensions": { "width": 9.58, "height": 25.84, "depth": 26.13 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 19,
       "images": [
@@ -1547,7 +1476,6 @@
       "dimensions": { "width": 22.29, "height": 24.06, "depth": 7.05 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 11,
       "images": [
@@ -1568,7 +1496,6 @@
       "dimensions": { "width": 20.73, "height": 6.81, "depth": 24.14 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 15,
       "images": [
@@ -1589,7 +1516,6 @@
       "dimensions": { "width": 8.45, "height": 25.16, "depth": 17.43 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 40,
       "images": [
@@ -1610,7 +1536,6 @@
       "dimensions": { "width": 25.01, "height": 5.72, "depth": 5.25 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 10,
       "images": [
@@ -1631,7 +1556,6 @@
       "dimensions": { "width": 19.66, "height": 19.62, "depth": 25.23 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -1652,7 +1576,6 @@
       "dimensions": { "width": 17.36, "height": 17.41, "depth": 27.38 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 45,
       "images": [
@@ -1673,7 +1596,6 @@
       "dimensions": { "width": 12.38, "height": 21.55, "depth": 27.95 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -1696,7 +1618,6 @@
       "dimensions": { "width": 19.67, "height": 11.05, "depth": 14.32 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -1719,7 +1640,6 @@
       "dimensions": { "width": 22.11, "height": 11.11, "depth": 23.07 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -1742,7 +1662,6 @@
       "dimensions": { "width": 11.02, "height": 14.45, "depth": 24.09 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -1765,7 +1684,6 @@
       "dimensions": { "width": 12.09, "height": 6.43, "depth": 15.69 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -1788,7 +1706,6 @@
       "dimensions": { "width": 17.25, "height": 27.31, "depth": 20.88 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 4,
       "images": [
@@ -1812,7 +1729,6 @@
       "dimensions": { "width": 8.54, "height": 23.52, "depth": 5.66 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
@@ -1836,7 +1752,6 @@
       "dimensions": { "width": 29.56, "height": 29.84, "depth": 7.77 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -1860,7 +1775,6 @@
       "dimensions": { "width": 7.11, "height": 28.63, "depth": 27.54 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -1884,7 +1798,6 @@
       "dimensions": { "width": 18.43, "height": 6.96, "depth": 20.73 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 8,
       "images": [
@@ -1908,7 +1821,6 @@
       "dimensions": { "width": 19.29, "height": 13.2, "depth": 29.13 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 2,
       "images": [
@@ -1932,7 +1844,6 @@
       "dimensions": { "width": 14.83, "height": 19.16, "depth": 28.98 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 3,
       "images": [
@@ -1956,7 +1867,6 @@
       "dimensions": { "width": 14.58, "height": 25.54, "depth": 19.57 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 9,
       "images": [
@@ -1980,7 +1890,6 @@
       "dimensions": { "width": 10.71, "height": 19.23, "depth": 19.85 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
@@ -2004,7 +1913,6 @@
       "dimensions": { "width": 18.32, "height": 19.34, "depth": 28.56 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
@@ -2028,7 +1936,6 @@
       "dimensions": { "width": 18.39, "height": 10.82, "depth": 10.52 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 10,
       "images": [
@@ -2051,7 +1958,6 @@
       "dimensions": { "width": 5.83, "height": 12.48, "depth": 7.65 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2074,7 +1980,6 @@
       "dimensions": { "width": 12.17, "height": 27.99, "depth": 10.36 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2097,7 +2002,6 @@
       "dimensions": { "width": 28.07, "height": 13.43, "depth": 10.81 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2120,7 +2024,6 @@
       "dimensions": { "width": 9.68, "height": 7.29, "depth": 5.67 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2143,7 +2046,6 @@
       "dimensions": { "width": 5.22, "height": 27.59, "depth": 16.93 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2166,7 +2068,6 @@
       "dimensions": { "width": 8.1, "height": 7.74, "depth": 5.68 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2188,7 +2089,6 @@
       "dimensions": { "width": 22.62, "height": 9.92, "depth": 18.15 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 3,
       "images": [
@@ -2211,7 +2111,6 @@
       "dimensions": { "width": 7.73, "height": 18.36, "depth": 17.87 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 2,
       "images": [
@@ -2232,7 +2131,6 @@
       "dimensions": { "width": 25.51, "height": 20.44, "depth": 26.48 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 8,
       "images": [
@@ -2253,7 +2151,6 @@
       "dimensions": { "width": 21.14, "height": 12.62, "depth": 20.13 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 8,
       "images": [
@@ -2274,7 +2171,6 @@
       "dimensions": { "width": 28.77, "height": 25.05, "depth": 29.55 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 43,
       "images": [
@@ -2296,7 +2192,6 @@
       "dimensions": { "width": 21.61, "height": 7.98, "depth": 9.32 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 4,
       "images": [
@@ -2318,7 +2213,6 @@
       "dimensions": { "width": 8.96, "height": 28.26, "depth": 26.46 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 2,
       "images": [
@@ -2341,7 +2235,6 @@
       "dimensions": { "width": 23.49, "height": 15.22, "depth": 20.05 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 19,
       "images": [
@@ -2362,7 +2255,6 @@
       "dimensions": { "width": 6.32, "height": 23.37, "depth": 21.62 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 19,
       "images": [
@@ -2386,7 +2278,6 @@
       "dimensions": { "width": 8.42, "height": 25.12, "depth": 29.9 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 10,
       "images": [
@@ -2408,7 +2299,6 @@
       "dimensions": { "width": 13.38, "height": 26.33, "depth": 22.71 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 4,
       "images": [
@@ -2429,7 +2319,6 @@
       "dimensions": { "width": 6.11, "height": 27.92, "depth": 23.63 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 10,
       "images": [
@@ -2450,7 +2339,6 @@
       "dimensions": { "width": 29.9, "height": 16.66, "depth": 13.85 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 2,
       "images": [
@@ -2471,7 +2359,6 @@
       "dimensions": { "width": 14.87, "height": 16.41, "depth": 12.98 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2495,7 +2382,6 @@
       "dimensions": { "width": 28.34, "height": 11.9, "depth": 8.19 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2519,7 +2405,6 @@
       "dimensions": { "width": 27.4, "height": 10.05, "depth": 5.17 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2543,7 +2428,6 @@
       "dimensions": { "width": 8.02, "height": 10.2, "depth": 17.22 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2567,7 +2451,6 @@
       "dimensions": { "width": 17.16, "height": 15.02, "depth": 15.03 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2591,7 +2474,6 @@
       "dimensions": { "width": 9.98, "height": 14.56, "depth": 19.38 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 32,
       "images": [
@@ -2614,7 +2496,6 @@
       "dimensions": { "width": 8.6, "height": 28.86, "depth": 22.75 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 23,
       "images": [
@@ -2637,7 +2518,6 @@
       "dimensions": { "width": 28.39, "height": 25.58, "depth": 15.49 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 48,
       "images": [
@@ -2660,7 +2540,6 @@
       "dimensions": { "width": 8.49, "height": 25.34, "depth": 18.12 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
@@ -2683,7 +2562,6 @@
       "dimensions": { "width": 16.21, "height": 22.94, "depth": 5.63 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 3,
       "images": [
@@ -2706,7 +2584,6 @@
       "dimensions": { "width": 22.39, "height": 9.77, "depth": 19.6 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2729,7 +2606,6 @@
       "dimensions": { "width": 27.86, "height": 8.53, "depth": 17.07 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
@@ -2752,7 +2628,6 @@
       "dimensions": { "width": 29.52, "height": 11.25, "depth": 14.41 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
@@ -2775,7 +2650,6 @@
       "dimensions": { "width": 20.35, "height": 16.4, "depth": 13.31 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 5,
       "images": [
@@ -2798,7 +2672,6 @@
       "dimensions": { "width": 21.83, "height": 27.83, "depth": 27.47 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2822,7 +2695,6 @@
       "dimensions": { "width": 21.74, "height": 28.75, "depth": 22.22 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2845,7 +2717,6 @@
       "dimensions": { "width": 29.32, "height": 16.3, "depth": 24.12 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -2868,7 +2739,6 @@
       "dimensions": { "width": 28.82, "height": 23.44, "depth": 6.21 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 5,
       "images": [
@@ -2891,7 +2761,6 @@
       "dimensions": { "width": 23.33, "height": 27.33, "depth": 27.02 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2914,7 +2783,6 @@
       "dimensions": { "width": 6.88, "height": 8.96, "depth": 18.13 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2937,7 +2805,6 @@
       "dimensions": { "width": 28.23, "height": 7.35, "depth": 10.68 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -2960,7 +2827,6 @@
       "dimensions": { "width": 28.83, "height": 26.69, "depth": 23.12 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 3,
       "images": [
@@ -2983,7 +2849,6 @@
       "dimensions": { "width": 27.29, "height": 9.73, "depth": 14.79 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
@@ -3006,7 +2871,6 @@
       "dimensions": { "width": 5.72, "height": 16.47, "depth": 27.76 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
@@ -3029,7 +2893,6 @@
       "dimensions": { "width": 9.74, "height": 23.16, "depth": 26.86 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 23,
       "images": [
@@ -3050,7 +2913,6 @@
       "dimensions": { "width": 21.26, "height": 20.59, "depth": 18.28 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 38,
       "images": [
@@ -3071,7 +2933,6 @@
       "dimensions": { "width": 15.64, "height": 18.72, "depth": 26.09 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 3,
       "images": [
@@ -3094,7 +2955,6 @@
       "dimensions": { "width": 15.68, "height": 23.18, "depth": 16.25 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 2,
       "images": [
@@ -3115,7 +2975,6 @@
       "dimensions": { "width": 12.95, "height": 15.58, "depth": 15.23 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 10,
       "images": [
@@ -3136,7 +2995,6 @@
       "dimensions": { "width": 26.97, "height": 13.92, "depth": 26.59 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 28,
       "images": [
@@ -3157,7 +3015,6 @@
       "dimensions": { "width": 14.13, "height": 25.99, "depth": 9.02 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 7,
       "images": [
@@ -3178,7 +3035,6 @@
       "dimensions": { "width": 18.85, "height": 16.08, "depth": 6.2 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 18,
       "images": [
@@ -3202,7 +3058,6 @@
       "dimensions": { "width": 15.56, "height": 7.36, "depth": 6.91 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 13,
       "images": [
@@ -3223,7 +3078,6 @@
       "dimensions": { "width": 15.24, "height": 28.04, "depth": 13.49 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 35,
       "images": [
@@ -3244,7 +3098,6 @@
       "dimensions": { "width": 22.49, "height": 7.19, "depth": 13.42 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 23,
       "images": [
@@ -3265,7 +3118,6 @@
       "dimensions": { "width": 11.42, "height": 18.98, "depth": 7.29 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 43,
       "images": [
@@ -3286,7 +3138,6 @@
       "dimensions": { "width": 27.3, "height": 14.38, "depth": 23.56 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 13,
       "images": [
@@ -3307,7 +3158,6 @@
       "dimensions": { "width": 29.14, "height": 10.81, "depth": 24.92 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 10,
       "images": [
@@ -3328,7 +3178,6 @@
       "dimensions": { "width": 27.82, "height": 27.05, "depth": 28.32 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 34,
       "images": [
@@ -3349,7 +3198,6 @@
       "dimensions": { "width": 14.55, "height": 27.86, "depth": 19.37 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 20,
       "images": [
@@ -3370,7 +3218,6 @@
       "dimensions": { "width": 10.73, "height": 17.62, "depth": 16.97 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 26,
       "images": [
@@ -3391,7 +3238,6 @@
       "dimensions": { "width": 14.41, "height": 22.93, "depth": 9.36 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 18,
       "images": [
@@ -3414,7 +3260,6 @@
       "dimensions": { "width": 15.27, "height": 7.88, "depth": 7.94 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
@@ -3437,7 +3282,6 @@
       "dimensions": { "width": 10.62, "height": 22.49, "depth": 28.91 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 12,
       "images": [
@@ -3460,7 +3304,6 @@
       "dimensions": { "width": 17.04, "height": 25.52, "depth": 12.34 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 19,
       "images": [
@@ -3483,7 +3326,6 @@
       "dimensions": { "width": 8.15, "height": 28.81, "depth": 8.4 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 11,
       "images": [
@@ -3506,7 +3348,6 @@
       "dimensions": { "width": 24.9, "height": 11.83, "depth": 17.08 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
@@ -3530,7 +3371,6 @@
       "dimensions": { "width": 18.5, "height": 24.49, "depth": 10.45 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -3554,7 +3394,6 @@
       "dimensions": { "width": 12.42, "height": 10.22, "depth": 23.37 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -3578,7 +3417,6 @@
       "dimensions": { "width": 22.85, "height": 26.97, "depth": 12.29 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 19,
       "images": [
@@ -3602,7 +3440,6 @@
       "dimensions": { "width": 8.02, "height": 5.01, "depth": 20.55 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 5,
       "images": [
@@ -3626,7 +3463,6 @@
       "dimensions": { "width": 13.86, "height": 19.2, "depth": 8.64 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
@@ -3650,7 +3486,6 @@
       "dimensions": { "width": 24.35, "height": 8.49, "depth": 5.89 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 19,
       "images": [
@@ -3674,7 +3509,6 @@
       "dimensions": { "width": 13, "height": 28.67, "depth": 6.45 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 11,
       "images": [
@@ -3698,7 +3532,6 @@
       "dimensions": { "width": 5.03, "height": 6.98, "depth": 8.65 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -3724,7 +3557,6 @@
       "dimensions": { "width": 27.01, "height": 11.43, "depth": 23.25 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -3750,7 +3582,6 @@
       "dimensions": { "width": 14.26, "height": 20.05, "depth": 14.21 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -3776,7 +3607,6 @@
       "dimensions": { "width": 17.45, "height": 22.98, "depth": 20.63 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "Out of Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 1,
       "images": [
@@ -3802,7 +3632,6 @@
       "dimensions": { "width": 21.11, "height": 16.23, "depth": 22.96 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -3828,7 +3657,6 @@
       "dimensions": { "width": 16.06, "height": 14.91, "depth": 28.61 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 15,
       "images": [
@@ -3851,7 +3679,6 @@
       "dimensions": { "width": 24.49, "height": 10.88, "depth": 8.35 },
       "warrantyInformation": "1 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 5,
       "images": [
@@ -3874,7 +3701,6 @@
       "dimensions": { "width": 23.45, "height": 16.1, "depth": 5.78 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 1,
       "images": [
@@ -3897,7 +3723,6 @@
       "dimensions": { "width": 9.35, "height": 22.43, "depth": 15.63 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 16,
       "images": [
@@ -3920,7 +3745,6 @@
       "dimensions": { "width": 15.31, "height": 26.35, "depth": 24.69 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 8,
       "images": [
@@ -3943,7 +3767,6 @@
       "dimensions": { "width": 22.4, "height": 22.15, "depth": 21.87 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "7",
       "minimumOrderQuantity": 2,
       "images": [
@@ -3967,7 +3790,6 @@
       "dimensions": { "width": 19.1, "height": 27.47, "depth": 29.95 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 4,
       "images": [
@@ -3991,7 +3813,6 @@
       "dimensions": { "width": 9.79, "height": 26.72, "depth": 14.21 },
       "warrantyInformation": "Lifetime warranty",
       "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 3,
       "images": [
@@ -4015,7 +3836,6 @@
       "dimensions": { "width": 22.66, "height": 19.32, "depth": 6.3 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -4039,7 +3859,6 @@
       "dimensions": { "width": 24.67, "height": 16.15, "depth": 14.69 },
       "warrantyInformation": "No warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 4,
       "images": [
@@ -4063,7 +3882,6 @@
       "dimensions": { "width": 19.73, "height": 14.54, "depth": 15.92 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 17,
       "images": [
@@ -4086,7 +3904,6 @@
       "dimensions": { "width": 28.22, "height": 18.32, "depth": 11.64 },
       "warrantyInformation": "3 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 7,
       "images": [
@@ -4109,7 +3926,6 @@
       "dimensions": { "width": 25.36, "height": 29.46, "depth": 15.58 },
       "warrantyInformation": "3 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 27,
       "images": [
@@ -4132,7 +3948,6 @@
       "dimensions": { "width": 9.73, "height": 15.4, "depth": 6.3 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 29,
       "images": [
@@ -4156,7 +3971,6 @@
       "dimensions": { "width": 15.41, "height": 18.83, "depth": 18.69 },
       "warrantyInformation": "1 week warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 3,
       "images": [
@@ -4180,7 +3994,6 @@
       "dimensions": { "width": 15.32, "height": 27.84, "depth": 21.06 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 19,
       "images": [
@@ -4204,7 +4017,6 @@
       "dimensions": { "width": 22.13, "height": 23.43, "depth": 28.61 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 9,
       "images": [
@@ -4228,7 +4040,6 @@
       "dimensions": { "width": 29.75, "height": 12.3, "depth": 26.41 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 30,
       "minimumOrderQuantity": 17,
       "images": [
@@ -4252,7 +4063,6 @@
       "dimensions": { "width": 12.27, "height": 5.91, "depth": 8.71 },
       "warrantyInformation": "5 year warranty",
       "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 1,
       "images": [
@@ -4275,7 +4085,6 @@
       "dimensions": { "width": 22.54, "height": 20.15, "depth": 25.37 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1-2 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "60",
       "minimumOrderQuantity": 1,
       "images": [
@@ -4298,7 +4107,6 @@
       "dimensions": { "width": 14.53, "height": 29.73, "depth": 10.22 },
       "warrantyInformation": "6 months warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
@@ -4321,7 +4129,6 @@
       "dimensions": { "width": 5.9, "height": 13.64, "depth": 23.65 },
       "warrantyInformation": "2 year warranty",
       "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
       "returnPolicy": 0,
       "minimumOrderQuantity": 2,
       "images": [
@@ -4344,7 +4151,6 @@
       "dimensions": { "width": 24.74, "height": 25.89, "depth": 8.18 },
       "warrantyInformation": "1 month warranty",
       "shippingInformation": "Ships in 3-5 business days",
-      "availabilityStatus": "In Stock",
       "returnPolicy": "90",
       "minimumOrderQuantity": 1,
       "images": [
