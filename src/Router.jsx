@@ -93,18 +93,22 @@ const router = createBrowserRouter([
                 path: '/about-us-another',
                 element: <AboutUsTwo />,
             },
-            {
-                path: '/shops',
-                element: <Shops />,
-            },
-            {
-                path: '/shops/shop-details',
-                element: <ShopDetails />,
-            },
-            {
-                path: '/shops/shop-details/:id',
-                element: <ShopDetails />,
-            },
+            // {
+            //     path: '/shops',
+            //     element: <Shops />,
+            // },
+            // {
+            //     path: '/shops/:shop_id',
+            //     element: <Shop />,
+            // },
+            // {
+            //     path: '/shops/:shops_id/products',
+            //     element: <Product />,
+            // },
+            // {
+            //     path: '/shops/:shops_id/products/:product_id',
+            //     element: <ProductDetails />,
+            // },
             {
                 path: '*',
                 element: <Error />,
