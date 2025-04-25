@@ -102,6 +102,10 @@ const router = createBrowserRouter([
         element: <ShopDetails />,
       },
       {
+        path: "/shops/shop-details/:id",
+        element: <ShopDetails />,
+      },
+      {
         path: "*",
         element: <Error />,
       },

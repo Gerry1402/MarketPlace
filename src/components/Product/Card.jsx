@@ -1,5 +1,6 @@
 import React from "react";
 import productImg from "../../assets/images/shop-grid-1.jpg";
+import { Link } from "react-router-dom";
 
 const Card = ({ cardData }) => {
   console.log(cardData);
@@ -27,14 +28,9 @@ const Card = ({ cardData }) => {
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i className="fal fa-heart"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
+                <Link to={`/shops/shop-details/${cardData.id}`}>
                   <i className="fal fa-eye"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
