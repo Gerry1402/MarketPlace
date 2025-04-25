@@ -21,92 +21,92 @@ import ShopDetails from "./components/Shops/Details";
 import Layout from "./components/Helper/Layout.jsx";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        Component: Layout,
-        children: [
-            {
-                index: true,
-                element: <HomeOne />,
-            },
-            {
-                path: "/home-two",
-                element: <HomeTwo />,
-            },
-            {
-                path: "/home-three",
-                element: <HomeThree />,
-            },
-            {
-                path: "/home-four",
-                element: <HomeFour />,
-            },
-            {
-                path: "/home-five",
-                element: <HomeFive />,
-            },
-            {
-                path: "/home-six",
-                element: <HomeSix />,
-            },
-            {
-                path: "/home-seven",
-                element: <HomeSeven />,
-            },
-            {
-                path: "/home-eight",
-                element: <HomeEight />,
-            },
-            {
-                path: "/home-dark",
-                element: <HomeDark />,
-            },
-            {
-                path: "/home-rtl",
-                element: <HomeRtl />,
-            },
-            {
-                path: "/news",
-                element: <News />,
-            },
-            {
-                path: "/news/single-news",
-                element: <SingleNews />,
-            },
-            {
-                path: "/service",
-                element: <Service />,
-            },
-            {
-                path: "/about-us",
-                element: <AboutUs />,
-            },
-            {
-                path: "/contact",
-                element: <Contact />,
-            },
-            {
-                path: "/error",
-                element: <Error />,
-            },
-            {
-                path: "/about-us-another",
-                element: <AboutUsTwo />,
-            },
-            {
-                path: "/shops",
-                element: <Shops />,
-            },
-            {
-                path: "/shops/shop-details",
-                element: <ShopDetails />,
-            },
-            {
-                path: "*",
-                element: <Error />,
-            },
-        ],
-    },
+  {
+    path: "/",
+    Component: Layout,
+    children: [
+      {
+        index: true,
+        element: <HomeOne />,
+      },
+      {
+        path: "/home-two",
+        element: <HomeTwo />,
+      },
+      {
+        path: "/home-three",
+        element: <HomeThree />,
+      },
+      {
+        path: "/home-four",
+        element: <HomeFour />,
+      },
+      {
+        path: "/home-five",
+        element: <HomeFive />,
+      },
+      {
+        path: "/home-six",
+        element: <HomeSix />,
+      },
+      {
+        path: "/home-seven",
+        element: <HomeSeven />,
+      },
+      {
+        path: "/home-eight",
+        element: <HomeEight />,
+      },
+      {
+        path: "/home-dark",
+        element: <HomeDark />,
+      },
+      {
+        path: "/home-rtl",
+        element: <HomeRtl />,
+      },
+      {
+        path: "/news",
+        element: <News />,
+      },
+      {
+        path: "/news/single-news",
+        element: <SingleNews />,
+      },
+      {
+        path: "/service",
+        element: <Service />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/error",
+        element: <Error />,
+      },
+      {
+        path: "/about-us-another",
+        element: <AboutUsTwo />,
+      },
+      {
+        path: "/shops",
+        element: <Shops />,
+      },
+      {
+        path: "/shops/shop-details",
+        element: <ShopDetails />,
+      },
+      {
+        path: "*",
+        element: <Error />,
+      },
+    ],
+  },
 ]);
 
 const Router = () => <RouterProvider router={router} />;

@@ -18,7 +18,7 @@ runtimes:
 lint:
   enabled:
     - checkov@3.2.408
-    
+
     - git-diff-check
     - markdownlint@0.44.0
     - osv-scanner@2.0.1
@@ -27,3 +27,10 @@ lint:
     - svgo@3.3.2
     - trufflehog@3.88.25
     - yamllint@1.37.0
+actions:
+  disabled:
+    - trunk-announce
+    - trunk-check-pre-push
+    - trunk-fmt-pre-commit
+  enabled:
+    - trunk-upgrade-available
