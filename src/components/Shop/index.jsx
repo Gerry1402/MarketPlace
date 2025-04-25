@@ -29,7 +29,7 @@ const Shops = () => {
                 title="Shop Products"
                 breadcrumb={[
                     { link: "/", title: "Home" },
-                    { link: "/shops", title: "Shop Products" },
+                    { link: "/shop", title: "Shop Products" },
                 ]}
             />
             <div className="appie-shop-grid-area pt-100 pb-50">

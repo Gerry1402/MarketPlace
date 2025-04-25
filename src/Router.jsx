@@ -1,28 +1,28 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomeOne from "./components/HomeOne/index.jsx";
-import HomeTwo from "./components/HomeTwo/index.jsx";
-import HomeThree from "./components/HomeThree/index.jsx";
-import HomeFour from "./components/HomeFour/index.jsx";
-import HomeFive from "./components/HomeFive/index.jsx";
-import HomeSix from "./components/HomeSix/index.jsx";
-import HomeSeven from "./components/HomeSeven/index.jsx";
-import HomeEight from "./components/HomeEight/index.jsx";
-import HomeDark from "./components/HomeDark/index.jsx";
-import HomeRtl from "./components/HomeRtl/index.jsx";
-import News from "./components/News/index.jsx";
-import SingleNews from "./components/News/SingleNews.jsx";
-import Service from "./components/Service/index.jsx";
-import AboutUs from "./components/AboutUs/index.jsx";
-import Contact from "./components/Contact/index.jsx";
-import Error from "./components/Error/index.jsx";
-import AboutUsTwo from "./components/AboutUs/AboutUsTwo.jsx";
-import Shops from "./components/Shops/index.jsx";
-import ShopDetails from "./components/Shops/Details";
-import Layout from "./components/Helper/Layout.jsx";
+import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom';
+import HomeOne from './components/HomeOne/index.jsx';
+import HomeTwo from './components/HomeTwo/index.jsx';
+import HomeThree from './components/HomeThree/index.jsx';
+import HomeFour from './components/HomeFour/index.jsx';
+import HomeFive from './components/HomeFive/index.jsx';
+import HomeSix from './components/HomeSix/index.jsx';
+import HomeSeven from './components/HomeSeven/index.jsx';
+import HomeEight from './components/HomeEight/index.jsx';
+import HomeDark from './components/HomeDark/index.jsx';
+import HomeRtl from './components/HomeRtl/index.jsx';
+import News from './components/News/index.jsx';
+import SingleNews from './components/News/SingleNews.jsx';
+import Service from './components/Service/index.jsx';
+import AboutUs from './components/AboutUs/index.jsx';
+import Contact from './components/Contact/index.jsx';
+import Error from './components/Error/index.jsx';
+import AboutUsTwo from './components/AboutUs/AboutUsTwo.jsx';
+import Shop from './components/Shop/index.jsx';
+import Product from './components/Shop/Product.jsx';
+import Layout from './components/Helper/Layout.jsx';
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         Component: Layout,
         children: [
             {
@@ -30,79 +30,79 @@ const router = createBrowserRouter([
                 element: <HomeOne />,
             },
             {
-                path: "/home-two",
+                path: '/home-two',
                 element: <HomeTwo />,
             },
             {
-                path: "/home-three",
+                path: '/home-three',
                 element: <HomeThree />,
             },
             {
-                path: "/home-four",
+                path: '/home-four',
                 element: <HomeFour />,
             },
             {
-                path: "/home-five",
+                path: '/home-five',
                 element: <HomeFive />,
             },
             {
-                path: "/home-six",
+                path: '/home-six',
                 element: <HomeSix />,
             },
             {
-                path: "/home-seven",
+                path: '/home-seven',
                 element: <HomeSeven />,
             },
             {
-                path: "/home-eight",
+                path: '/home-eight',
                 element: <HomeEight />,
             },
             {
-                path: "/home-dark",
+                path: '/home-dark',
                 element: <HomeDark />,
             },
             {
-                path: "/home-rtl",
+                path: '/home-rtl',
                 element: <HomeRtl />,
             },
             {
-                path: "/news",
+                path: '/news',
                 element: <News />,
             },
             {
-                path: "/news/single-news",
+                path: '/news/single-news',
                 element: <SingleNews />,
             },
             {
-                path: "/service",
+                path: '/service',
                 element: <Service />,
             },
             {
-                path: "/about-us",
+                path: '/about-us',
                 element: <AboutUs />,
             },
             {
-                path: "/contact",
+                path: '/contact',
                 element: <Contact />,
             },
             {
-                path: "/error",
+                path: '/error',
                 element: <Error />,
             },
             {
-                path: "/about-us-another",
+                path: '/about-us-another',
                 element: <AboutUsTwo />,
             },
             {
-                path: "/shops",
-                element: <Shops />,
+                path: '/shop',
+                element: <Shop />,
             },
             {
-                path: "/shops/shop-details",
-                element: <ShopDetails />,
+                path: '/shop/shop-details',
+                element: <Product />,
             },
             {
-                path: "*",
+                path: '*',
                 element: <Error />,
             },
         ],

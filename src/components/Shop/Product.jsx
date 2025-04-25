@@ -65,8 +65,8 @@ const Details = () => {
                 title="Product Title"
                 breadcrumb={[
                     { link: "/", title: "Home" },
-                    { link: "/shops", title: "Shop Products" },
-                    { link: "/shops/shop-details", title: "Shop Details" },
+                    { link: "/shop", title: "Shop Products" },
+                    { link: "/shop/shop-details", title: "Shop Details" },
                 ]}
             />
             <section className="shop-details-area pt-100 pb-100">
