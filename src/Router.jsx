@@ -94,12 +94,16 @@ const router = createBrowserRouter([
                 element: <AboutUsTwo />,
             },
             {
-                path: '/shop',
-                element: <Shop />,
+                path: '/shops',
+                element: <Shops />,
             },
             {
-                path: '/shop/shop-details',
-                element: <Product />,
+                path: '/shops/shop-details',
+                element: <ShopDetails />,
+            },
+            {
+                path: '/shops/shop-details/:id',
+                element: <ShopDetails />,
             },
             {
                 path: '*',
