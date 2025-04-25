@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------
 
     Template Name: Sample - Corporate Business Bootstrap4 HTML5 Template
     Template URI: site.com
@@ -13,14 +13,87 @@
     ===================
 
     01. Theme default CSS
-	02. Header
-    03. Hero
-	04. Footer
+	02. Header */  
+    /* 03. Hero */
+    .appie-hero-area {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Slider de fondo (ya lo tenías) */
+    .hero-slides { position: absolute; inset: 0; z-index: 0; }
+    .hero-slides .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-slides .slide.active {
+      opacity: 1;
+    }
+
+    /* delays… */
+    
+    /* Overlay centrado */
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;               /* sobre las slides */
+      text-align: center;
+      color: #fff;              /* blanco sobre fondo oscuro */
+      padding: 0 20px;          /* un poco de margen lateral */
+      max-width: 600px;         /* para que no sea demasiado ancho */
+    }
+    
+    /* Títulos y textos dentro del overlay */
+    .hero-overlay h2 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-overlay p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Botón estilo .main-btn de tu template */
+    .hero-overlay .main-btn {
+      display: inline-block;
+      padding: 0 30px;
+      line-height: 45px;
+      border-radius: 6px;
+      background-color: #2b70fa;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+    .hero-overlay .main-btn:hover {
+      background-color: #1a4fc0;
+    }
+    
+    /* Asegúrate de incluir tus keyframes slideShow si no lo has hecho ya */
+    @keyframes slideShow {
+      0%   { opacity: 1; }
+      30%  { opacity: 1; }
+      33%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+.appie-hero-area .container {
+  position: relative;
+  z-index: 1;
+}
+
+	/* 04. Footer
 
 -----------------------------------------------------------------------------------*/
 /*===========================
     1. COMMON css 
 ===========================*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 body {
   font-family: "Roboto", sans-serif;
@@ -864,6 +937,7 @@ p {
   top: 0;
   right: 0;
   z-index: 999;
+  background: #fff;
 }
 .appie-header-area.appie-header-2-area .appie-btn-box .main-btn {
   background: #ff3e66;
@@ -1408,6 +1482,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 80px;
 }
 .appie-hero-area.appie-hero-3-area {
   background-image: url(./../images/hero-bg.jpg);

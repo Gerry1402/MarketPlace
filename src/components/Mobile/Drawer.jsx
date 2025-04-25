@@ -2,16 +2,23 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
+
 const Drawer = ({ drawer, action, lang }) => {
     const [itemSize, setSize] = useState("0px");
     const [item, setItem] = useState("home");
     const handler = (e, value) => {
-        // e.preventDefault();
         const getItems = document.querySelectorAll(`#${value} li`).length;
-        if (getItems > 0) {
-            setSize(`${43 * getItems}px`);
-            setItem(value);
-        }
+            if (getItems > 0) {
+              if (item === value) {
+                // ya estaba abierto, lo cerramos
+                setSize("0px");
+                setItem("");
+              } else {
+                // abrimos el nuevo
+                setSize(`${43 * getItems}px`);
+                setItem(value);
+             }
+            }
     };
     return (
         <>
@@ -28,9 +35,12 @@ const Drawer = ({ drawer, action, lang }) => {
                             <div className="row">
                                 <div className="col-12">
                                     <div
-                                        className={`offcanvas_menu_wrapper ${
-                                            drawer ? "active" : ""
-                                        }`}
+                                        className={`offcanvas_menu_wrapper ${drawer ? "active" : ""}`}
+                                             style={{
+                                               maxHeight: '100vh',
+                                               overflowY: 'auto',
+                                               WebkitOverflowScrolling: 'touch'
+                                             }}
                                     >
                                         <div className="canvas_close">
                                             <a
@@ -44,7 +54,7 @@ const Drawer = ({ drawer, action, lang }) => {
                                             <img src={logo} alt="" />
                                         </div>
                                         <div id="menu" className="text-left ">
-                                            <ul className="offcanvas_main_menu">
+                                            <ul className="offcanvas_main_menu"   style={{ overflowY: 'auto' }}>
                                                 <li
                                                     onClick={(e) =>
                                                         handler(e, "home")
@@ -56,15 +66,13 @@ const Drawer = ({ drawer, action, lang }) => {
                                                         <i className="fa fa-angle-down"></i>
                                                     </span>
                                                     <a href="#">أنا</a>
-                                                    <ul
+                                                     <ul
                                                         className="sub-menu"
-                                                        style={{
-                                                            height:
-                                                                item === "home"
-                                                                    ? itemSize
-                                                                    : "0px",
-                                                        }}
-                                                    >
+                                                           style={{
+                                                             height: item === value ? itemSize : "0px",
+                                                             transition: "height 0.08s ease"
+                                                           }}
+                                                         >
                                                         <li>
                                                             <Link to="/">
                                                                 الصفحة الرئيسية
@@ -282,9 +290,12 @@ const Drawer = ({ drawer, action, lang }) => {
                             <div className="row">
                                 <div className="col-12">
                                     <div
-                                        className={`offcanvas_menu_wrapper ${
-                                            drawer ? "active" : ""
-                                        }`}
+                                        className={`offcanvas_menu_wrapper ${drawer ? "active" : ""}`}
+                                        style={{
+                                          maxHeight: '100vh',
+                                          overflowY: 'auto',
+                                          WebkitOverflowScrolling: 'touch'
+                                        }}
                                     >
                                         <div className="canvas_close">
                                             <a
