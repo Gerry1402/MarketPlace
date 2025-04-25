@@ -311,7 +311,7 @@ p {
   left: 0;
   margin-left: -300px;
   padding: 50px 15px 30px;
-  overflow-y: visible;
+  overflow-y: scroll;
 }
 .offcanvas_menu_wrapper.active {
   margin-left: 0;
