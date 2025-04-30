@@ -36,26 +36,10 @@ const Card = ({ cardData }) => {
           </div>
         </div>
         <div className="content">
-          <ul>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star-half-alt"></i>
-            </li>
-          </ul>
-          <a href="#">{cardData.title}</a>
+          <br />
+          <div href="#">{cardData.name}</div>
           <div className="pricing">
-            <div className="discount-price">${cardData.price} </div>
+            <div className="discount-price">$100{cardData.price} </div>
             <div className="regular-price">$180.00</div>
           </div>
         </div>

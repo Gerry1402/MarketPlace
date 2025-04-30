@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -16,12 +16,16 @@ import Drawer from "../Mobile/Drawer.jsx";
 import HeaderNews from "../News/HeaderNews.jsx";
 import HeroNews from "../News/HeroNews.jsx";
 import { useParams } from "react-router-dom";
+import supabase from "../Service/supabase.jsx";
 
 const Details = () => {
   const [drawer, drawerAction] = useToggle(false);
   const [quantity, setQuantity] = useState(1);
   const [detailsTab, setTab] = useState("review");
   const { idProduct } = useParams();
+  const [product, setProduct] = useState(null);
+  const [reviews, setReviews] = useState([]);
+
   const detailsTabHandler = (e, value) => {
     e.preventDefault();
     setTab(value);
@@ -59,6 +63,44 @@ const Details = () => {
     setQuantity(e.target.value);
   };
 
+  useEffect(() => {
+    const fetchProductById = async () => {
+      const { data, error } = await supabase
+        .from("products1")
+        .select("*")
+        .eq("id", idProduct)
+        .single();
+
+      if (error) {
+        console.error("Error al obtener el producto:", error);
+        return;
+      }
+
+      console.log("Producto:", data);
+      setProduct(data);
+    };
+
+    const fetchReviews = async () => {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select("*")
+        .eq("product", idProduct);
+
+      if (error) {
+        console.error("Error al obtener el reviews:", error);
+        return;
+      }
+
+      console.log("Reviews:", data);
+      setReviews(data);
+    };
+
+    if (idProduct) {
+      fetchProductById();
+      fetchReviews();
+    }
+  }, [idProduct]);
+
   return (
     <>
       <Drawer drawer={drawer} action={drawerAction.toggle} />
@@ -75,144 +117,73 @@ const Details = () => {
         <div className="container">
           <div className="row ">
             <div className="col-lg-6">
-              <div className="shop-details-thumb">
-                <div className="shop-details-thumb-slider-active">
-                  <Slider ref={sliderRef} autoplay="true">
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="shop-small-slider-active mt-10">
-                <Slider ref={miniSliderRef} {...settings}>
-                  <div className="item">
-                    <img src={smProductImg1} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg3} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg4} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                </Slider>
-              </div>
+              <img src="https://picsum.photos/500/500" alt="" />
             </div>
             <div className="col-lg-6">
-              <div className="shop-product-details-content pl-70 mt-35">
-                <span>In stock</span>
-                <div>Id product</div>
-                {idProduct}
-                <h2 className="title">Smartwatch with Music</h2>
-                <div className="pricing">
-                  <div className="discount-price mr-15">$114.00</div>
-                  <div className="regular-price">$172.00</div>
-                </div>
-                <div className="review">
-                  <ul>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star-half-alt"></i>
-                    </li>
-                  </ul>
-                  <span>(4 reviews)</span>
-                </div>
-                <p>
-                  So I said nancy boy he lost his bottle smashing mush brolly
-                  victoria sponge loo, bobby say Charles gutted mate bugger
-                  fanny around, lurgy grub some dodgy chav blatant blag me old
-                  mucker.
-                </p>
-                <div className="shop-buttons d-block d-sm-flex align-items-center">
-                  <div className="product-quantity" id="quantity">
-                    <button
-                      onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-                      type="button"
-                      id="sub"
-                      className="sub"
-                    >
-                      -
-                    </button>
-                    <input
-                      onChange={(e) => quantityHandler(e)}
-                      type="text"
-                      id="1"
-                      value={quantity}
-                    />
-                    <button
-                      onClick={() => setQuantity(quantity + 1)}
-                      type="button"
-                      id="add"
-                      className="add"
-                    >
-                      +
-                    </button>
+              {product ? (
+                <div className="shop-product-details-content pl-70 mt-35">
+                  <span>{product.stock > 0 ? "In stock" : "Out of stock"}</span>
+                  <div>Id product</div>
+                  {idProduct}
+                  <h2 className="title">{product.name}</h2>
+                  {/* <h2 className="title">{product.title}</h2> */}
+                  <div className="pricing">
+                    <div className="discount-price mr-15">
+                      {product.price * (1 - product.discount / 100)}
+                    </div>
+                    {product.discount && (
+                      <div className="regular-price">{product.price}</div>
+                    )}
                   </div>
-                  <a className="main-btn ml-10" href="#">
-                    Add To Cart
-                  </a>
+                  <p>{product.description}</p>
+                  <div className="shop-buttons d-block d-sm-flex align-items-center">
+                    <div className="product-quantity" id="quantity">
+                      <button
+                        onClick={() =>
+                          quantity > 1 && setQuantity(quantity - 1)
+                        }
+                        type="button"
+                        id="sub"
+                        className="sub"
+                      >
+                        -
+                      </button>
+                      <input
+                        onChange={(e) => quantityHandler(e)}
+                        type="text"
+                        id="1"
+                        value={quantity}
+                      />
+                      <button
+                        onClick={() => setQuantity(quantity + 1)}
+                        type="button"
+                        id="add"
+                        className="add"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <a className="main-btn ml-10" href="#">
+                      Add To Cart
+                    </a>
+                  </div>
+                  <div className="details-info">
+                    <ul>
+                      <li>
+                        <span>SKU:</span> 42725-AB-6
+                      </li>
+                      <li>
+                        <span>Categories: </span> Watch, Appie, UX
+                      </li>
+                      <li>
+                        <span>Tags:</span> Creative, Shop, WordPress
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="details-info">
-                  <ul>
-                    <li>
-                      <span>SKU:</span> 42725-AB-6
-                    </li>
-                    <li>
-                      <span>Categories: </span> Watch, Appie, UX
-                    </li>
-                    <li>
-                      <span>Tags:</span> Creative, Shop, WordPress
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ) : (
+                <p>Loading product...</p>
+              )}
             </div>
           </div>
         </div>
@@ -257,7 +228,7 @@ const Details = () => {
                       aria-controls="pills-profile"
                       aria-selected="false"
                     >
-                      Reviews (2)
+                      Reviews ({reviews.length})
                     </a>
                   </li>
                 </ul>
@@ -327,80 +298,52 @@ const Details = () => {
                   >
                     <div className="review-rating-box">
                       <div className="top-rating-result">
-                        <h3 className="title">2 Reviews for Watch</h3>
+                        <h3 className="title">
+                          {reviews.length} Reviews for
+                          {/* {product.title} */}
+                        </h3>
                         <div className="rating-result-box">
-                          <div className="thumb">
-                            <img src={testmonialUser2} alt="" />
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star-half-alt"></i>
-                              </li>
-                            </ul>
-                            <div className="shop-meta">
-                              <div className="author-user-name">
-                                <a href="#">Will Barrow</a>
+                          {reviews.map((review) => (
+                            <div className="content">
+                              <ul>
+                                {[...Array(Math.floor(review.stars / 2))].map(
+                                  (_, index) => (
+                                    <li>
+                                      <i className="fas fa-star"></i>
+                                    </li>
+                                  ),
+                                )}
+                                {review.stars % 2 > 0 && (
+                                  <li>
+                                    <i className="fas fa-star-half-alt"></i>
+                                  </li>
+                                )}
+                                {[
+                                  ...Array(
+                                    5 -
+                                      (Math.floor(review.stars / 2) +
+                                        (review.stars % 2) !==
+                                      0
+                                        ? 0
+                                        : 1),
+                                  ),
+                                ].map((_, index) => (
+                                  <li>
+                                    <i className="fal fa-star"></i>
+                                  </li>
+                                ))}
+                              </ul>
+                              <div className="shop-meta">
+                                <div className="author-user-name">
+                                  <a href="#">Will Barrow</a>
+                                </div>
+                                <div className="date">
+                                  <span>{reviews.created_at}</span>
+                                </div>
                               </div>
-                              <div className="date">
-                                <span>March 15, 2022</span>
-                              </div>
+                              <p>{reviews.content}</p>
                             </div>
-                            <p>
-                              That arse over tit a load of old tosh pardon you
-                              wellies amongst william my good sir grub your bike
-                              mate james bond morish a blinding.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="rating-result-box">
-                          <div className="thumb">
-                            <img src={testmonialUser} alt="" />
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star-half-alt"></i>
-                              </li>
-                            </ul>
-                            <div className="shop-meta">
-                              <div className="author-user-name">
-                                <a href="#">Elon Gated</a>
-                              </div>
-                              <div className="date">
-                                <span>April 24, 2022</span>
-                              </div>
-                            </div>
-                            <p>
-                              Lost the plot twit the full monty down the pub Why
-                              off his nut cheers say a blinding shot happy days
-                              bog argy bargy.
-                            </p>
-                          </div>
+                          ))}
                         </div>
                       </div>
                       <div className="review-box">
@@ -413,6 +356,55 @@ const Details = () => {
                         </div>
                         <div className="add-review-star">
                           <span>Rate this product:</span>
+                          <form>
+                            <ul
+                              className="star-rating"
+                              style={{
+                                display: "flex",
+                                listStyle: "none",
+                                padding: 0,
+                              }}
+                            >
+                              {Array.from(
+                                { length: totalStars },
+                                (_, index) => {
+                                  const starValue = index + 1;
+
+                                  return (
+                                    <li key={starValue}>
+                                      <button
+                                        type="button"
+                                        onClick={() => setRating(starValue)}
+                                        onMouseEnter={() => setHover(starValue)}
+                                        onMouseLeave={() => setHover(null)}
+                                        style={{
+                                          background: "none",
+                                          border: "none",
+                                          cursor: "pointer",
+                                          padding: "5px",
+                                        }}
+                                      >
+                                        <i
+                                          className={
+                                            starValue <= (hover || rating)
+                                              ? "fas fa-star" // Rellena
+                                              : "fal fa-star" // Contorno
+                                          }
+                                          style={{
+                                            fontSize: "24px",
+                                            color: "#FFD700",
+                                          }}
+                                        ></i>
+                                      </button>
+                                    </li>
+                                  );
+                                },
+                              )}
+                            </ul>
+
+                            <input type="hidden" name="rating" value={rating} />
+                            <p>Valoración seleccionada: {rating} estrellas</p>
+                          </form>
                           <ul>
                             <li>
                               <i className="fas fa-star"></i>
