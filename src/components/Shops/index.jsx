@@ -26,6 +26,22 @@ const Shops = () => {
   );
   const totalPages = Math.ceil(products.length / productsPerPage);
 
+  const fetchProducts = async (shopId = null) => {
+    const { data, error } = shopId
+      ? await supabase.from("products1").select("*").eq("shop_id", shopId)
+      : await supabase.from("products1").select("*");
+
+    if (error) {
+      console.error("Error al obtener los productos:", error.message || error);
+      return;
+    }
+
+    console.log("Productos:", data);
+
+    setProducts(data);
+    setCurrentPage(1);
+  };
+
   useEffect(() => {
     const fetchShops = async () => {
       const { data, error } = await supabase.from("shops").select("*");
@@ -37,34 +53,6 @@ const Shops = () => {
 
       console.log("Tiendas:", data);
       setShops(data);
-    };
-
-    // const fetchProducts = async (shopId = null) => {
-    //   const { data, error } = shopId
-    //     ? await supabase.from("products1").select("*").eq("shop_id", shopId)
-    //     : await supabase.from("products1").select("*");
-
-    //   if (error) {
-    //     console.error("Error al obtener los productos:", error);
-    //     return;
-    //   }
-
-    //   console.log("Productos:", data);
-
-    //   setProducts(data);
-    //   setCurrentPage(1);
-    // };
-
-    const fetchProducts = async () => {
-      const { data, error } = await supabase.from("products1").select("*");
-
-      if (error) {
-        console.error("Error al obtener los productos:", error);
-        return;
-      }
-
-      console.log("Productos:", data);
-      setProducts(data);
     };
 
     fetchShops();
@@ -79,6 +67,13 @@ const Shops = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
+  };
+
+  const handleShopChange = (e) => {
+    const selectedId = e.target.value;
+    setSelectedShopId(selectedId);
+    console.log("Selected shop ID:", selectedId);
+    fetchProducts(selectedId);
   };
 
   return (
@@ -103,10 +98,11 @@ const Shops = () => {
                 <span>
                   Showing all <span>{products.length}</span> results
                 </span>
-                <select id="shops">
+                <select id="shops" onChange={handleShopChange}>
+                  <option value="">All Shops</option>
                   {shops && shops.length > 0 ? (
                     shops.map((shop) => (
-                      <option key={shop.id} value={shop.name}>
+                      <option key={shop.id} value={shop.id}>
                         {shop.name}
                       </option>
                     ))
