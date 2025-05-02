@@ -15,7 +15,7 @@ import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
 import Drawer from "../Mobile/Drawer.jsx";
 import HeaderNews from "../News/HeaderNews.jsx";
 import HeroNews from "../News/HeroNews.jsx";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import supabase from "../Service/supabase.jsx";
 
 const Details = () => {
@@ -163,9 +163,9 @@ const Details = () => {
                         +
                       </button>
                     </div>
-                    <a className="main-btn ml-10" href="#">
+                    <Link to={"/Cart/index"} className="main-btn ml-10">
                       Add To Cart
-                    </a>
+                    </Link>
                   </div>
                   <div className="details-info">
                     <ul>
@@ -356,55 +356,6 @@ const Details = () => {
                         </div>
                         <div className="add-review-star">
                           <span>Rate this product:</span>
-                          <form>
-                            <ul
-                              className="star-rating"
-                              style={{
-                                display: "flex",
-                                listStyle: "none",
-                                padding: 0,
-                              }}
-                            >
-                              {Array.from(
-                                { length: totalStars },
-                                (_, index) => {
-                                  const starValue = index + 1;
-
-                                  return (
-                                    <li key={starValue}>
-                                      <button
-                                        type="button"
-                                        onClick={() => setRating(starValue)}
-                                        onMouseEnter={() => setHover(starValue)}
-                                        onMouseLeave={() => setHover(null)}
-                                        style={{
-                                          background: "none",
-                                          border: "none",
-                                          cursor: "pointer",
-                                          padding: "5px",
-                                        }}
-                                      >
-                                        <i
-                                          className={
-                                            starValue <= (hover || rating)
-                                              ? "fas fa-star" // Rellena
-                                              : "fal fa-star" // Contorno
-                                          }
-                                          style={{
-                                            fontSize: "24px",
-                                            color: "#FFD700",
-                                          }}
-                                        ></i>
-                                      </button>
-                                    </li>
-                                  );
-                                },
-                              )}
-                            </ul>
-
-                            <input type="hidden" name="rating" value={rating} />
-                            <p>Valoración seleccionada: {rating} estrellas</p>
-                          </form>
                           <ul>
                             <li>
                               <i className="fas fa-star"></i>

@@ -3,7 +3,7 @@ import productImg from "../../assets/images/shop-grid-1.jpg";
 import { Link } from "react-router-dom";
 
 const Card = ({ cardData }) => {
-  console.log(cardData);
+  // console.log(cardData);
   const handleError = (e) => {
     e.target.src = productImg;
   };
@@ -23,9 +23,9 @@ const Card = ({ cardData }) => {
           <div className="cart-list-icon">
             <ul>
               <li>
-                <a href="#">
+                <Link to={"/Cart/index"}>
                   <i className="fal fa-shopping-bag"></i>
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to={`/shops/shop-details/${cardData.id}`}>

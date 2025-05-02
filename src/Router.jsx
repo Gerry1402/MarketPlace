@@ -19,6 +19,7 @@ import AboutUsTwo from "./components/AboutUs/AboutUsTwo.jsx";
 import Shops from "./components/Shops/index.jsx";
 import ShopDetails from "./components/Shops/Details";
 import Layout from "./components/Helper/Layout.jsx";
+import Cart from "./components/Cart/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
       {
         path: "/shops/shop-details/:idProduct",
         element: <ShopDetails />,
+      },
+      {
+        path: "/Cart/index",
+        element: <Cart />,
       },
       {
         path: "*",

@@ -14,6 +14,17 @@ const Shops = () => {
   const [drawer, drawerAction] = useToggle(false);
   const [products, setProducts] = useState([]);
   const [shops, setShops] = useState([]);
+  const [selectedShopId, setSelectedShopId] = useState(null);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 6;
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct,
+  );
+  const totalPages = Math.ceil(products.length / productsPerPage);
 
   useEffect(() => {
     const fetchShops = async () => {
@@ -27,6 +38,22 @@ const Shops = () => {
       console.log("Tiendas:", data);
       setShops(data);
     };
+
+    // const fetchProducts = async (shopId = null) => {
+    //   const { data, error } = shopId
+    //     ? await supabase.from("products1").select("*").eq("shop_id", shopId)
+    //     : await supabase.from("products1").select("*");
+
+    //   if (error) {
+    //     console.error("Error al obtener los productos:", error);
+    //     return;
+    //   }
+
+    //   console.log("Productos:", data);
+
+    //   setProducts(data);
+    //   setCurrentPage(1);
+    // };
 
     const fetchProducts = async () => {
       const { data, error } = await supabase.from("products1").select("*");
@@ -43,6 +70,16 @@ const Shops = () => {
     fetchShops();
     fetchProducts();
   }, []);
+
+  const handlePageClick = (pageNum) => {
+    setCurrentPage(pageNum);
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <>
@@ -79,8 +116,8 @@ const Shops = () => {
                 </select>
               </div>
               <div className="row">
-                {products && products.length > 0 ? (
-                  products.map((value) => (
+                {currentProducts && currentProducts.length > 0 ? (
+                  currentProducts.map((value) => (
                     <div className="col-lg-4 col-md-6">
                       <Card cardData={value} />
                     </div>
@@ -88,15 +125,34 @@ const Shops = () => {
                 ) : (
                   <div>No hay productos</div>
                 )}
+
                 <div className="col-lg-12">
                   <div className="bisylms-pagination">
-                    <span className="current">1</span>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a className="next" href="#">
-                      next
-                      <i className="fal fa-arrow-right"></i>
-                    </a>
+                    {[...Array(totalPages)].map((_, index) => (
+                      <a
+                        key={index}
+                        href="#"
+                        className={currentPage === index + 1 ? "active" : ""}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handlePageClick(index + 1);
+                        }}
+                      >
+                        {index + 1}
+                      </a>
+                    ))}
+                    {currentPage < totalPages && (
+                      <a
+                        className="next"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNextPage();
+                        }}
+                      >
+                        next <i className="fal fa-arrow-right"></i>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
