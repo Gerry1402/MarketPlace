@@ -28,8 +28,8 @@ const Shops = () => {
 
   const fetchProducts = async (shopId = null) => {
     const { data, error } = shopId
-      ? await supabase.from("products1").select("*").eq("shop_id", shopId)
-      : await supabase.from("products1").select("*");
+      ? await supabase.from("products").select("*").eq("shop_id", shopId)
+      : await supabase.from("products").select("*");
 
     if (error) {
       console.error("Error al obtener los productos:", error.message || error);

@@ -1,6 +1,7 @@
 import React from "react";
 import productImg from "../../assets/images/shop-grid-1.jpg";
 import { Link } from "react-router-dom";
+import product from "../../assets/images/shop-details-thumb-1.jpg";
 
 const Card = ({ cardData }) => {
   // console.log(cardData);
@@ -14,7 +15,7 @@ const Card = ({ cardData }) => {
           <img
             className="appie-card-img"
             onError={handleError}
-            src={cardData.image}
+            src={cardData.images}
             alt=""
           />
           <div className="reborn">
@@ -39,8 +40,16 @@ const Card = ({ cardData }) => {
           <br />
           <div href="#">{cardData.name}</div>
           <div className="pricing">
-            <div className="discount-price">$100{cardData.price} </div>
-            <div className="regular-price">$180.00</div>
+            {cardData.discount ? (
+              <>
+                <div className="discount-price mr-15">
+                  {cardData.price * (1 - cardData.discount / 100)}$
+                </div>
+                <div className="regular-price">{cardData.price}$</div>
+              </>
+            ) : (
+              <div className="discount-price">{cardData.price}$</div>
+            )}
           </div>
         </div>
       </div>

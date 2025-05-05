@@ -43,11 +43,37 @@ const Cart = ({ value, action }) => {
           </div>
           {cart && cart.length > 0 ? (
             cart.map((item) => (
-              <div className="row" key={item.id}>
-                <div className="col-8">
-                  <h5>{item.product?.name || "Producto desconocido"}</h5>
-                  <p>Price: ${item.product?.price}</p>
-                  <p>Stock: {item.quantity}</p>
+              <div className="col-lg-12" key={item.id}>
+                <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
+                  <div className="thumb">
+                    <img src={blog4} alt="" />
+                  </div>
+                  <div className="content">
+                    <h5 className="title">
+                      {item.product?.name || "Producto desconocido"}
+                    </h5>
+                    <div className="meta-item">
+                      <ul>
+                        <li>
+                          <p>Price: ${item.product?.price}</p>
+                        </li>
+                        <li>
+                          <p>Stock: {item.quantity}</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <button
+                      style={{
+                        background: "none",
+                        border: "none",
+                        padding: 0,
+                        margin: 0,
+                        cursor: "pointer",
+                      }}
+                    >
+                      <i className="fas fa-trash"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             ))
@@ -66,6 +92,7 @@ const Cart = ({ value, action }) => {
                       How to Improve Your App Store Position
                     </a>
                   </h5>
+
                   <div className="meta-item">
                     <ul>
                       <li>

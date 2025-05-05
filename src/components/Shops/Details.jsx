@@ -66,7 +66,7 @@ const Details = () => {
   useEffect(() => {
     const fetchProductById = async () => {
       const { data, error } = await supabase
-        .from("products1")
+        .from("products")
         .select("*")
         .eq("id", idProduct)
         .single();
@@ -101,6 +101,31 @@ const Details = () => {
     }
   }, [idProduct]);
 
+  const addCart = (quantity) => {
+    const addToCart = async () => {
+      const { data, error } = await supabase
+        .from("cart")
+        .insert([
+          {
+            product_id: idProduct,
+            quantity: quantity,
+          },
+        ])
+        .select("*");
+
+      console.log(quantity);
+
+      if (error) {
+        console.error("Error al agregar producto al carrito:", error);
+        return;
+      }
+
+      console.log("Producto agregado al carrito:", data);
+    };
+
+    addToCart();
+  };
+
   return (
     <>
       <Drawer drawer={drawer} action={drawerAction.toggle} />
@@ -118,21 +143,23 @@ const Details = () => {
           <div className="row ">
             <div className="col-lg-6">
               <img src="https://picsum.photos/500/500" alt="" />
+              {/* <img src={JSON.parse(product.images)[0]} alt="" /> */}
             </div>
             <div className="col-lg-6">
               {product ? (
                 <div className="shop-product-details-content pl-70 mt-35">
                   <span>{product.stock > 0 ? "In stock" : "Out of stock"}</span>
-                  <div>Id product</div>
-                  {idProduct}
-                  <h2 className="title">{product.name}</h2>
-                  {/* <h2 className="title">{product.title}</h2> */}
+                  <h2 className="title">{product.title}</h2>
                   <div className="pricing">
-                    <div className="discount-price mr-15">
-                      {product.price * (1 - product.discount / 100)}
-                    </div>
-                    {product.discount && (
-                      <div className="regular-price">{product.price}</div>
+                    {product.discount ? (
+                      <>
+                        <div className="discount-price mr-15">
+                          {product.price * (1 - product.discount / 100)}$
+                        </div>
+                        <div className="regular-price">{product.price}$</div>
+                      </>
+                    ) : (
+                      <div className="discount-price">{product.price}$</div>
                     )}
                   </div>
                   <p>{product.description}</p>
@@ -164,7 +191,19 @@ const Details = () => {
                       </button>
                     </div>
                     <Link to={"/Cart/index"} className="main-btn ml-10">
-                      Add To Cart
+                      <button
+                        onClick={() => addCart(quantity)}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          padding: 0,
+                          margin: 0,
+                          cursor: "pointer",
+                          color: "#fff",
+                        }}
+                      >
+                        Add to Cart
+                      </button>
                     </Link>
                   </div>
                   <div className="details-info">
