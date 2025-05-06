@@ -289,20 +289,33 @@ const Details = () => {
                           +
                         </button>
                       </div>
-                      <Link to={"/Cart/index"} className="main-btn ml-10">
-                        <button
-                          onClick={() => addCart(quantity)}
-                          style={{
-                            background: "none",
-                            border: "none",
-                            padding: 0,
-                            margin: 0,
-                            cursor: "pointer",
-                          }}
-                        >
-                          Add to Cart
-                        </button>
-                      </Link>
+                      <Link to="/Cart/index" className="ml-10">
+                      <button
+                        onClick={() => addCart(quantity)}
+                        className="main-btn ml-10"
+                        style={{
+                          color: "#ffffff",
+                          transition: "background-color 0.3s, color 0.3s",
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.color = "#1a4fc0";
+                          e.currentTarget.style.backgroundColor = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.color = "#ffffff";
+                          e.currentTarget.style.backgroundColor = "";
+                          original
+                        }}
+                      >
+                        Add to Cart
+                      </button>
+                    </Link>
+                      <button
+                onClick={() => {/* aquí tu lógica de Trade o redirección */}}
+                className="main-btn ml-10"
+              >
+                Trade
+              </button>
                     </div>
                   ) : (
                     <div

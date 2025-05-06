@@ -121,7 +121,7 @@ const Shops = () => {
   return (
     <>
       <Drawer drawer={drawer} action={drawerAction.toggle} />
-      <HeaderNews action={drawerAction.toggle} />
+      <HeaderNews action={drawerAction.toggle}showChat={true} />
       <HeroNews
         title="Shop Products"
         breadcrumb={[

@@ -20,6 +20,9 @@ import Shops from "./components/Shops/index.jsx";
 import ShopDetails from "./components/Shops/Details";
 import Layout from "./components/Helper/Layout.jsx";
 import Cart from "./components/Cart/index.jsx";
+import MessageInbox from"./components/Shops/MessageInbox"
+import Backpack from "./components/Shops/Backpack.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -109,6 +112,13 @@ const router = createBrowserRouter([
       {
         path: "/Cart/index",
         element: <Cart />,
+      },
+      { path: "inbox",
+        element: <MessageInbox /> }
+      ,
+      {
+        path: "backpack",
+        element: <Backpack />,
       },
       {
         path: "*",
