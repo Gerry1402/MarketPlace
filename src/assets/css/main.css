@@ -938,7 +938,12 @@ p {
   top: 0;
   right: 0;
   z-index: 999;
-  background: #fff;
+  background: #ffffff;
+  padding-bottom: 25px
+}
+.appie-header-area .appie-logo-box img {
+  max-height: 80px;
+  width: auto;
 }
 .appie-header-area.appie-header-2-area .appie-btn-box .main-btn {
   background: #ff3e66;
@@ -961,6 +966,26 @@ p {
 .appie-header-area.appie-header-7-area.appie-sticky.sticky {
   background: #290645;
 }
+
+header.appie-header-area.appie-sticky.sticky {
+  background-color: #2b70fa !important; 
+}
+
+/*Enlaces y iconos en blanco */
+header.appie-header-area.appie-sticky.sticky .appie-header-main-menu a,
+header.appie-header-area.appie-sticky.sticky .login-btn,
+header.appie-header-area.appie-sticky.sticky .toggle-btn i {
+  color: #fff !important;
+}
+.appie-header-area.appie-sticky.sticky
+  .appie-header-main-menu ul > li > a {
+  color: #fff !important;
+}
+header.appie-header-area.appie-sticky.sticky .main-btn {
+  background-color: #2b70fa !important;  
+  border-color:     #2b70fa !important;  
+  color:            #fff    !important;  
+}
 .appie-header-area.appie-header-error-page {
   box-shadow: 0px 10px 20px 0px rgba(14, 17, 51, 0.1);
   padding-top: 20px;
@@ -970,6 +995,46 @@ p {
 .header-nav-box .appie-btn-box {
   position: relative;
 }
+.appie-header-area .appie-header-main-menu ul > li > a,
+.appie-header-area .appie-btn-box .login-btn {
+  color: #0e1133 !important;
+}
+
+.appie-header-area.appie-sticky .appie-header-main-menu ul li .sub-menu li a {
+  color: #0e1133 !important;   
+}
+
+.appie-header-area.appie-sticky .appie-header-main-menu ul li .sub-menu li a:hover {
+  color: #2b70fa !important;    
+}
+
+.appie-header-area .appie-btn-box .main-btn {
+  background-color: #2b70fa !important;
+  border-color:    #2b70fa !important;
+  color:           #fff   !important;
+  display:         inline-block !important;
+  visibility:      visible !important;
+  opacity:         1 !important;
+}
+
+/* Estado sticky */
+.appie-header-area.appie-sticky.sticky .appie-btn-box .main-btn {
+  background-color: #2b70fa !important;
+  border-color:    #2b70fa !important;
+  color:           #fff   !important;
+  display:         inline-block !important;
+  visibility:      visible !important;
+  opacity:         1 !important;
+}
+
+/* Hover*/
+.appie-header-area .appie-btn-box .main-btn:hover,
+.appie-header-area.appie-sticky.sticky .appie-btn-box .main-btn:hover {
+  background-color: #fff   !important;
+  color:            #2b70fa !important;
+}
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-nav-box .appie-btn-box {
     padding-right: 50px;
@@ -987,6 +1052,7 @@ p {
 }
 .header-nav-box .appie-btn-box .login-btn i {
   padding-right: 6px;
+  color: #0e1133;
 }
 @media (max-width: 767px) {
   .header-nav-box .appie-btn-box .main-btn {

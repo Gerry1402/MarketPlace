@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/logo-7.png";
+import logo from "../../assets/images/logo.png";
 import Navigation from "../Navigation.jsx";
 
 const HeaderService = ({ action }) => {
