@@ -16,11 +16,9 @@ const Card = ({ cardData }) => {
           <img
             className="appie-card-img"
             onError={handleError}
-            // src={cardData.images}
             src={cardData.images.thumbnail}
             alt=""
           />
-          {/* {console.log(cardData.images.thumbnail)} */}
           <div className="reborn">
             <span>{cardData.stock > 0 ? "Sale" : "No Sale"}</span>
           </div>
@@ -57,7 +55,7 @@ const Card = ({ cardData }) => {
               <div className="discount-price">{cardData.price}$</div>
             )}
           </div>
-          {cardData.handmade && (
+          {cardData.handmade ? (
             <div
               className="handmade-icon"
               style={{
@@ -70,6 +68,8 @@ const Card = ({ cardData }) => {
               <i className="fas fa-hands" style={{ fontSize: "1rem" }}></i>
               <span>Handmade Product</span>
             </div>
+          ) : (
+            <br />
           )}
         </div>
       </div>

@@ -219,9 +219,21 @@ const Details = () => {
       <section className="shop-details-area pt-100 pb-100">
         <div className="container">
           <div className="row ">
+            
             <div className="col-lg-6">
-              <img src="https://picsum.photos/500/500" alt="" />
-              {/* <img src={JSON.parse(product.images)[0]} alt="" /> */}
+              {product ? (
+    <>
+      <img
+        src={product.images?.thumbnail}
+        alt={product.title}
+        style={{ maxWidth: "70%", height: "auto", marginBottom: "20px" }}
+      />
+    </>
+  ) : (
+    <p>Loading image...</p>
+  )}
+
+              
             </div>
             <div className="col-lg-6">
               {product ? (
