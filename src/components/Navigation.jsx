@@ -135,10 +135,10 @@ const Navigation = ({ lang = false }) => {
                                 <Link to="/error">Error</Link>
                             </li>
                             <li>
-                                <Link to="/shops">Shops</Link>
+                                <Link to="/shop">Shops</Link>
                             </li>
                             <li>
-                                <Link to="/shops/shop-details">
+                                <Link to="/shop/shop-details">
                                     Shop details
                                 </Link>
                             </li>

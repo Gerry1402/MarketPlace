@@ -418,12 +418,12 @@ const Drawer = ({ drawer, action, lang }) => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link to="/shops">
+                                                            <Link to="/shop">
                                                                 Shops
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link to="/shops/shop-details">
+                                                            <Link to="/shop/shop-details">
                                                                 Shop details
                                                             </Link>
                                                         </li>
