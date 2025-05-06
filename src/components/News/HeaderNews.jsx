@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../../assets/images/logo-7.png";
+import logo from "../../assets/images/logo.png";
 import StickyMenu from "../../lib/StickyMenu.js";
 import Navigation from "../Navigation.jsx";
 import { Link } from "react-router-dom";
