@@ -9,11 +9,10 @@ import shape5 from "../../assets/images/shape/5.png";
 import shape12 from "../../assets/images/shape/shape-12.png";
 import { useEffect } from "react";
 import supabase from "../Service/supabase.jsx";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Cart = ({ value, action }) => {
   const [cart, setCart] = useState([]);
-
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -30,15 +29,10 @@ const Cart = ({ value, action }) => {
       setCart(data);
     };
 
-
     fetchCart();
-
   }, []);
 
-
-
-
-    const updateQuantity = async (itemId, newQuantity) => {
+  const updateQuantity = async (itemId, newQuantity) => {
     const item = cart.find((i) => i.id === itemId);
     if (!item) return;
 
@@ -86,8 +80,8 @@ const Cart = ({ value, action }) => {
                   quantity: newQuantity,
                   product: { ...i.product, stock: newStock },
                 }
-              : i
-          )
+              : i,
+          ),
         );
       }
     }
@@ -105,71 +99,69 @@ const Cart = ({ value, action }) => {
             </div>
           </div>
           {cart && cart.length > 0 ? (
-      cart.map((item) => (
-    <div className="col-lg-12" key={item.id}>
-      <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-        <div className="thumb">
-          <img src={blog4} alt="" />
-        </div>
-        <div className="content">
-          <h5 className="title">
-            {item.product?.title || "Producto desconocido"}
-          </h5>
-          <div className="meta-item">
-            <ul>
-              <li>
-                <p>Price: ${item.product?.price}</p>
-              </li>
-              <li>
-                <p>Stock: {item.product?.stock}</p>
-              </li>
-            </ul>
-          </div>
-          
-          
+            cart.map((item) => (
+              <div className="col-lg-12" key={item.id}>
+                <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
+                  <div className="thumb">
+                    <img src={blog4} alt="" />
+                  </div>
+                  <div className="content">
+                    <h5 className="title">
+                      {item.product?.title || "Producto desconocido"}
+                    </h5>
+                    <div className="meta-item">
+                      <ul>
+                        <li>
+                          <p>Price: ${item.product?.price}</p>
+                        </li>
+                        <li>
+                          <p>Stock: {item.product?.stock}</p>
+                        </li>
+                      </ul>
+                    </div>
 
+                    <div className="shop-buttons d-block d-sm-flex align-items-center">
+                      <div className="product-quantity" id="quantity">
+                        <button
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity - 1)
+                          }
+                          type="button"
+                          className="sub"
+                        >
+                          -
+                        </button>
 
-          <div className="shop-buttons d-block d-sm-flex align-items-center">
-            <div className="product-quantity" id="quantity">
-              <button
-              onClick={() => updateQuantity(item.id, item.quantity - 1)}
-              type="button"
-              className="sub"
-              >
-              -
-              </button>
-
-              <input
-  onChange={(e) => {
-    const value = parseInt(e.target.value, 10);
-    if (!isNaN(value)) {
-      updateQuantity(item.id, value);
-    }
-  }}
-  type="text"
-  value={item.quantity}
-/>
-              <button
-  onClick={() => updateQuantity(item.id, item.quantity + 1)}
-  type="button"
-  className="add"
->
-  +
-</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ))
-) : (
-  <p>Loading cart...</p>
-)}
-
-
+                        <input
+                          onChange={(e) => {
+                            const value = parseInt(e.target.value, 10);
+                            if (!isNaN(value)) {
+                              updateQuantity(item.id, value);
+                            }
+                          }}
+                          type="text"
+                          value={item.quantity}
+                        />
+                        <button
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity + 1)
+                          }
+                          type="button"
+                          className="add"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>Loading cart...</p>
+          )}
         </div>
       </section>
-      
     </>
   );
 };

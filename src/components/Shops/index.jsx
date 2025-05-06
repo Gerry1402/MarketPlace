@@ -15,9 +15,10 @@ const Shops = () => {
   const [products, setProducts] = useState([]);
   const [shops, setShops] = useState([]);
   const [selectedShopId, setSelectedShopId] = useState(null);
+  const [categories, setCategories] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 6;
+  const productsPerPage = 21;
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(
@@ -42,6 +43,19 @@ const Shops = () => {
     setCurrentPage(1);
   };
 
+  const fetchCategories = async () => {
+    const { data, error } = await supabase.from("categories").select("*");
+
+    if (error) {
+      console.error("Error al obtener las categorias:", error.message || error);
+      return;
+    }
+
+    console.log("Categorías:", data);
+
+    setCategories(data);
+  };
+
   useEffect(() => {
     const fetchShops = async () => {
       const { data, error } = await supabase.from("shops").select("*");
@@ -57,6 +71,7 @@ const Shops = () => {
 
     fetchShops();
     fetchProducts();
+    fetchCategories();
   }, []);
 
   const handlePageClick = (pageNum) => {
@@ -91,7 +106,23 @@ const Shops = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 order-2 order-lg-1">
-              <SideBarFilter />
+              <div className="appie-shop-sidebar">
+                <div className="shop-category-widget">
+                  <h4 className="title">Product Categories</h4>
+                  <ul>
+                    {categories.map((category) => (
+                      <li key={category.id}>
+                        <a
+                          href="#"
+                          onClick={() => handleCategoryFilter(category.id)}
+                        >
+                          {category.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
             <div className="col-lg-9 order-1 order-lg-2">
               <div className="shop-grid-topbar d-flex justify-content-between align-items-center">

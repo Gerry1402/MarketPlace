@@ -28,7 +28,6 @@ const Details = () => {
   const [sizeName, setSizeName] = useState("");
   const [colorName, setColorName] = useState("");
 
-
   const detailsTabHandler = (e, value) => {
     e.preventDefault();
     setTab(value);
@@ -62,16 +61,14 @@ const Details = () => {
     ],
   };
 
-
   const quantityHandler = (e) => {
-  const value = parseInt(e.target.value, 10);
-  if (isNaN(value)) return;
+    const value = parseInt(e.target.value, 10);
+    if (isNaN(value)) return;
 
-  if (value >= 1 && value <= product.stock) {
-    setQuantity(value);
-  }
-};
-  
+    if (value >= 1 && value <= product.stock) {
+      setQuantity(value);
+    }
+  };
 
   useEffect(() => {
     const fetchProductById = async () => {
@@ -90,31 +87,31 @@ const Details = () => {
       setProduct(data);
 
       if (data.size_id) {
-      const { data: sizeData, error: sizeError } = await supabase
-        .from("sizes")
-        .select("name")
-        .eq("id", data.size_id)
-        .single();
+        const { data: sizeData, error: sizeError } = await supabase
+          .from("sizes")
+          .select("name")
+          .eq("id", data.size_id)
+          .single();
 
-      if (sizeError) {
-        console.error("Error al obtener el size:", sizeError);
-      } else {
-        setSizeName(sizeData.name);
-      }
+        if (sizeError) {
+          console.error("Error al obtener el size:", sizeError);
+        } else {
+          setSizeName(sizeData.name);
+        }
       }
 
       if (data.color_id) {
-      const { data: colorData, error: colorError } = await supabase
-        .from("colors")
-        .select("name")
-        .eq("id", data.color_id)
-        .single();
+        const { data: colorData, error: colorError } = await supabase
+          .from("colors")
+          .select("name")
+          .eq("id", data.color_id)
+          .single();
 
-      if (colorError) {
-        console.error("Error al obtener el color:", colorError);
-      } else {
-        setColorName(colorData.name);
-      }
+        if (colorError) {
+          console.error("Error al obtener el color:", colorError);
+        } else {
+          setColorName(colorData.name);
+        }
       }
     };
 
@@ -164,51 +161,48 @@ const Details = () => {
   //   addToCart();
   // };
 
-
   const addCart = (quantityToAdd) => {
-  if (!product || quantityToAdd <= 0) return;
+    if (!product || quantityToAdd <= 0) return;
 
-  if (quantityToAdd > product.stock) {
-    alert("No hay suficiente stock disponible.");
-    return;
-  }
-
-  const addToCart = async () => {
-    const { data, error } = await supabase
-      .from("cart")
-      .insert([
-        {
-          product_id: idProduct,
-          quantity: quantityToAdd,
-        },
-      ])
-      .select("*");
-
-    if (error) {
-      console.error("Error al agregar producto al carrito:", error);
+    if (quantityToAdd > product.stock) {
+      alert("No hay suficiente stock disponible.");
       return;
     }
 
-    const newStock = product.stock - quantityToAdd;
+    const addToCart = async () => {
+      const { data, error } = await supabase
+        .from("cart")
+        .insert([
+          {
+            product_id: idProduct,
+            quantity: quantityToAdd,
+          },
+        ])
+        .select("*");
 
-    const { error: stockError } = await supabase
-      .from("products")
-      .update({ stock: newStock })
-      .eq("id", idProduct);
+      if (error) {
+        console.error("Error al agregar producto al carrito:", error);
+        return;
+      }
 
-    if (stockError) {
-      console.error("Error actualizando el stock del producto:", stockError);
-      return;
-    }
+      const newStock = product.stock - quantityToAdd;
 
-    setProduct({ ...product, stock: newStock });
-    setQuantity(1);
+      const { error: stockError } = await supabase
+        .from("products")
+        .update({ stock: newStock })
+        .eq("id", idProduct);
+
+      if (stockError) {
+        console.error("Error actualizando el stock del producto:", stockError);
+        return;
+      }
+
+      setProduct({ ...product, stock: newStock });
+      setQuantity(1);
+    };
+
+    addToCart();
   };
-
-  addToCart();
-};
-
-
 
   return (
     <>
@@ -249,70 +243,66 @@ const Details = () => {
                   <p>{product.description}</p>
                   <p>Stock: {product.stock}</p>
 
-
-          
-
-{product.stock > 0 ? (
-                  <div className="shop-buttons d-block d-sm-flex align-items-center">
-                    <div className="product-quantity" id="quantity">
-                      <button
-                        onClick={() =>
-                          quantity > 1 && setQuantity(quantity - 1)
-                        }
-                        type="button"
-                        id="sub"
-                        className="sub"
-                      >
-                        -
-                      </button>
-                      <input
-                        onChange={(e) => quantityHandler(e)}
-                        type="text"
-                        id="1"
-                        value={quantity}
-                      />
-                      <button
-  onClick={() =>
-    quantity < product.stock && setQuantity(quantity + 1)
-  }
-  type="button"
-  id="add"
-  className="add"
->
-  +
-</button>
+                  {product.stock > 0 ? (
+                    <div className="shop-buttons d-block d-sm-flex align-items-center">
+                      <div className="product-quantity" id="quantity">
+                        <button
+                          onClick={() =>
+                            quantity > 1 && setQuantity(quantity - 1)
+                          }
+                          type="button"
+                          id="sub"
+                          className="sub"
+                        >
+                          -
+                        </button>
+                        <input
+                          onChange={(e) => quantityHandler(e)}
+                          type="text"
+                          id="1"
+                          value={quantity}
+                        />
+                        <button
+                          onClick={() =>
+                            quantity < product.stock &&
+                            setQuantity(quantity + 1)
+                          }
+                          type="button"
+                          id="add"
+                          className="add"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <Link to={"/Cart/index"} className="main-btn ml-10">
+                        <button
+                          onClick={() => addCart(quantity)}
+                          style={{
+                            background: "none",
+                            border: "none",
+                            padding: 0,
+                            margin: 0,
+                            cursor: "pointer",
+                          }}
+                        >
+                          Add to Cart
+                        </button>
+                      </Link>
                     </div>
-                    <Link to={"/Cart/index"} className="main-btn ml-10">
-                      <button
-                        onClick={() => addCart(quantity)}
-                        style={{
-                          background: "none",
-                          border: "none",
-                          padding: 0,
-                          margin: 0,
-                          cursor: "pointer",
-                        }}
-                      >
-                        Add to Cart
-                      </button>
-                    </Link>
-                  </div>
                   ) : (
-              <div
-                className="alert alert-danger mt-3"
-                style={{
-                  backgroundColor: "#f8d7da",
-                  color: "#721c24",
-                  padding: "10px",
-                  borderRadius: "5px",
-                  border: "1px solid #f5c6cb",
-                }}
-              >
-              Producto agotado
-            </div>
-)}
-
-
+                    <div
+                      className="alert alert-danger mt-3"
+                      style={{
+                        backgroundColor: "#f8d7da",
+                        color: "#721c24",
+                        padding: "10px",
+                        borderRadius: "5px",
+                        border: "1px solid #f5c6cb",
+                      }}
+                    >
+                      Producto agotado
+                    </div>
+                  )}
 
                   <div className="details-info">
                     <ul>

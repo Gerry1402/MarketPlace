@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import product from "../../assets/images/shop-details-thumb-1.jpg";
 
 const Card = ({ cardData }) => {
-  // console.log(cardData);
   const handleError = (e) => {
     e.target.src = productImg;
   };
@@ -35,17 +34,18 @@ const Card = ({ cardData }) => {
               </li>
             </ul>
           </div>
-          
         </div>
         <div className="content">
-          
           <br />
           <div href="#">{cardData.title}</div>
           <div className="pricing">
             {cardData.discount ? (
               <>
                 <div className="discount-price mr-15">
-                  {cardData.price * (1 - cardData.discount / 100)}$
+                  {Math.round(
+                    cardData.price * (1 - cardData.discount / 100) * 100,
+                  ) / 100}
+                  $
                 </div>
                 <div className="regular-price">{cardData.price}$</div>
               </>
@@ -53,7 +53,7 @@ const Card = ({ cardData }) => {
               <div className="discount-price">{cardData.price}$</div>
             )}
           </div>
-          {/* {cardData.handmade && (
+          {cardData.handmade && (
             <div
               className="handmade-icon"
               style={{
@@ -63,10 +63,10 @@ const Card = ({ cardData }) => {
                 gap: "8px",
               }}
             >
-            <i className="fas fa-hands" style={{ fontSize: "1rem" }}></i>
-            <span>Handmade Product</span>
-          </div>
-          )} */}
+              <i className="fas fa-hands" style={{ fontSize: "1rem" }}></i>
+              <span>Handmade Product</span>
+            </div>
+          )}
         </div>
       </div>
     </>
