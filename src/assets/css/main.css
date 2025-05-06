@@ -18,6 +18,7 @@
     .appie-hero-area {
       position: relative;
       overflow: hidden;
+      min-height: 45vh;
     }
     
     /* Slider de fondo (ya lo tenías) */
@@ -2403,16 +2404,38 @@ p {
 
 .appie-single-service {
   padding: 50px 30px 43px;
-  background: #fff;
+  background:transparent;
   border-radius: 6px;
   transition: all linear 0.3s;
+  box-shadow: none;
 }
+/* configuracion para los iconos */
+.appie-single-service .icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: none;
+  margin: 0 auto 20px;
+}
+.appie-single-service .icon img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 0
+}
+
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .appie-single-service {
     padding: 50px 15px 43px;
   }
 }
-.appie-single-service .icon {
+
+/* .appie-single-service .icon {
   display: inline-block;
   border-radius: 20px;
   height: 70px;
@@ -2422,7 +2445,8 @@ p {
   background: linear-gradient(135deg, #84bcfa 0%, #2b70fa 100%);
   box-shadow: 0px 6px 10px 0px rgba(16, 73, 189, 0.3);
   position: relative;
-}
+} */
+
 .appie-single-service .icon > span {
   position: absolute;
   right: -10px;
@@ -2446,24 +2470,24 @@ p {
   box-shadow: 0px 40px 40px 0px rgba(14, 17, 51, 0.1);
   transform: translateY(-15px);
 }
-.appie-single-service.item-2 .icon {
-  background: linear-gradient(135deg, #f7b8af 0%, #f8452d 100%);
-}
-.appie-single-service.item-2 .icon span {
+/* .appie-single-service.item-2 .icon {
+  background: linear-gradient(135deg, #969494 0%, #292828 100%);
+} */
+/* .appie-single-service.item-2 .icon span {
   background: #f8452d;
-}
-.appie-single-service.item-3 .icon {
-  background: linear-gradient(135deg, #a0eac2 0%, #31c369 100%);
-}
-.appie-single-service.item-3 .icon span {
+} */
+/* .appie-single-service.item-3 .icon {
+  background: #F7E018
+} */
+/* .appie-single-service.item-3 .icon span {
   background: #31c369;
-}
-.appie-single-service.item-4 .icon {
-  background: linear-gradient(135deg, #d8aaff 0%, #9b2cfa 100%);
-}
-.appie-single-service.item-4 .icon span {
+} */
+/* .appie-single-service.item-4 .icon {
+  background: linear-gradient(135deg,#271148 0 0%,#6b5097 100%);
+} */
+/* .appie-single-service.item-4 .icon span {
   background: #9b2cfa;
-}
+} */
 .appie-single-service.appie-single-services-3 {
   background: transparent;
 }
@@ -3058,6 +3082,13 @@ p {
   }
 }
 
+.appie-traffic-area .traffic-thumb img {
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 .appie-traffic-title {
   padding-right: 220px;
   margin-bottom: 43px;
@@ -3138,6 +3169,16 @@ p {
   font-weight: 700;
   padding-bottom: 7px;
 }
+.appie-traffic-service .icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+
+
+
 .appie-traffic-service p {
   font-size: 15px;
 }
@@ -5463,9 +5504,17 @@ blockquote cite {
 }
 .appie-project-area .appie-project-box .appie-project-thumb {
   position: absolute;
-  right: 70px;
-  bottom: 0;
+  right: 30%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
 }
+.appie-project-area .input-box .main-btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .appie-project-area .appie-project-box .appie-project-thumb {
     right: 30px;

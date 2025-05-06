@@ -23,22 +23,16 @@ const HomeOne = () => {
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HomeOneHeader action={drawerAction.toggle} />
-
-            {/* Primero el Hero */}
             <HeroHomeOne />
-
-            {/* Luego el bloque de Proyecto Destacado */}
             <ProjectHighlight />
-
-            {/* Resto de secciones */}
             <ServicesHomeOne />
-            <FeaturesHomeOne />
             <TrafficHomeOne />
             <TestimonialHomeOne />
+            {/* <FeaturesHomeOne /> */}
             <TeamHomeOne />
-            <PricingHomeOne />
-            <FaqHomeOne />
-            <BlogHomeOne />
+            {/* <PricingHomeOne /> */}
+            {/* <FaqHomeOne /> */}
+            {/* <BlogHomeOne /> */}
             <ProjectHomeOne />
             <FooterHomeOne />
             <BackToTop />
