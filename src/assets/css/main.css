@@ -961,7 +961,7 @@ p {
   background: linear-gradient(90deg, #6b1fcd 0%, #374ede 100%);
 }
 .appie-header-area.appie-header-page-area.appie-sticky.sticky {
-  background: #0a44b9;
+  background: #000000;
 }
 .appie-header-area.appie-header-7-area.appie-sticky.sticky {
   background: #290645;
@@ -1019,8 +1019,8 @@ header.appie-header-area.appie-sticky.sticky .main-btn {
 
 /* Estado sticky */
 .appie-header-area.appie-sticky.sticky .appie-btn-box .main-btn {
-  background-color: #2b70fa !important;
-  border-color:    #2b70fa !important;
+  background-color:  #2434f0 !important;
+  border-color:     #2434f0 !important;
   color:           #fff   !important;
   display:         inline-block !important;
   visibility:      visible !important;
@@ -1033,6 +1033,8 @@ header.appie-header-area.appie-sticky.sticky .main-btn {
   background-color: #fff   !important;
   color:            #2b70fa !important;
 }
+
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
