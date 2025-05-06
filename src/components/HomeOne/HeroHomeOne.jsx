@@ -1,75 +1,69 @@
-import React from "react";
-import heroThumbOne from "../../assets/images/hero-thumb-1.png";
-import heroThumbTwo from "../../assets/images/hero-thumb-2.png";
-import shapeTwo from "../../assets/images/shape/shape-2.png";
-import shapeThree from "../../assets/images/shape/shape-3.png";
-import shapeFour from "../../assets/images/shape/shape-4.png";
+import React, { useState, useEffect } from "react";
+import slide1 from "../../assets/images/ecomerce1.jpg";
+import slide2 from "../../assets/images/ecomerce2.png";
+import slide3 from "../../assets/images/ecomerce3.png";
 
 const HeroHomeOne = ({ className }) => {
-    return (
-        <>
-            <section className={`appie-hero-area ${className || ""}`}>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="appie-hero-content">
-                                <span>Welcome To Appie</span>
-                                <h1 className="appie-title">
-                                    Manage it all, in this all new system.
-                                </h1>
-                                <p>
-                                    Hanky panky lavatory up the duff jolly good
-                                    cack brolly is chinwag zonked happy days
-                                    sloshed.
-                                </p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-apple" />{" "}
-                                            Download for iOS
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="item-2" href="#">
-                                            <i className="fab fa-google-play" />{" "}
-                                            Download for Android
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="appie-hero-thumb">
-                                <div
-                                    className="thumb wow animated fadeInUp"
-                                    data-wow-duration="2000ms"
-                                    data-wow-delay="200ms"
-                                >
-                                    <img src={heroThumbOne} alt="" />
-                                </div>
-                                <div
-                                    className="thumb-2 wow animated fadeInRight"
-                                    data-wow-duration="2000ms"
-                                    data-wow-delay="600ms"
-                                >
-                                    <img src={heroThumbTwo} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="hero-shape-1">
-                    <img src={shapeTwo} alt="" />
-                </div>
-                <div className="hero-shape-2">
-                    <img src={shapeThree} alt="" />
-                </div>
-                <div className="hero-shape-3">
-                    <img src={shapeFour} alt="" />
-                </div>
-            </section>
-        </>
-    );
+  const slides = [slide1, slide2, slide3];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const iv = setInterval(() => {
+      setCurrent((c) => (c + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(iv);
+  }, [slides.length]);
+
+  // Estilo para cada línea
+  const lineStyle = {
+    display: "inline-block",
+    backgroundColor: "#1c2f5f",  // azul oscuro
+    color: "#fff",
+    padding: "0.5rem 1rem",
+    borderRadius: "0.25rem",
+    margin: "0.25rem 0",
+    fontSize: "2rem",
+    lineHeight: 1.2,
+  };
+
+  return (
+    <section className={`appie-hero-area ${className || ""}`}>
+      <div className="hero-slides">
+        {slides.map((img, i) => (
+          <div
+            key={i}
+            className={`slide ${i === current ? "active" : ""}`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+      </div>
+      <div className="hero-overlay">
+        <h2 style={{ margin: 0 }}>
+          <span style={lineStyle}>
+            Everything you need with
+          </span>
+          <br />
+          <span style={lineStyle}>
+            just one CLICK
+          </span>
+        </h2>
+        <p style={{ color: "#fff", marginTop: "1rem" }}>
+          Visit our website for more information!
+        </p>
+        <a
+          href="#equipo"
+          className="main-btn"
+          style={{
+            color: "#fff",
+            borderColor: "#fff",
+            marginTop: "1.5rem",
+          }}
+        >
+          VIEW
+        </a>
+      </div>
+    </section>
+  );
 };
 
 export default HeroHomeOne;

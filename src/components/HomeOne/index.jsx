@@ -14,6 +14,7 @@ import ServicesHomeOne from "./ServicesHomeOne.jsx";
 import TeamHomeOne from "./TeamHomeOne.jsx";
 import TestimonialHomeOne from "./TestimonialHomeOne.jsx";
 import TrafficHomeOne from "./TrafficHomeOne.jsx";
+import ProjectHighlight from "./proyectHighLight.jsx";
 
 const HomeOne = () => {
     const [drawer, drawerAction] = useToggle(false);
@@ -23,14 +24,15 @@ const HomeOne = () => {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HomeOneHeader action={drawerAction.toggle} />
             <HeroHomeOne />
+            <ProjectHighlight />
             <ServicesHomeOne />
-            <FeaturesHomeOne />
             <TrafficHomeOne />
             <TestimonialHomeOne />
+            {/* <FeaturesHomeOne /> */}
             <TeamHomeOne />
-            <PricingHomeOne />
-            <FaqHomeOne />
-            <BlogHomeOne />
+            {/* <PricingHomeOne /> */}
+            {/* <FaqHomeOne /> */}
+            {/* <BlogHomeOne /> */}
             <ProjectHomeOne />
             <FooterHomeOne />
             <BackToTop />
