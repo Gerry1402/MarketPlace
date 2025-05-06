@@ -220,13 +220,13 @@ const Details = () => {
         <div className="container">
           <div className="row ">
             
-            <div className="col-lg-6">
+            <div className="col-lg-6 d-flex justify-content-center">
               {product ? (
     <>
       <img
         src={product.images?.thumbnail}
         alt={product.title}
-        style={{ maxWidth: "70%", height: "auto", marginBottom: "20px" }}
+        style={{ maxWidth: "80%", height: "auto", marginBottom: "20px" }}
       />
     </>
   ) : (
@@ -244,7 +244,10 @@ const Details = () => {
                     {product.discount ? (
                       <>
                         <div className="discount-price mr-15">
-                          {product.price * (1 - product.discount / 100)}$
+                          {Math.round(
+                    product.price * (1 - product.discount / 100) * 100,
+                  ) / 100}
+                  $
                         </div>
                         <div className="regular-price">{product.price}$</div>
                       </>

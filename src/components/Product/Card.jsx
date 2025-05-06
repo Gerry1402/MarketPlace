@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import product from "../../assets/images/shop-details-thumb-1.jpg";
 
 const Card = ({ cardData }) => {
-
-  console.log("Card Data:", cardData.images.thumbnail);
   const handleError = (e) => {
     e.target.src = productImg;
   };

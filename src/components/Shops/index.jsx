@@ -16,6 +16,7 @@ const Shops = () => {
   const [shops, setShops] = useState([]);
   const [selectedShopId, setSelectedShopId] = useState(null);
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 21;
@@ -27,10 +28,31 @@ const Shops = () => {
   );
   const totalPages = Math.ceil(products.length / productsPerPage);
 
-  const fetchProducts = async (shopId = null) => {
-    const { data, error } = shopId
-      ? await supabase.from("products").select("*").eq("shop_id", shopId)
-      : await supabase.from("products").select("*");
+  const fetchProducts = async (shopId = null, categoryId = null) => {
+    let data, error;
+
+      if (shopId && categoryId) {
+    ({ data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("shop_id", shopId)
+      .eq("categories_id", categoryId));
+  } else if (shopId) {
+    ({ data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("shop_id", shopId));
+  } else if (categoryId) {
+    ({ data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("categories_id", categoryId));
+  } else {
+    ({ data, error } = await supabase.from("products").select("*"));
+  }
+
+
+
 
     if (error) {
       console.error("Error al obtener los productos:", error.message || error);
@@ -91,6 +113,11 @@ const Shops = () => {
     fetchProducts(selectedId);
   };
 
+  const handleCategoryFilter = (categoryId) => {
+  setSelectedCategory(categoryId);
+  fetchProducts(null, categoryId);
+};
+
   return (
     <>
       <Drawer drawer={drawer} action={drawerAction.toggle} />
@@ -110,11 +137,21 @@ const Shops = () => {
                 <div className="shop-category-widget">
                   <h4 className="title">Product Categories</h4>
                   <ul>
+                    <li>
+                      
+                      <a href=""
+                        onClick={(e) => {
+                        e.preventDefault();
+                        handleCategoryFilter(null);
+                        }}>Show all</a>
+                    </li>
                     {categories.map((category) => (
                       <li key={category.id}>
                         <a
-                          href="#"
-                          onClick={() => handleCategoryFilter(category.id)}
+                          href=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleCategoryFilter(category.id)}}
                         >
                           {category.name}
                         </a>
