@@ -19,7 +19,7 @@ const Card = ({ cardData }) => {
             alt=""
           />
           <div className="reborn">
-            <span>Sale</span>
+            <span>{cardData.stock > 0 ? "Sale" : "No Sale"}</span>
           </div>
           <div className="cart-list-icon">
             <ul>
@@ -35,10 +35,12 @@ const Card = ({ cardData }) => {
               </li>
             </ul>
           </div>
+          
         </div>
         <div className="content">
+          
           <br />
-          <div href="#">{cardData.name}</div>
+          <div href="#">{cardData.title}</div>
           <div className="pricing">
             {cardData.discount ? (
               <>
@@ -51,6 +53,20 @@ const Card = ({ cardData }) => {
               <div className="discount-price">{cardData.price}$</div>
             )}
           </div>
+          {/* {cardData.handmade && (
+            <div
+              className="handmade-icon"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                color: "green",
+                gap: "8px",
+              }}
+            >
+            <i className="fas fa-hands" style={{ fontSize: "1rem" }}></i>
+            <span>Handmade Product</span>
+          </div>
+          )} */}
         </div>
       </div>
     </>

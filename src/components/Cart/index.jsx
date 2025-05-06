@@ -9,9 +9,11 @@ import shape5 from "../../assets/images/shape/5.png";
 import shape12 from "../../assets/images/shape/shape-12.png";
 import { useEffect } from "react";
 import supabase from "../Service/supabase.jsx";
+import {Link} from 'react-router-dom';
 
 const Cart = ({ value, action }) => {
   const [cart, setCart] = useState([]);
+
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -28,8 +30,69 @@ const Cart = ({ value, action }) => {
       setCart(data);
     };
 
+
     fetchCart();
+
   }, []);
+
+
+
+
+    const updateQuantity = async (itemId, newQuantity) => {
+    const item = cart.find((i) => i.id === itemId);
+    if (!item) return;
+
+    const currentQuantity = item.quantity;
+    const quantityDiff = newQuantity - currentQuantity;
+    const productId = item.product.id;
+    const currentStock = item.product.stock;
+
+    const newStock = currentStock - quantityDiff;
+    if (newStock < 0) {
+      alert("No hay suficiente stock disponible.");
+      return;
+    }
+
+    const stockUpdate = await supabase
+      .from("products")
+      .update({ stock: newStock })
+      .eq("id", productId);
+
+    if (stockUpdate.error) {
+      console.error("Error actualizando el stock:", stockUpdate.error);
+      return;
+    }
+
+    if (newQuantity <= 0) {
+      const { error } = await supabase.from("cart").delete().eq("id", itemId);
+      if (error) {
+        console.error("Error eliminando del carrito:", error);
+      } else {
+        setCart((prev) => prev.filter((i) => i.id !== itemId));
+      }
+    } else {
+      const { error } = await supabase
+        .from("cart")
+        .update({ quantity: newQuantity })
+        .eq("id", itemId);
+      if (error) {
+        console.error("Error actualizando el carrito:", error);
+      } else {
+        setCart((prev) =>
+          prev.map((i) =>
+            i.id === itemId
+              ? {
+                  ...i,
+                  quantity: newQuantity,
+                  product: { ...i.product, stock: newStock },
+                }
+              : i
+          )
+        );
+      }
+    }
+  };
+
   return (
     <>
       <section className="appie-blog-3-area appie-blog-8-area pt-90 pb-100">
@@ -42,205 +105,71 @@ const Cart = ({ value, action }) => {
             </div>
           </div>
           {cart && cart.length > 0 ? (
-            cart.map((item) => (
-              <div className="col-lg-12" key={item.id}>
-                <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-                  <div className="thumb">
-                    <img src={blog4} alt="" />
-                  </div>
-                  <div className="content">
-                    <h5 className="title">
-                      {item.product?.name || "Producto desconocido"}
-                    </h5>
-                    <div className="meta-item">
-                      <ul>
-                        <li>
-                          <p>Price: ${item.product?.price}</p>
-                        </li>
-                        <li>
-                          <p>Stock: {item.quantity}</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <button
-                      style={{
-                        background: "none",
-                        border: "none",
-                        padding: 0,
-                        margin: 0,
-                        cursor: "pointer",
-                      }}
-                    >
-                      <i className="fas fa-trash"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p>Loading cart...</p>
-          )}
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-                <div className="thumb">
-                  <img src={blog4} alt="" />
-                </div>
-                <div className="content">
-                  <h5 className="title">
-                    <a href="/news/single-news">
-                      How to Improve Your App Store Position
-                    </a>
-                  </h5>
+      cart.map((item) => (
+    <div className="col-lg-12" key={item.id}>
+      <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
+        <div className="thumb">
+          <img src={blog4} alt="" />
+        </div>
+        <div className="content">
+          <h5 className="title">
+            {item.product?.title || "Producto desconocido"}
+          </h5>
+          <div className="meta-item">
+            <ul>
+              <li>
+                <p>Price: ${item.product?.price}</p>
+              </li>
+              <li>
+                <p>Stock: {item.product?.stock}</p>
+              </li>
+            </ul>
+          </div>
+          
+          
 
-                  <div className="meta-item">
-                    <ul>
-                      <li>
-                        <i className="fal fa-clock"></i> July 14, 2022
-                      </li>
-                      <li>
-                        <i className="fal fa-comments"></i> July 14, 2022
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-12">
-              <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-                <div className="thumb">
-                  <img src={blog5} alt="" />
-                </div>
-                <div className="content">
-                  <h5 className="title">
-                    <a href="/news/single-news">
-                      Introducing New App Design for our iOS App
-                    </a>
-                  </h5>
-                  <div className="meta-item">
-                    <ul>
-                      <li>
-                        <i className="fal fa-clock"></i> July 14, 2022
-                      </li>
-                      <li>
-                        <i className="fal fa-comments"></i> July 14, 2022
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-12">
-              <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
-                <div className="thumb">
-                  <img src={blog6} alt="" />
-                </div>
-                <div className="content">
-                  <h5 className="title">
-                    <a href="#">
-                      Engineering job is Becoming More interesting.
-                    </a>
-                  </h5>
-                  <div className="meta-item">
-                    <ul>
-                      <li>
-                        <i className="fal fa-clock"></i> July 14, 2022
-                      </li>
-                      <li>
-                        <i className="fal fa-comments"></i> July 14, 2022
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-12">
-              <div className="blog-btn text-center mt-60">
-                <a className="main-btn" href="#">
-                  View All Posts <i className="fal fa-arrow-right"></i>
-                </a>
-              </div>
+
+          <div className="shop-buttons d-block d-sm-flex align-items-center">
+            <div className="product-quantity" id="quantity">
+              <button
+              onClick={() => updateQuantity(item.id, item.quantity - 1)}
+              type="button"
+              className="sub"
+              >
+              -
+              </button>
+
+              <input
+  onChange={(e) => {
+    const value = parseInt(e.target.value, 10);
+    if (!isNaN(value)) {
+      updateQuantity(item.id, value);
+    }
+  }}
+  type="text"
+  value={item.quantity}
+/>
+              <button
+  onClick={() => updateQuantity(item.id, item.quantity + 1)}
+  type="button"
+  className="add"
+>
+  +
+</button>
             </div>
           </div>
         </div>
-        <div className="appie-blog-8-shape-1">
-          <img src={shape5} alt="" />
-        </div>
-        <div className="appie-blog-8-shape-2">
-          <img src={shape12} alt="" />
+      </div>
+    </div>
+  ))
+) : (
+  <p>Loading cart...</p>
+)}
+
+
         </div>
       </section>
-      <div className="amm-shopping-cart-wrapper">
-        <div className={`amm-shopping-cart-canvas ${value ? "open" : ""}`}>
-          <div className="amm-shopping_cart">
-            <div className="amm-shopping_cart-top-bar d-flex justify-content-between">
-              <h6>Shopping Cart</h6>
-              <button
-                type="button"
-                onClick={action}
-                className="amm-shopping-cart-close"
-              >
-                <i className="fas fa-times"></i>
-              </button>
-            </div>
-            <div className="amm-shopping_cart-list-items mt-30">
-              <ul>
-                <li>
-                  <div className="amm-single-shopping-cart media">
-                    <div className="cart-image">
-                      <img src={cart1} alt="Cart" />
-                    </div>
-                    <div className="cart-content media-body pl-15">
-                      <h6>
-                        <a href="#">Banana</a>
-                      </h6>
-                      <span className="quality">QTY: 01</span>
-                      <span className="price">$205.00</span>
-                      <a className="remove" href="#">
-                        <i className="fa fa-times"></i>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="amm-single-shopping-cart media">
-                    <div className="cart-image">
-                      <img src={cart2} alt="Cart" />
-                    </div>
-                    <div className="cart-content media-body pl-15">
-                      <h6>
-                        <a href="#">Grape</a>
-                      </h6>
-                      <span className="quality">QTY: 01</span>
-                      <span className="price-discount">$205.00</span>
-                      <span className="price-close">$205.00</span>
-                      <a className="remove" href="#">
-                        <i className="fa fa-times"></i>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="amm-shopping_cart-btn">
-              <div className="total pt-35 d-flex justify-content-between">
-                <h5>Subtotal:</h5>
-                <p>$240.00</p>
-              </div>
-              <div className="cart-btn pt-25">
-                <a className="main-btn" href="#">
-                  View Cart
-                </a>
-                <a className="main-btn main-btn-2" href="#">
-                  Checkout
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={`overlay ${value ? "open" : ""}`}></div>
-      </div>
+      
     </>
   );
 };
