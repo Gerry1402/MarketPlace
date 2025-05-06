@@ -1,9 +1,9 @@
 import React from "react";
 import productImg from "../../assets/images/shop-grid-1.jpg";
 import { Link } from "react-router-dom";
+import product from "../../assets/images/shop-details-thumb-1.jpg";
 
 const Card = ({ cardData }) => {
-  console.log(cardData);
   const handleError = (e) => {
     e.target.src = productImg;
   };
@@ -14,18 +14,18 @@ const Card = ({ cardData }) => {
           <img
             className="appie-card-img"
             onError={handleError}
-            src={cardData.image}
+            src={cardData.images}
             alt=""
           />
           <div className="reborn">
-            <span>Sale</span>
+            <span>{cardData.stock > 0 ? "Sale" : "No Sale"}</span>
           </div>
           <div className="cart-list-icon">
             <ul>
               <li>
-                <a href="#">
+                <Link to={"/Cart/index"}>
                   <i className="fal fa-shopping-bag"></i>
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to={`/shops/shop-details/${cardData.id}`}>
@@ -36,28 +36,37 @@ const Card = ({ cardData }) => {
           </div>
         </div>
         <div className="content">
-          <ul>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star-half-alt"></i>
-            </li>
-          </ul>
-          <a href="#">{cardData.title}</a>
+          <br />
+          <div href="#">{cardData.title}</div>
           <div className="pricing">
-            <div className="discount-price">${cardData.price} </div>
-            <div className="regular-price">$180.00</div>
+            {cardData.discount ? (
+              <>
+                <div className="discount-price mr-15">
+                  {Math.round(
+                    cardData.price * (1 - cardData.discount / 100) * 100,
+                  ) / 100}
+                  $
+                </div>
+                <div className="regular-price">{cardData.price}$</div>
+              </>
+            ) : (
+              <div className="discount-price">{cardData.price}$</div>
+            )}
           </div>
+          {cardData.handmade && (
+            <div
+              className="handmade-icon"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                color: "green",
+                gap: "8px",
+              }}
+            >
+              <i className="fas fa-hands" style={{ fontSize: "1rem" }}></i>
+              <span>Handmade Product</span>
+            </div>
+          )}
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -15,13 +15,19 @@ import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
 import Drawer from "../Mobile/Drawer.jsx";
 import HeaderNews from "../News/HeaderNews.jsx";
 import HeroNews from "../News/HeroNews.jsx";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import supabase from "../Service/supabase.jsx";
 
 const Details = () => {
   const [drawer, drawerAction] = useToggle(false);
   const [quantity, setQuantity] = useState(1);
   const [detailsTab, setTab] = useState("review");
   const { idProduct } = useParams();
+  const [product, setProduct] = useState(null);
+  const [reviews, setReviews] = useState([]);
+  const [sizeName, setSizeName] = useState("");
+  const [colorName, setColorName] = useState("");
+
   const detailsTabHandler = (e, value) => {
     e.preventDefault();
     setTab(value);
@@ -56,7 +62,146 @@ const Details = () => {
   };
 
   const quantityHandler = (e) => {
-    setQuantity(e.target.value);
+    const value = parseInt(e.target.value, 10);
+    if (isNaN(value)) return;
+
+    if (value >= 1 && value <= product.stock) {
+      setQuantity(value);
+    }
+  };
+
+  useEffect(() => {
+    const fetchProductById = async () => {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("id", idProduct)
+        .single();
+
+      if (error) {
+        console.error("Error al obtener el producto:", error);
+        return;
+      }
+
+      console.log("Producto:", data);
+      setProduct(data);
+
+      if (data.size_id) {
+        const { data: sizeData, error: sizeError } = await supabase
+          .from("sizes")
+          .select("name")
+          .eq("id", data.size_id)
+          .single();
+
+        if (sizeError) {
+          console.error("Error al obtener el size:", sizeError);
+        } else {
+          setSizeName(sizeData.name);
+        }
+      }
+
+      if (data.color_id) {
+        const { data: colorData, error: colorError } = await supabase
+          .from("colors")
+          .select("name")
+          .eq("id", data.color_id)
+          .single();
+
+        if (colorError) {
+          console.error("Error al obtener el color:", colorError);
+        } else {
+          setColorName(colorData.name);
+        }
+      }
+    };
+
+    const fetchReviews = async () => {
+      const { data, error } = await supabase
+        .from("reviews")
+        .select("*")
+        .eq("product", idProduct);
+
+      if (error) {
+        console.error("Error al obtener el reviews:", error);
+        return;
+      }
+
+      console.log("Reviews:", data);
+      setReviews(data);
+    };
+
+    if (idProduct) {
+      fetchProductById();
+      fetchReviews();
+    }
+  }, [idProduct]);
+
+  // const addCart = (quantity) => {
+  //   const addToCart = async () => {
+  //     const { data, error } = await supabase
+  //       .from("cart")
+  //       .insert([
+  //         {
+  //           product_id: idProduct,
+  //           quantity: quantity,
+  //         },
+  //       ])
+  //       .select("*");
+
+  //     console.log(quantity);
+
+  //     if (error) {
+  //       console.error("Error al agregar producto al carrito:", error);
+  //       return;
+  //     }
+
+  //     console.log("Producto agregado al carrito:", data);
+  //   };
+
+  //   addToCart();
+  // };
+
+  const addCart = (quantityToAdd) => {
+    if (!product || quantityToAdd <= 0) return;
+
+    if (quantityToAdd > product.stock) {
+      alert("No hay suficiente stock disponible.");
+      return;
+    }
+
+    const addToCart = async () => {
+      const { data, error } = await supabase
+        .from("cart")
+        .insert([
+          {
+            product_id: idProduct,
+            quantity: quantityToAdd,
+          },
+        ])
+        .select("*");
+
+      if (error) {
+        console.error("Error al agregar producto al carrito:", error);
+        return;
+      }
+
+      const newStock = product.stock - quantityToAdd;
+
+      const { error: stockError } = await supabase
+        .from("products")
+        .update({ stock: newStock })
+        .eq("id", idProduct);
+
+      if (stockError) {
+        console.error("Error actualizando el stock del producto:", stockError);
+        return;
+      }
+
+      setProduct({ ...product, stock: newStock });
+      setQuantity(1);
+    };
+
+    addToCart();
   };
 
   return (
@@ -75,144 +220,113 @@ const Details = () => {
         <div className="container">
           <div className="row ">
             <div className="col-lg-6">
-              <div className="shop-details-thumb">
-                <div className="shop-details-thumb-slider-active">
-                  <Slider ref={sliderRef} autoplay="true">
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                    <div className="item">
-                      <img src={product} alt="" />
-                    </div>
-                  </Slider>
-                </div>
-              </div>
-              <div className="shop-small-slider-active mt-10">
-                <Slider ref={miniSliderRef} {...settings}>
-                  <div className="item">
-                    <img src={smProductImg1} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg3} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg4} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                  <div className="item">
-                    <img src={smProductImg2} alt="" />
-                  </div>
-                </Slider>
-              </div>
+              <img src="https://picsum.photos/500/500" alt="" />
+              {/* <img src={JSON.parse(product.images)[0]} alt="" /> */}
             </div>
             <div className="col-lg-6">
-              <div className="shop-product-details-content pl-70 mt-35">
-                <span>In stock</span>
-                <div>Id product</div>
-                {idProduct}
-                <h2 className="title">Smartwatch with Music</h2>
-                <div className="pricing">
-                  <div className="discount-price mr-15">$114.00</div>
-                  <div className="regular-price">$172.00</div>
-                </div>
-                <div className="review">
-                  <ul>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star"></i>
-                    </li>
-                    <li>
-                      <i className="fas fa-star-half-alt"></i>
-                    </li>
-                  </ul>
-                  <span>(4 reviews)</span>
-                </div>
-                <p>
-                  So I said nancy boy he lost his bottle smashing mush brolly
-                  victoria sponge loo, bobby say Charles gutted mate bugger
-                  fanny around, lurgy grub some dodgy chav blatant blag me old
-                  mucker.
-                </p>
-                <div className="shop-buttons d-block d-sm-flex align-items-center">
-                  <div className="product-quantity" id="quantity">
-                    <button
-                      onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-                      type="button"
-                      id="sub"
-                      className="sub"
-                    >
-                      -
-                    </button>
-                    <input
-                      onChange={(e) => quantityHandler(e)}
-                      type="text"
-                      id="1"
-                      value={quantity}
-                    />
-                    <button
-                      onClick={() => setQuantity(quantity + 1)}
-                      type="button"
-                      id="add"
-                      className="add"
-                    >
-                      +
-                    </button>
+              {product ? (
+                <div className="shop-product-details-content pl-70 mt-35">
+                  <span>{product.stock > 0 ? "In stock" : "Out of stock"}</span>
+                  <h2 className="title">{product.title}</h2>
+                  <div className="pricing">
+                    {product.discount ? (
+                      <>
+                        <div className="discount-price mr-15">
+                          {product.price * (1 - product.discount / 100)}$
+                        </div>
+                        <div className="regular-price">{product.price}$</div>
+                      </>
+                    ) : (
+                      <div className="discount-price">{product.price}$</div>
+                    )}
                   </div>
-                  <a className="main-btn ml-10" href="#">
-                    Add To Cart
-                  </a>
+                  <p>{product.description}</p>
+                  <p>Stock: {product.stock}</p>
+
+                  {product.stock > 0 ? (
+                    <div className="shop-buttons d-block d-sm-flex align-items-center">
+                      <div className="product-quantity" id="quantity">
+                        <button
+                          onClick={() =>
+                            quantity > 1 && setQuantity(quantity - 1)
+                          }
+                          type="button"
+                          id="sub"
+                          className="sub"
+                        >
+                          -
+                        </button>
+                        <input
+                          onChange={(e) => quantityHandler(e)}
+                          type="text"
+                          id="1"
+                          value={quantity}
+                        />
+                        <button
+                          onClick={() =>
+                            quantity < product.stock &&
+                            setQuantity(quantity + 1)
+                          }
+                          type="button"
+                          id="add"
+                          className="add"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <Link to={"/Cart/index"} className="main-btn ml-10">
+                        <button
+                          onClick={() => addCart(quantity)}
+                          style={{
+                            background: "none",
+                            border: "none",
+                            padding: 0,
+                            margin: 0,
+                            cursor: "pointer",
+                          }}
+                        >
+                          Add to Cart
+                        </button>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div
+                      className="alert alert-danger mt-3"
+                      style={{
+                        backgroundColor: "#f8d7da",
+                        color: "#721c24",
+                        padding: "10px",
+                        borderRadius: "5px",
+                        border: "1px solid #f5c6cb",
+                      }}
+                    >
+                      Producto agotado
+                    </div>
+                  )}
+
+                  <div className="details-info">
+                    <ul>
+                      {/* <li>
+                        <span>SKU:</span> 42725-AB-6
+                      </li>
+                      <li>
+                        <span>Categories: </span> Watch, Appie, UX
+                      </li> */}
+                      <li>
+                        <span>Size:</span> {sizeName}
+                      </li>
+                      <li>
+                        <span>Color: </span> {colorName}
+                      </li>
+                      <li>
+                        <span>Dimensions:</span> {product.dimensions}
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="details-info">
-                  <ul>
-                    <li>
-                      <span>SKU:</span> 42725-AB-6
-                    </li>
-                    <li>
-                      <span>Categories: </span> Watch, Appie, UX
-                    </li>
-                    <li>
-                      <span>Tags:</span> Creative, Shop, WordPress
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ) : (
+                <p>Loading product...</p>
+              )}
             </div>
           </div>
         </div>
@@ -257,7 +371,7 @@ const Details = () => {
                       aria-controls="pills-profile"
                       aria-selected="false"
                     >
-                      Reviews (2)
+                      Reviews ({reviews.length})
                     </a>
                   </li>
                 </ul>
@@ -327,80 +441,52 @@ const Details = () => {
                   >
                     <div className="review-rating-box">
                       <div className="top-rating-result">
-                        <h3 className="title">2 Reviews for Watch</h3>
+                        <h3 className="title">
+                          {reviews.length} Reviews for
+                          {/* {product.title} */}
+                        </h3>
                         <div className="rating-result-box">
-                          <div className="thumb">
-                            <img src={testmonialUser2} alt="" />
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star-half-alt"></i>
-                              </li>
-                            </ul>
-                            <div className="shop-meta">
-                              <div className="author-user-name">
-                                <a href="#">Will Barrow</a>
+                          {reviews.map((review) => (
+                            <div className="content">
+                              <ul>
+                                {[...Array(Math.floor(review.stars / 2))].map(
+                                  (_, index) => (
+                                    <li>
+                                      <i className="fas fa-star"></i>
+                                    </li>
+                                  ),
+                                )}
+                                {review.stars % 2 > 0 && (
+                                  <li>
+                                    <i className="fas fa-star-half-alt"></i>
+                                  </li>
+                                )}
+                                {[
+                                  ...Array(
+                                    5 -
+                                      (Math.floor(review.stars / 2) +
+                                        (review.stars % 2) !==
+                                      0
+                                        ? 0
+                                        : 1),
+                                  ),
+                                ].map((_, index) => (
+                                  <li>
+                                    <i className="fal fa-star"></i>
+                                  </li>
+                                ))}
+                              </ul>
+                              <div className="shop-meta">
+                                <div className="author-user-name">
+                                  <a href="#">Will Barrow</a>
+                                </div>
+                                <div className="date">
+                                  <span>{reviews.created_at}</span>
+                                </div>
                               </div>
-                              <div className="date">
-                                <span>March 15, 2022</span>
-                              </div>
+                              <p>{reviews.content}</p>
                             </div>
-                            <p>
-                              That arse over tit a load of old tosh pardon you
-                              wellies amongst william my good sir grub your bike
-                              mate james bond morish a blinding.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="rating-result-box">
-                          <div className="thumb">
-                            <img src={testmonialUser} alt="" />
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star"></i>
-                              </li>
-                              <li>
-                                <i className="fas fa-star-half-alt"></i>
-                              </li>
-                            </ul>
-                            <div className="shop-meta">
-                              <div className="author-user-name">
-                                <a href="#">Elon Gated</a>
-                              </div>
-                              <div className="date">
-                                <span>April 24, 2022</span>
-                              </div>
-                            </div>
-                            <p>
-                              Lost the plot twit the full monty down the pub Why
-                              off his nut cheers say a blinding shot happy days
-                              bog argy bargy.
-                            </p>
-                          </div>
+                          ))}
                         </div>
                       </div>
                       <div className="review-box">
