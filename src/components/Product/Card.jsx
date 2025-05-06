@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import product from "../../assets/images/shop-details-thumb-1.jpg";
 
 const Card = ({ cardData }) => {
+
+  console.log("Card Data:", cardData.images.thumbnail);
   const handleError = (e) => {
     e.target.src = productImg;
   };
@@ -14,9 +16,11 @@ const Card = ({ cardData }) => {
           <img
             className="appie-card-img"
             onError={handleError}
-            src={cardData.images}
+            // src={cardData.images}
+            src={cardData.images.thumbnail}
             alt=""
           />
+          {/* {console.log(cardData.images.thumbnail)} */}
           <div className="reborn">
             <span>{cardData.stock > 0 ? "Sale" : "No Sale"}</span>
           </div>
