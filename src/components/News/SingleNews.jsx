@@ -1,12 +1,12 @@
-import React from "react";
-import useToggle from "../../Hooks/useToggle.js";
-import BackToTop from "../BackToTop.jsx";
-import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
-import Drawer from "../Mobile/Drawer.jsx";
-import Blog from "./Blog.jsx";
-import BlogSideBar from "./BlogSideBar.jsx";
-import HeaderNews from "./HeaderNews.jsx";
-import HeroNews from "./HeroNews.jsx";
+import React from 'react';
+import useToggle from '../../Hooks/useToggle.js';
+import BackToTop from '../BackToTop.jsx';
+import FooterHomeOne from '../HomeOne/FooterHomeOne.jsx';
+import Drawer from '../Mobile/Drawer.jsx';
+import Blog from './Blog.jsx';
+import BlogSideBar from './BlogSideBar.jsx';
+import HeaderNews from './HeaderNews.jsx';
+import HeroNews from './HeroNews.jsx';
 
 const SingleNews = () => {
     const [drawer, drawerAction] = useToggle(false);
@@ -17,9 +17,9 @@ const SingleNews = () => {
             <HeroNews
                 title="Blog"
                 breadcrumb={[
-                    { link: "/", title: "home" },
-                    { link: "/news", title: "Blogs" },
-                    { link: "/news/single-news", title: "Blog" },
+                    { link: '/', title: 'home' },
+                    { link: '/news', title: 'Blogs' },
+                    { link: '/news/single-news', title: 'Blog' },
                 ]}
             />
             <section className="blogpage-section">

@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../../assets/images/logo-7.png";
-import Navigation from "../Navigation.jsx";
+import React from 'react';
+import logo from '../../assets/images/logo-7.png';
+import Navigation from '../Navigation.jsx';
 
 const HeaderService = ({ action }) => {
     return (
@@ -30,9 +30,8 @@ const HeaderService = ({ action }) => {
                                         Get Started
                                     </a>
                                     <div
-                                        onClick={(e) => action(e)}
-                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block"
-                                    >
+                                        onClick={e => action(e)}
+                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                         <i className="fa fa-bars"></i>
                                     </div>
                                 </div>

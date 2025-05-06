@@ -1,10 +1,10 @@
-import React from "react";
-import logo from "../../assets/images/logo.png";
+import React from 'react';
+import logo from '../../assets/images/logo.png';
 
 const FooterHomeRtl = ({ className }) => {
     return (
         <>
-            <section className={`appie-footer-area ${className || ""}`}>
+            <section className={`appie-footer-area ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
@@ -14,13 +14,9 @@ const FooterHomeRtl = ({ className }) => {
                                         <img src={logo} alt="" />
                                     </a>
                                 </div>
-                                <p>
-                                    Appie WordPress هو موضوع هو آخر موضوع ستحصل
-                                    عليه على الإطلاق.
-                                </p>
+                                <p>Appie WordPress هو موضوع هو آخر موضوع ستحصل عليه على الإطلاق.</p>
                                 <a href="#">
-                                    اقرأ أكثر{" "}
-                                    <i className="fal fa-arrow-right" />
+                                    اقرأ أكثر <i className="fal fa-arrow-right" />
                                 </a>
                                 <div className="social mt-30">
                                     <ul>
@@ -98,21 +94,18 @@ const FooterHomeRtl = ({ className }) => {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-envelope" />{" "}
-                                            support@appie.com
+                                            <i className="fal fa-envelope" /> support@appie.com
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-phone" />{" "}
-                                            +(642) 342 762 44
+                                            <i className="fal fa-phone" /> +(642) 342 762 44
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-map-marker-alt" />{" "}
-                                            442 Belle Terre St Floor 7, San
-                                            Francisco, AV 4206
+                                            <i className="fal fa-map-marker-alt" /> 442 Belle Terre St Floor
+                                            7, San Francisco, AV 4206
                                         </a>
                                     </li>
                                 </ul>
@@ -126,23 +119,18 @@ const FooterHomeRtl = ({ className }) => {
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <i className="fab fa-apple" />{" "}
-                                                تنزيل لنظام iOS
+                                                <i className="fab fa-apple" /> تنزيل لنظام iOS
                                             </a>
                                         </li>
                                         <li>
                                             <a className="item-2" href="#">
-                                                <i className="fab fa-google-play" />{" "}
-                                                تنزيل لنظام Android
+                                                <i className="fab fa-google-play" /> تنزيل لنظام Android
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="copyright-text">
-                                    <p>
-                                        حقوق النشر © 2021 Appie. كل الحقوق
-                                        محفوظة.
-                                    </p>
+                                    <p>حقوق النشر © 2021 Appie. كل الحقوق محفوظة.</p>
                                 </div>
                             </div>
                         </div>

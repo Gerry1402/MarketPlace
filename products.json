@@ -45,9 +45,7 @@
         "dimensions": { "width": 24.16, "height": 10.7, "depth": 11.07 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 25,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
     },
     {
@@ -62,9 +60,7 @@
         "dimensions": { "width": 14.37, "height": 13.94, "depth": 14.6 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 6,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
     },
     {
@@ -79,9 +75,7 @@
         "dimensions": { "width": 8.11, "height": 10.89, "depth": 29.06 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 46,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
     },
     {
@@ -286,9 +280,7 @@
         "dimensions": { "width": 8.29, "height": 5.58, "depth": 12.41 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 44,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Apple/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
     },
     {
@@ -303,9 +295,7 @@
         "dimensions": { "width": 23.35, "height": 13.48, "depth": 26.4 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 21,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png"
     },
     {
@@ -320,9 +310,7 @@
         "dimensions": { "width": 15.4, "height": 13.97, "depth": 25.13 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 48,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/thumbnail.png"
     },
     {
@@ -355,9 +343,7 @@
         "dimensions": { "width": 8.18, "height": 27.45, "depth": 27.88 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 2,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png"
     },
     {
@@ -372,9 +358,7 @@
         "dimensions": { "width": 11.04, "height": 20.5, "depth": 8.18 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 7,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Cucumber/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cucumber/thumbnail.png"
     },
     {
@@ -389,9 +373,7 @@
         "dimensions": { "width": 29.39, "height": 29.77, "depth": 20.54 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 29,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/thumbnail.png"
     },
     {
@@ -406,9 +388,7 @@
         "dimensions": { "width": 12.3, "height": 10.99, "depth": 15.53 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 43,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Eggs/thumbnail.png"
     },
     {
@@ -423,9 +403,7 @@
         "dimensions": { "width": 20.14, "height": 8.4, "depth": 10.01 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 49,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/thumbnail.png"
     },
     {
@@ -440,9 +418,7 @@
         "dimensions": { "width": 7.32, "height": 14.31, "depth": 21.38 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 1,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Bell%20Pepper/thumbnail.png"
     },
     {
@@ -457,9 +433,7 @@
         "dimensions": { "width": 18.67, "height": 21.17, "depth": 25.26 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 43,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/thumbnail.png"
     },
     {
@@ -474,9 +448,7 @@
         "dimensions": { "width": 26.53, "height": 27.11, "depth": 6.63 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 1,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
     },
     {
@@ -511,9 +483,7 @@
         "dimensions": { "width": 8.97, "height": 12.26, "depth": 15.05 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 26,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Juice/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Juice/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Juice/thumbnail.png"
     },
     {
@@ -528,9 +498,7 @@
         "dimensions": { "width": 27.3, "height": 7.48, "depth": 15.08 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 8,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
     },
     {
@@ -545,9 +513,7 @@
         "dimensions": { "width": 25.97, "height": 27.47, "depth": 6.31 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 1,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Lemon/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Lemon/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Lemon/thumbnail.png"
     },
     {
@@ -562,9 +528,7 @@
         "dimensions": { "width": 22.42, "height": 20.9, "depth": 12.48 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 41,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Milk/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Milk/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Milk/thumbnail.png"
     },
     {
@@ -579,9 +543,7 @@
         "dimensions": { "width": 11.12, "height": 27.3, "depth": 27.57 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 50,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Mulberry/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Mulberry/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Mulberry/thumbnail.png"
     },
     {
@@ -596,9 +558,7 @@
         "dimensions": { "width": 11.21, "height": 24.54, "depth": 15.05 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 8,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Nescafe%20Coffee/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Nescafe%20Coffee/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Nescafe%20Coffee/thumbnail.png"
     },
     {
@@ -613,9 +573,7 @@
         "dimensions": { "width": 20, "height": 6.44, "depth": 20.07 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 29,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Potatoes/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Potatoes/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Potatoes/thumbnail.png"
     },
     {
@@ -630,9 +588,7 @@
         "dimensions": { "width": 5.62, "height": 7.88, "depth": 23.48 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 39,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/thumbnail.png"
     },
     {
@@ -647,9 +603,7 @@
         "dimensions": { "width": 14.05, "height": 17.13, "depth": 14.05 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 40,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Red%20Onions/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Red%20Onions/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Red%20Onions/thumbnail.png"
     },
     {
@@ -664,9 +618,7 @@
         "dimensions": { "width": 28.86, "height": 6.26, "depth": 11.04 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 18,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Rice/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Rice/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Rice/thumbnail.png"
     },
     {
@@ -681,9 +633,7 @@
         "dimensions": { "width": 15.73, "height": 24.93, "depth": 27.19 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 41,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/thumbnail.png"
     },
     {
@@ -698,9 +648,7 @@
         "dimensions": { "width": 20.82, "height": 15.81, "depth": 14.89 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 38,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Strawberry/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Strawberry/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Strawberry/thumbnail.png"
     },
     {
@@ -733,9 +681,7 @@
         "dimensions": { "width": 25.46, "height": 25.86, "depth": 18.06 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 46,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/groceries/Water/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/groceries/Water/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Water/thumbnail.png"
     },
     {
@@ -825,9 +771,7 @@
         "dimensions": { "width": 29.6, "height": 19.68, "depth": 10.12 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 10,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/home-decoration/Table%20Lamp/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/home-decoration/Table%20Lamp/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Table%20Lamp/thumbnail.png"
     },
     {
@@ -842,9 +786,7 @@
         "dimensions": { "width": 27.97, "height": 21.77, "depth": 21.38 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 26,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Bamboo%20Spatula/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Bamboo%20Spatula/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Bamboo%20Spatula/thumbnail.png"
     },
     {
@@ -877,9 +819,7 @@
         "dimensions": { "width": 21.06, "height": 15.46, "depth": 13.28 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 30,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/thumbnail.png"
     },
     {
@@ -931,9 +871,7 @@
         "dimensions": { "width": 24.38, "height": 26.51, "depth": 6.93 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 9,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Chopping%20Board/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Chopping%20Board/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Chopping%20Board/thumbnail.png"
     },
     {
@@ -965,9 +903,7 @@
         "dimensions": { "width": 17.18, "height": 11.58, "depth": 11.79 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 23,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Egg%20Slicer/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Egg%20Slicer/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Egg%20Slicer/thumbnail.png"
     },
     {
@@ -1019,9 +955,7 @@
         "dimensions": { "width": 23.61, "height": 25.62, "depth": 5.67 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 10,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Fork/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Fork/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Fork/thumbnail.png"
     },
     {
@@ -1036,9 +970,7 @@
         "dimensions": { "width": 14.7, "height": 18.98, "depth": 21.93 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 25,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Glass/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Glass/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Glass/thumbnail.png"
     },
     {
@@ -1053,9 +985,7 @@
         "dimensions": { "width": 12.6, "height": 28.86, "depth": 21.12 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 22,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Grater%20Black/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Grater%20Black/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Grater%20Black/thumbnail.png"
     },
     {
@@ -1070,9 +1000,7 @@
         "dimensions": { "width": 13.3, "height": 6.21, "depth": 16.77 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 7,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Hand%20Blender/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Hand%20Blender/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Hand%20Blender/thumbnail.png"
     },
     {
@@ -1087,9 +1015,7 @@
         "dimensions": { "width": 27.19, "height": 20.42, "depth": 17.45 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 11,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Ice%20Cube%20Tray/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Ice%20Cube%20Tray/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Ice%20Cube%20Tray/thumbnail.png"
     },
     {
@@ -1104,9 +1030,7 @@
         "dimensions": { "width": 22.94, "height": 11.91, "depth": 20.47 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 1,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Kitchen%20Sieve/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Kitchen%20Sieve/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Kitchen%20Sieve/thumbnail.png"
     },
     {
@@ -1121,9 +1045,7 @@
         "dimensions": { "width": 11.63, "height": 23.99, "depth": 24.62 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 47,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Knife/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Knife/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Knife/thumbnail.png"
     },
     {
@@ -1138,9 +1060,7 @@
         "dimensions": { "width": 13.76, "height": 18.36, "depth": 27.9 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 49,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Lunch%20Box/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Lunch%20Box/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Lunch%20Box/thumbnail.png"
     },
     {
@@ -1193,9 +1113,7 @@
         "dimensions": { "width": 19.51, "height": 17.96, "depth": 23.24 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 8,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Pan/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Pan/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Pan/thumbnail.png"
     },
     {
@@ -1210,9 +1128,7 @@
         "dimensions": { "width": 14.77, "height": 21.78, "depth": 29.1 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 2,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Plate/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Plate/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Plate/thumbnail.png"
     },
     {
@@ -1227,9 +1143,7 @@
         "dimensions": { "width": 27.38, "height": 20.49, "depth": 26.65 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 27,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Red%20Tongs/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Red%20Tongs/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Red%20Tongs/thumbnail.png"
     },
     {
@@ -1261,9 +1175,7 @@
         "dimensions": { "width": 22.29, "height": 24.06, "depth": 7.05 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 11,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Slotted%20Turner/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Slotted%20Turner/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Slotted%20Turner/thumbnail.png"
     },
     {
@@ -1278,9 +1190,7 @@
         "dimensions": { "width": 20.73, "height": 6.81, "depth": 24.14 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 15,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spice%20Rack/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Spice%20Rack/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spice%20Rack/thumbnail.png"
     },
     {
@@ -1295,9 +1205,7 @@
         "dimensions": { "width": 8.45, "height": 25.16, "depth": 17.43 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 40,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spoon/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Spoon/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Spoon/thumbnail.png"
     },
     {
@@ -1312,9 +1220,7 @@
         "dimensions": { "width": 25.01, "height": 5.72, "depth": 5.25 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 10,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Tray/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Tray/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Tray/thumbnail.png"
     },
     {
@@ -1346,9 +1252,7 @@
         "dimensions": { "width": 17.36, "height": 17.41, "depth": 27.38 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 45,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Yellow%20Peeler/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/kitchen-accessories/Yellow%20Peeler/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Yellow%20Peeler/thumbnail.png"
     },
     {
@@ -2483,9 +2387,7 @@
         "dimensions": { "width": 9.74, "height": 23.16, "depth": 26.86 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 23,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/American%20Football/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/American%20Football/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/American%20Football/thumbnail.png"
     },
     {
@@ -2500,9 +2402,7 @@
         "dimensions": { "width": 21.26, "height": 20.59, "depth": 18.28 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 38,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Baseball%20Ball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Baseball%20Ball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Baseball%20Ball/thumbnail.png"
     },
     {
@@ -2536,9 +2436,7 @@
         "dimensions": { "width": 15.68, "height": 23.18, "depth": 16.25 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 2,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Basketball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Basketball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Basketball/thumbnail.png"
     },
     {
@@ -2553,9 +2451,7 @@
         "dimensions": { "width": 12.95, "height": 15.58, "depth": 15.23 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 10,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Basketball%20Rim/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Basketball%20Rim/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Basketball%20Rim/thumbnail.png"
     },
     {
@@ -2570,9 +2466,7 @@
         "dimensions": { "width": 26.97, "height": 13.92, "depth": 26.59 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 28,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Ball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Ball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Ball/thumbnail.png"
     },
     {
@@ -2587,9 +2481,7 @@
         "dimensions": { "width": 14.13, "height": 25.99, "depth": 9.02 },
         "returnPolicy": 90,
         "minimumOrderQuantity": 7,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Bat/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Bat/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Bat/thumbnail.png"
     },
     {
@@ -2624,9 +2516,7 @@
         "dimensions": { "width": 15.56, "height": 7.36, "depth": 6.91 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 13,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Wicket/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Wicket/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Cricket%20Wicket/thumbnail.png"
     },
     {
@@ -2658,9 +2548,7 @@
         "dimensions": { "width": 22.49, "height": 7.19, "depth": 13.42 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 23,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Football/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Football/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Football/thumbnail.png"
     },
     {
@@ -2675,9 +2563,7 @@
         "dimensions": { "width": 11.42, "height": 18.98, "depth": 7.29 },
         "returnPolicy": 60,
         "minimumOrderQuantity": 43,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Golf%20Ball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Golf%20Ball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Golf%20Ball/thumbnail.png"
     },
     {
@@ -2692,9 +2578,7 @@
         "dimensions": { "width": 27.3, "height": 14.38, "depth": 23.56 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 13,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Iron%20Golf/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Iron%20Golf/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Iron%20Golf/thumbnail.png"
     },
     {
@@ -2726,9 +2610,7 @@
         "dimensions": { "width": 27.82, "height": 27.05, "depth": 28.32 },
         "returnPolicy": 0,
         "minimumOrderQuantity": 34,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Ball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Ball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Ball/thumbnail.png"
     },
     {
@@ -2743,9 +2625,7 @@
         "dimensions": { "width": 14.55, "height": 27.86, "depth": 19.37 },
         "returnPolicy": 30,
         "minimumOrderQuantity": 20,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Racket/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Racket/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Racket/thumbnail.png"
     },
     {
@@ -2760,9 +2640,7 @@
         "dimensions": { "width": 10.73, "height": 17.62, "depth": 16.97 },
         "returnPolicy": 7,
         "minimumOrderQuantity": 26,
-        "images": [
-            "https://cdn.dummyjson.com/products/images/sports-accessories/Volleyball/1.png"
-        ],
+        "images": ["https://cdn.dummyjson.com/products/images/sports-accessories/Volleyball/1.png"],
         "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Volleyball/thumbnail.png"
     },
     {

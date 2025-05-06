@@ -1,7 +1,7 @@
-import Router from "./Router.jsx";
-import { useEffect, useState } from "react";
-import Loader from "./components/Helper/Loader.jsx";
-import Layout from "./components/Helper/Layout.jsx";
+import Router from './Router.jsx';
+import { useEffect, useState } from 'react';
+import Loader from './components/Helper/Loader.jsx';
+import Layout from './components/Helper/Layout.jsx';
 
 const App = () => {
     const [loading, setLoading] = useState(true);
@@ -15,13 +15,11 @@ const App = () => {
     return (
         <>
             {loading && (
-                <div className={`appie-loader ${loading ? "active" : ""}`}>
+                <div className={`appie-loader ${loading ? 'active' : ''}`}>
                     <Loader />
                 </div>
             )}
-            <div
-                className={`appie-visible ${loading === false ? "active" : ""}`}
-            >
+            <div className={`appie-visible ${loading === false ? 'active' : ''}`}>
                 <Router />
             </div>
         </>

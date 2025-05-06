@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
-import productImg from "../../assets/images/shop-grid-1.jpg";
-import useToggle from "../../Hooks/useToggle.js";
-import BackToTop from "../BackToTop.jsx";
-import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
-import Drawer from "../Mobile/Drawer.jsx";
-import HeaderNews from "../News/HeaderNews.jsx";
-import HeroNews from "../News/HeroNews.jsx";
-import Card from "../Product/Card.jsx";
-import SideBarFilter from "./SideBarFilter.jsx";
+import React, { useEffect, useState } from 'react';
+import productImg from '../../assets/images/shop-grid-1.jpg';
+import useToggle from '../../Hooks/useToggle.js';
+import BackToTop from '../BackToTop.jsx';
+import FooterHomeOne from '../HomeOne/FooterHomeOne.jsx';
+import Drawer from '../Mobile/Drawer.jsx';
+import HeaderNews from '../News/HeaderNews.jsx';
+import HeroNews from '../News/HeroNews.jsx';
+import Card from '../Product/Card.jsx';
+import SideBarFilter from './SideBarFilter.jsx';
 
 const Shops = () => {
     const [drawer, drawerAction] = useToggle(false);
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products/")
-            .then((res) => res.json())
-            .then((data) => setProducts(data))
-            .catch((err) => {
+        fetch('https://fakestoreapi.com/products/')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+            .catch(err => {
                 console.error(err);
             });
     }, []);
@@ -28,8 +28,8 @@ const Shops = () => {
             <HeroNews
                 title="Shop Products"
                 breadcrumb={[
-                    { link: "/", title: "Home" },
-                    { link: "/shop", title: "Shop Products" },
+                    { link: '/', title: 'Home' },
+                    { link: '/shop', title: 'Shop Products' },
                 ]}
             />
             <div className="appie-shop-grid-area pt-100 pb-50">
@@ -54,7 +54,7 @@ const Shops = () => {
                             </div>
                             <div className="row">
                                 {products && products.length > 0 ? (
-                                    products.map((value) => (
+                                    products.map(value => (
                                         <div className="col-lg-4 col-md-6">
                                             <Card cardData={value} />
                                         </div>
@@ -64,10 +64,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -109,16 +106,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -126,10 +117,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -171,16 +159,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -188,10 +170,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -233,16 +212,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,10 +223,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -295,16 +265,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,10 +276,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -357,16 +318,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -374,10 +329,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -419,16 +371,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -436,10 +382,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -481,16 +424,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -498,10 +435,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -543,16 +477,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -560,10 +488,7 @@ const Shops = () => {
                                         <div className="col-lg-4 col-md-6">
                                             <div className="single-shop-box">
                                                 <div className="thumb text-center">
-                                                    <img
-                                                        src={productImg}
-                                                        alt=""
-                                                    />
+                                                    <img src={productImg} alt="" />
                                                     <div className="reborn">
                                                         <span>Sale</span>
                                                     </div>
@@ -605,16 +530,10 @@ const Shops = () => {
                                                             <i className="fas fa-star-half-alt"></i>
                                                         </li>
                                                     </ul>
-                                                    <a href="#">
-                                                        Smartwatch with Music
-                                                    </a>
+                                                    <a href="#">Smartwatch with Music</a>
                                                     <div className="pricing">
-                                                        <div className="discount-price">
-                                                            $158.00{" "}
-                                                        </div>
-                                                        <div className="regular-price">
-                                                            $180.00
-                                                        </div>
+                                                        <div className="discount-price">$158.00 </div>
+                                                        <div className="regular-price">$180.00</div>
                                                     </div>
                                                 </div>
                                             </div>

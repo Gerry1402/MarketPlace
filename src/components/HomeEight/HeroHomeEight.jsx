@@ -1,9 +1,9 @@
-import React from "react";
-import hero from "../../assets/images/hero-thumb-9.png";
-import shapeOne from "../../assets/images/shape/1.png";
-import shapeTwo from "../../assets/images/shape/2.png";
-import shapeThree from "../../assets/images/shape/3.png";
-import shapeFour from "../../assets/images/shape/4.png";
+import React from 'react';
+import hero from '../../assets/images/hero-thumb-9.png';
+import shapeOne from '../../assets/images/shape/1.png';
+import shapeTwo from '../../assets/images/shape/2.png';
+import shapeThree from '../../assets/images/shape/3.png';
+import shapeFour from '../../assets/images/shape/4.png';
 
 const HeroHomeEight = () => {
     return (
@@ -13,12 +13,10 @@ const HeroHomeEight = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="appie-hero-content appie-hero-content-8">
-                                <h1 className="appie-title">
-                                    We’re a full-range design app
-                                </h1>
+                                <h1 className="appie-title">We’re a full-range design app</h1>
                                 <p>
-                                    Jolly good excuse my french boot super my
-                                    good sir cup of char richard about chinwag.
+                                    Jolly good excuse my french boot super my good sir cup of char richard
+                                    about chinwag.
                                 </p>
                                 <ul>
                                     <li>
@@ -29,8 +27,7 @@ const HeroHomeEight = () => {
                                     </li>
                                     <li>
                                         <a className="item-2" href="#">
-                                            <i className="fab fa-apple" />{" "}
-                                            <span>App Store</span>
+                                            <i className="fab fa-apple" /> <span>App Store</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -41,8 +38,7 @@ const HeroHomeEight = () => {
                                 <div
                                     className="thumb text-center wow animated fadeInUp"
                                     data-wow-duration="1000ms"
-                                    data-wow-delay="600ms"
-                                >
+                                    data-wow-delay="600ms">
                                     <img src={hero} alt="" />
                                 </div>
                             </div>

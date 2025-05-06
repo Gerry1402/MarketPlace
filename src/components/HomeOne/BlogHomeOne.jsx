@@ -1,25 +1,18 @@
-import React from "react";
-import blogOne from "../../assets/images/blog-1.jpg";
-import blogTwo from "../../assets/images/blog-2.jpg";
-import blogThree from "../../assets/images/blog-3.jpg";
+import React from 'react';
+import blogOne from '../../assets/images/blog-1.jpg';
+import blogTwo from '../../assets/images/blog-2.jpg';
+import blogThree from '../../assets/images/blog-3.jpg';
 
 const BlogHomeOne = ({ className }) => {
     return (
         <>
-            <section
-                className={`appie-blog-area pt-90 pb-95 ${className || ""}`}
-            >
+            <section className={`appie-blog-area pt-90 pb-95 ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    Latest blog posts
-                                </h3>
-                                <p>
-                                    Different layouts and styles for team
-                                    sections.
-                                </p>
+                                <h3 className="appie-title">Latest blog posts</h3>
+                                <p>Different layouts and styles for team sections.</p>
                             </div>
                         </div>
                     </div>
@@ -28,8 +21,7 @@ const BlogHomeOne = ({ className }) => {
                             <div
                                 className="appie-blog-item mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="200ms"
-                            >
+                                data-wow-delay="200ms">
                                 <div className="thumb">
                                     <img src={blogOne} alt="" />
                                 </div>
@@ -44,13 +36,11 @@ const BlogHomeOne = ({ className }) => {
                                     </div>
                                     <h3 className="title">
                                         <a href="/news/single-news">
-                                            Introducing New Apps Design for our
-                                            iOS App
+                                            Introducing New Apps Design for our iOS App
                                         </a>
                                     </h3>
                                     <a href="#">
-                                        Learn More{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        Learn More <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>
@@ -59,8 +49,7 @@ const BlogHomeOne = ({ className }) => {
                             <div
                                 className="appie-blog-item mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="400ms"
-                            >
+                                data-wow-delay="400ms">
                                 <div className="thumb">
                                     <img src={blogTwo} alt="" />
                                 </div>
@@ -74,13 +63,10 @@ const BlogHomeOne = ({ className }) => {
                                         </ul>
                                     </div>
                                     <h3 className="title">
-                                        <a href="/news/single-news">
-                                            How to bring Dolce to your company
-                                        </a>
+                                        <a href="/news/single-news">How to bring Dolce to your company</a>
                                     </h3>
                                     <a href="#">
-                                        Learn More{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        Learn More <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>
@@ -89,8 +75,7 @@ const BlogHomeOne = ({ className }) => {
                             <div
                                 className="appie-blog-item mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="600ms"
-                            >
+                                data-wow-delay="600ms">
                                 <div className="thumb">
                                     <img src={blogThree} alt="" />
                                 </div>
@@ -105,13 +90,11 @@ const BlogHomeOne = ({ className }) => {
                                     </div>
                                     <h3 className="title">
                                         <a href="/news/single-news">
-                                            17 Effective Ways to Monetize Mobile
-                                            Apps
+                                            17 Effective Ways to Monetize Mobile Apps
                                         </a>
                                     </h3>
                                     <a href="#">
-                                        Learn More{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        Learn More <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>

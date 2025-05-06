@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import logo from "../../assets/images/logo-9.png";
-import StickyMenu from "../../lib/StickyMenu.js";
-import Navigation from "../Navigation.jsx";
+import React, { useEffect } from 'react';
+import logo from '../../assets/images/logo-9.png';
+import StickyMenu from '../../lib/StickyMenu.js';
+import Navigation from '../Navigation.jsx';
 
 const HeaderHomeEight = ({ action }) => {
     useEffect(() => {
@@ -34,9 +34,8 @@ const HeaderHomeEight = ({ action }) => {
                                         Get Started
                                     </a>
                                     <div
-                                        onClick={(e) => action(e)}
-                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block"
-                                    >
+                                        onClick={e => action(e)}
+                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                         <i className="fa fa-bars" />
                                     </div>
                                 </div>

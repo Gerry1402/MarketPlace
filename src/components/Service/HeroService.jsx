@@ -1,5 +1,5 @@
-import React from "react";
-import thumb from "../../assets/images/fun-fact-thumb.png";
+import React from 'react';
+import thumb from '../../assets/images/fun-fact-thumb.png';
 
 const HeroService = () => {
     return (
@@ -11,8 +11,7 @@ const HeroService = () => {
                             <div className="appie-page-title-item">
                                 <span>Fast Development</span>
                                 <h3 className="title">
-                                    Simple but effective, <br /> effortless yet
-                                    powerful.
+                                    Simple but effective, <br /> effortless yet powerful.
                                 </h3>
                                 <div className="thumb">
                                     <img src={thumb} alt="" />

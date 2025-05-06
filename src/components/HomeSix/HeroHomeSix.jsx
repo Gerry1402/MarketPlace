@@ -1,5 +1,5 @@
-import React from "react";
-import heroThumb from "../../assets/images/hero-thumb-7.png";
+import React from 'react';
+import heroThumb from '../../assets/images/hero-thumb-7.png';
 
 const HeroHomeSix = () => {
     return (
@@ -12,8 +12,7 @@ const HeroHomeSix = () => {
                                 <div
                                     className="thumb wow animated fadeInUp"
                                     data-wow-duration="1000ms"
-                                    data-wow-delay="600ms"
-                                >
+                                    data-wow-delay="600ms">
                                     <img src={heroThumb} alt="" />
                                 </div>
                             </div>
@@ -21,21 +20,17 @@ const HeroHomeSix = () => {
                         <div className="col-lg-6">
                             <div className="appie-hero-content appie-hero-content-6">
                                 <span>Welcome To Creative App.</span>
-                                <h1 className="appie-title">
-                                    Get started with Appie Template.
-                                </h1>
+                                <h1 className="appie-title">Get started with Appie Template.</h1>
                                 <p>
-                                    Lost the plot so I said nancy boy I don't
-                                    want no agro bleeder bum bag easy peasy
-                                    cheesed off cheers ruddy.
+                                    Lost the plot so I said nancy boy I don't want no agro bleeder bum bag
+                                    easy peasy cheesed off cheers ruddy.
                                 </p>
                                 <ul>
                                     <li>
                                         <a href="#">
                                             <i className="fab fa-apple"></i>
                                             <span>
-                                                Available on the{" "}
-                                                <span>App Store</span>
+                                                Available on the <span>App Store</span>
                                             </span>
                                         </a>
                                     </li>
@@ -43,8 +38,7 @@ const HeroHomeSix = () => {
                                         <a className="item-2" href="#">
                                             <i className="fab fa-google-play"></i>
                                             <span>
-                                                Available on the{" "}
-                                                <span>Google Play</span>
+                                                Available on the <span>Google Play</span>
                                             </span>
                                         </a>
                                     </li>

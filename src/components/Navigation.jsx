@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navigation = ({ lang = false }) => {
     return (
@@ -36,9 +36,7 @@ const Navigation = ({ lang = false }) => {
                                 <Link to="/home-eight">الصفحة الرئيسية 8</Link>
                             </li>
                             <li>
-                                <Link to="/home-dark">
-                                    الصفحة الرئيسية الظلام
-                                </Link>
+                                <Link to="/home-dark">الصفحة الرئيسية الظلام</Link>
                             </li>
                             <li>
                                 <Link to="/home-rtl">الصفحة الرئيسية Rtl</Link>
@@ -138,9 +136,7 @@ const Navigation = ({ lang = false }) => {
                                 <Link to="/shop">Shops</Link>
                             </li>
                             <li>
-                                <Link to="/shop/shop-details">
-                                    Shop details
-                                </Link>
+                                <Link to="/shop/shop-details">Shop details</Link>
                             </li>
                         </ul>
                     </li>

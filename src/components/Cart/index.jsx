@@ -1,19 +1,15 @@
-import React from "react";
-import cart1 from "../../assets/images/cart-1.jpg";
-import cart2 from "../../assets/images/cart-2.jpg";
+import React from 'react';
+import cart1 from '../../assets/images/cart-1.jpg';
+import cart2 from '../../assets/images/cart-2.jpg';
 
 const Cart = ({ value, action }) => {
     return (
         <div className="amm-shopping-cart-wrapper">
-            <div className={`amm-shopping-cart-canvas ${value ? "open" : ""}`}>
+            <div className={`amm-shopping-cart-canvas ${value ? 'open' : ''}`}>
                 <div className="amm-shopping_cart">
                     <div className="amm-shopping_cart-top-bar d-flex justify-content-between">
                         <h6>Shopping Cart</h6>
-                        <button
-                            type="button"
-                            onClick={action}
-                            className="amm-shopping-cart-close"
-                        >
+                        <button type="button" onClick={action} className="amm-shopping-cart-close">
                             <i className="fas fa-times"></i>
                         </button>
                     </div>
@@ -46,12 +42,8 @@ const Cart = ({ value, action }) => {
                                             <a href="#">Grape</a>
                                         </h6>
                                         <span className="quality">QTY: 01</span>
-                                        <span className="price-discount">
-                                            $205.00
-                                        </span>
-                                        <span className="price-close">
-                                            $205.00
-                                        </span>
+                                        <span className="price-discount">$205.00</span>
+                                        <span className="price-close">$205.00</span>
                                         <a className="remove" href="#">
                                             <i className="fa fa-times"></i>
                                         </a>
@@ -77,7 +69,7 @@ const Cart = ({ value, action }) => {
                     </div>
                 </div>
             </div>
-            <div className={`overlay ${value ? "open" : ""}`}></div>
+            <div className={`overlay ${value ? 'open' : ''}`}></div>
         </div>
     );
 };

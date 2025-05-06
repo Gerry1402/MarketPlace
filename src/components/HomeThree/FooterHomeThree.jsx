@@ -1,13 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo-4.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo-4.png';
 
 const FooterHomeThree = ({ className }) => {
     return (
         <>
-            <section
-                className={`appie-footer-area appie-footer-3-area ${className}`}
-            >
+            <section className={`appie-footer-area appie-footer-3-area ${className}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
@@ -17,13 +15,9 @@ const FooterHomeThree = ({ className }) => {
                                         <img src={logo} alt="" />
                                     </a>
                                 </div>
-                                <p>
-                                    Appie WordPress is theme is the last theme
-                                    you will ever have.
-                                </p>
+                                <p>Appie WordPress is theme is the last theme you will ever have.</p>
                                 <a href="#">
-                                    Read More{" "}
-                                    <i className="fal fa-arrow-right" />
+                                    Read More <i className="fal fa-arrow-right" />
                                 </a>
                                 <div className="social mt-30">
                                     <ul>
@@ -101,21 +95,18 @@ const FooterHomeThree = ({ className }) => {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-envelope" />{" "}
-                                            support@appie.com
+                                            <i className="fal fa-envelope" /> support@appie.com
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-phone" />{" "}
-                                            +(642) 342 762 44
+                                            <i className="fal fa-phone" /> +(642) 342 762 44
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-map-marker-alt" />{" "}
-                                            442 Belle Terre St Floor 7, San
-                                            Francisco, AV 4206
+                                            <i className="fal fa-map-marker-alt" /> 442 Belle Terre St Floor
+                                            7, San Francisco, AV 4206
                                         </a>
                                     </li>
                                 </ul>
@@ -131,29 +122,23 @@ const FooterHomeThree = ({ className }) => {
                 align-items-center
                 justify-content-between
                 pt-35
-              "
-                            >
+              ">
                                 <div className="apps-download-btn">
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <i className="fab fa-apple" />{" "}
-                                                Download for iOS
+                                                <i className="fab fa-apple" /> Download for iOS
                                             </a>
                                         </li>
                                         <li>
                                             <a className="item-2" href="#">
-                                                <i className="fab fa-google-play" />{" "}
-                                                Download for Android
+                                                <i className="fab fa-google-play" /> Download for Android
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="copyright-text">
-                                    <p>
-                                        Copyright © 2021 Appie. All rights
-                                        reserved.
-                                    </p>
+                                    <p>Copyright © 2021 Appie. All rights reserved.</p>
                                 </div>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
-import React from "react";
-import team1 from "../../assets/images/team-1.jpg";
-import team2 from "../../assets/images/team-2.jpg";
-import team3 from "../../assets/images/team-3.jpg";
-import team4 from "../../assets/images/team-4.jpg";
+import React from 'react';
+import team1 from '../../assets/images/team-1.jpg';
+import team2 from '../../assets/images/team-2.jpg';
+import team3 from '../../assets/images/team-3.jpg';
+import team4 from '../../assets/images/team-4.jpg';
 
 const TeamAbout = () => {
     return (
@@ -12,13 +12,8 @@ const TeamAbout = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    Meet our Team Members
-                                </h3>
-                                <p>
-                                    Different layouts and styles for team
-                                    sections.
-                                </p>
+                                <h3 className="appie-title">Meet our Team Members</h3>
+                                <p>Different layouts and styles for team sections.</p>
                             </div>
                         </div>
                     </div>
@@ -27,8 +22,7 @@ const TeamAbout = () => {
                             <div
                                 className="appie-team-item appie-team-item-about mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
-                                data-wow-delay="200ms"
-                            >
+                                data-wow-delay="200ms">
                                 <div className="thumb">
                                     <img src={team1} alt="" />
                                     <ul>
@@ -59,8 +53,7 @@ const TeamAbout = () => {
                             <div
                                 className="appie-team-item appie-team-item-about mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
-                                data-wow-delay="400ms"
-                            >
+                                data-wow-delay="400ms">
                                 <div className="thumb">
                                     <img src={team2} alt="" />
                                     <ul>
@@ -91,8 +84,7 @@ const TeamAbout = () => {
                             <div
                                 className="appie-team-item appie-team-item-about mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
-                                data-wow-delay="600ms"
-                            >
+                                data-wow-delay="600ms">
                                 <div className="thumb">
                                     <img src={team3} alt="" />
                                     <ul>
@@ -123,8 +115,7 @@ const TeamAbout = () => {
                             <div
                                 className="appie-team-item appie-team-item-about mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
-                                data-wow-delay="800ms"
-                            >
+                                data-wow-delay="800ms">
                                 <div className="thumb">
                                     <img src={team4} alt="" />
                                     <ul>
@@ -154,8 +145,7 @@ const TeamAbout = () => {
                         <div className="col-lg-12">
                             <div className="team-btn text-center mt-50">
                                 <a className="main-btn" href="#">
-                                    View all Members{" "}
-                                    <i className="fal fa-arrow-right"></i>
+                                    View all Members <i className="fal fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>

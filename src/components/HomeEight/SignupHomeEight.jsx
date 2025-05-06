@@ -1,10 +1,10 @@
-import React from "react";
-import signupThumb from "../../assets/images/signup-thumb.png";
+import React from 'react';
+import signupThumb from '../../assets/images/signup-thumb.png';
 
 const SponserHomeEight = ({ className }) => {
     return (
         <>
-            <div className={`appie-signup-area ${className || ""}`}>
+            <div className={`appie-signup-area ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -13,33 +13,20 @@ const SponserHomeEight = ({ className }) => {
                                 <h3 className="title">Get Started.</h3>
                                 <form action="#">
                                     <div className="input-box">
-                                        <input
-                                            type="text"
-                                            placeholder="Enter your name"
-                                        />
+                                        <input type="text" placeholder="Enter your name" />
                                     </div>
                                     <div className="input-box">
-                                        <input
-                                            type="email"
-                                            placeholder="Enter your email"
-                                        />
+                                        <input type="email" placeholder="Enter your email" />
                                     </div>
                                     <div className="input-box">
                                         <button type="submit">Sign Up</button>
                                     </div>
                                     <div className="appie_checkbox_common checkbox_style2">
                                         <div>
-                                            <input
-                                                type="checkbox"
-                                                name="checkbox2"
-                                                id="checkbox4"
-                                            />
+                                            <input type="checkbox" name="checkbox2" id="checkbox4" />
                                             <label htmlFor="checkbox4">
-                                                <span></span>By signing up you
-                                                agree to our
-                                                <a href="#">
-                                                    Terms & Conditions.
-                                                </a>
+                                                <span></span>By signing up you agree to our
+                                                <a href="#">Terms & Conditions.</a>
                                             </label>
                                         </div>
                                     </div>

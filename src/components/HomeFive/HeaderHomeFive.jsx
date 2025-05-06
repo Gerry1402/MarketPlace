@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import logo from "../../assets/images/logo-5.png";
-import StickyMenu from "../../lib/StickyMenu.js";
-import Navigation from "../Navigation.jsx";
+import React, { useEffect } from 'react';
+import logo from '../../assets/images/logo-5.png';
+import StickyMenu from '../../lib/StickyMenu.js';
+import Navigation from '../Navigation.jsx';
 
 const HeaderHomeFive = ({ action, cartToggle, searchToggle }) => {
     useEffect(() => {
@@ -31,9 +31,8 @@ const HeaderHomeFive = ({ action, cartToggle, searchToggle }) => {
                                         <li>
                                             <a
                                                 className="search-open"
-                                                onClick={(e) => searchToggle(e)}
-                                                style={{ cursor: "pointer" }}
-                                            >
+                                                onClick={e => searchToggle(e)}
+                                                style={{ cursor: 'pointer' }}>
                                                 <i className="fal fa-search"></i>
                                             </a>
                                         </li>
@@ -41,17 +40,15 @@ const HeaderHomeFive = ({ action, cartToggle, searchToggle }) => {
                                             <a
                                                 onClick={cartToggle}
                                                 className="cart-btn amm-shopping-cart-open"
-                                                href="#"
-                                            >
+                                                href="#">
                                                 <i className="fal fa-shopping-cart"></i>
                                                 <span>2</span>
                                             </a>
                                         </li>
                                     </ul>
                                     <div
-                                        onClick={(e) => action(e)}
-                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block"
-                                    >
+                                        onClick={e => action(e)}
+                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                         <i className="fa fa-bars"></i>
                                     </div>
                                 </div>

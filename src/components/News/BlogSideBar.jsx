@@ -1,8 +1,8 @@
-import React from "react";
-import BlogImg1 from "../../assets/images/blog/p1.jpg";
-import BlogImg2 from "../../assets/images/blog/p2.jpg";
-import BlogImg3 from "../../assets/images/blog/p3.jpg";
-import BlogImg4 from "../../assets/images/blog/p4.jpg";
+import React from 'react';
+import BlogImg1 from '../../assets/images/blog/p1.jpg';
+import BlogImg2 from '../../assets/images/blog/p2.jpg';
+import BlogImg3 from '../../assets/images/blog/p3.jpg';
+import BlogImg4 from '../../assets/images/blog/p4.jpg';
 
 const BlogSideBar = () => {
     return (
@@ -55,9 +55,7 @@ const BlogSideBar = () => {
                         <img src={BlogImg1} alt="" />
                     </a>
                     <h5>
-                        <a href="single-post.html">
-                            Using creative problem Solving
-                        </a>
+                        <a href="single-post.html">Using creative problem Solving</a>
                     </h5>
                     <span>March 10, 2020</span>
                 </div>
@@ -75,9 +73,7 @@ const BlogSideBar = () => {
                         <img src={BlogImg3} alt="" />
                     </a>
                     <h5>
-                        <a href="single-post.html">
-                            Making music with Other people
-                        </a>
+                        <a href="single-post.html">Making music with Other people</a>
                     </h5>
                     <span>April 12, 2020</span>
                 </div>
@@ -86,9 +82,7 @@ const BlogSideBar = () => {
                         <img src={BlogImg4} alt="" />
                     </a>
                     <h5>
-                        <a href="single-post.html">
-                            Brush strokes energize Trees in paintings
-                        </a>
+                        <a href="single-post.html">Brush strokes energize Trees in paintings</a>
                     </h5>
                     <span>July 4, 2020</span>
                 </div>
