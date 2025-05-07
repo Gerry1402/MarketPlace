@@ -16,7 +16,7 @@ import Drawer from "../Mobile/Drawer.jsx";
 import HeaderNews from "../News/HeaderNews.jsx";
 import HeroNews from "../News/HeroNews.jsx";
 import { Link, useParams } from "react-router-dom";
-import supabase from "../Service/supabase.jsx";
+import {supabase} from "../../services/supabase.jsx";
 
 const Details = () => {
   const [drawer, drawerAction] = useToggle(false);

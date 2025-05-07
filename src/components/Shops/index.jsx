@@ -8,7 +8,7 @@ import HeaderNews from "../News/HeaderNews.jsx";
 import HeroNews from "../News/HeroNews.jsx";
 import Card from "../Product/Card.jsx";
 import SideBarFilter from "./SideBarFilter.jsx";
-import supabase from "../Service/supabase.jsx";
+import {supabase} from "../../services/supabase.jsx";
 
 const Shops = () => {
   const [drawer, drawerAction] = useToggle(false);
