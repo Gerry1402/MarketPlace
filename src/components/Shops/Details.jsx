@@ -272,6 +272,7 @@ const Details = () => {
 
             setProduct({ ...product, stock: newStock });
             setQuantity(1);
+            window.dispatchEvent(new Event('cartUpdated'));
         };
 
         addToCart();
