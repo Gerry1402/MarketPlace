@@ -44,10 +44,7 @@ const Cart = ({ value, action }) => {
             alert('No hay suficiente stock disponible.');
             return;
         }
-        const stockUpdate = await supabase
-            .from('products')
-            .update({ stock: newStock })
-            .eq('id', productId);
+        const stockUpdate = await supabase.from('products').update({ stock: newStock }).eq('id', productId);
 
         if (stockUpdate.error) {
             console.error('Error actualizando el stock:', stockUpdate.error);
@@ -120,8 +117,7 @@ const Cart = ({ value, action }) => {
             <HeaderNews action={drawerAction.toggle} />
             <section
                 className="appie-blog-3-area appie-blog-8-area pt-90 pb-100"
-                style={{ paddingTop: '150px' }}
-            >
+                style={{ paddingTop: '150px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -143,21 +139,29 @@ const Cart = ({ value, action }) => {
                                         <div className="meta-item">
                                             <ul>
                                                 <li>
-                                                    <p style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                                    <p
+                                                        style={{
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            gap: '10px',
+                                                        }}>
                                                         {item.product.discount ? (
                                                             <>
                                                                 <span className="discount-price">
                                                                     {Math.round(
                                                                         item.product.price *
-                                                                            (1 - item.product.discount / 100) *
+                                                                            (1 -
+                                                                                item.product.discount / 100) *
                                                                             100
                                                                     ) / 100}
                                                                     $
                                                                 </span>
                                                                 <span
                                                                     className="regular-price"
-                                                                    style={{ textDecoration: 'line-through', color: '#888' }}
-                                                                >
+                                                                    style={{
+                                                                        textDecoration: 'line-through',
+                                                                        color: '#888',
+                                                                    }}>
                                                                     {item.product.price}$
                                                                 </span>
                                                             </>
@@ -179,8 +183,7 @@ const Cart = ({ value, action }) => {
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
                                                     type="button"
-                                                    className="sub"
-                                                >
+                                                    className="sub">
                                                     -
                                                 </button>
 
@@ -198,8 +201,7 @@ const Cart = ({ value, action }) => {
                                                 <button
                                                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
                                                     type="button"
-                                                    className="add"
-                                                >
+                                                    className="add">
                                                     +
                                                 </button>
 
@@ -211,8 +213,7 @@ const Cart = ({ value, action }) => {
                                                         color: '#dc3545',
                                                         cursor: 'pointer',
                                                         fontSize: '18px',
-                                                    }}
-                                                >
+                                                    }}>
                                                     <i className="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
@@ -238,8 +239,7 @@ const Cart = ({ value, action }) => {
                             display: 'flex',
                             gap: '10px',
                             alignItems: 'center',
-                        }}
-                    >
+                        }}>
                         <h5 style={{ margin: 0 }}>Total:</h5>
                         <h5 style={{ margin: 0 }}>${total.toFixed(2)}</h5>
                     </div>
