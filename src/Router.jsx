@@ -119,7 +119,14 @@ const router = createBrowserRouter([
       {
         path: "backpack",
         element: <Backpack />,
-      },
+      },{
+        path: '/login',
+        element: <Login/>,
+    },
+    {
+        path: '/signup',
+        element: <SignUp/>,
+    },
       {
         path: "*",
         element: <Error />,
