@@ -31,7 +31,9 @@ const HeaderNews = ({ action }) => {
                         </div>
                         <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                             <div className="appie-btn-box text-right">
-                                <Link to="/Cart/index" className="login-btn">
+                                {user ? (
+                                    <>
+                                    <Link to="/Cart/index" className="login-btn">
                                     <i
                                         className="fal fa-shopping-cart"
                                         style={{
@@ -40,16 +42,15 @@ const HeaderNews = ({ action }) => {
                                         }}></i>
                                     <span style={{ fontWeight: 'bold', marginRight: '20px' }}>$0.00</span>
                                 </Link>
-                                {/* <a href="#" className="login-btn">
-                  </a> */}
-                                {user ? (
-                                    <a className="login-btn" href="#">
+                                
+                                    <Link to="#" className="login-btn">
                                         <i className="fal fa-user"></i> {user.user_metadata.display_name}
-                                    </a>
+                                    </Link>
+                                    </>
                                 ) : (
-                                    <a className="main-btn ml-30" href="#">
+                                    <Link to="/login" className="main-btn ml-30">
                                         Login
-                                    </a>
+                                    </Link>
                                 )}
 
                                 <div

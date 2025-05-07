@@ -19,6 +19,7 @@ import { supabase } from '../../services/supabase.jsx';
 import testmonialUser from '../../assets/images/testimonial-user-1.png';
 import testmonialUser2 from '../../assets/images/testimonial-user-2.png';
 import useToggle from '../../Hooks/useToggle.js';
+import {useAuthContext} from '../../auth/useAuthContext.jsx';
 
 const Details = () => {
     const [drawer, drawerAction] = useToggle(false);
@@ -29,6 +30,8 @@ const Details = () => {
     const [reviews, setReviews] = useState([]);
     const [sizeName, setSizeName] = useState('');
     const [colorName, setColorName] = useState('');
+    const { user } = useAuthContext();
+
 
     const detailsTabHandler = (e, value) => {
         e.preventDefault();
@@ -133,30 +136,6 @@ const Details = () => {
         }
     }, [idProduct]);
 
-    // const addCart = (quantity) => {
-    //   const addToCart = async () => {
-    //     const { data, error } = await supabase
-    //       .from("cart")
-    //       .insert([
-    //         {
-    //           product_id: idProduct,
-    //           quantity: quantity,
-    //         },
-    //       ])
-    //       .select("*");
-
-    //     console.log(quantity);
-
-    //     if (error) {
-    //       console.error("Error al agregar producto al carrito:", error);
-    //       return;
-    //     }
-
-    //     console.log("Producto agregado al carrito:", data);
-    //   };
-
-    //   addToCart();
-    // };
 
     const addCart = quantityToAdd => {
         if (!product || quantityToAdd <= 0) {
@@ -252,9 +231,17 @@ const Details = () => {
                                         )}
                                     </div>
                                     <p>{product.description}</p>
-                                    <p>Stock: {product.stock}</p>
-
-                                    {product.stock > 0 ? (
+                                    <div className="d-flex align-items-center gap-3 mt-2">
+                                    <p className="badge bg-secondary">Stock: {product.stock}</p>
+                                    {product.handmade && (
+                                        <p className="badge bg-success d-flex align-items-center gap-1">
+                                            <i className="fas fa-hands"></i> Handmade
+                                        </p>
+                                    )}
+                                    </div>
+                                    
+                                    {user ? (
+                                    product.stock > 0 ? (
                                         <div className="shop-buttons d-block d-sm-flex align-items-center">
                                             <div className="product-quantity" id="quantity">
                                                 <button
@@ -306,16 +293,11 @@ const Details = () => {
                                             }}>
                                             Producto agotado
                                         </div>
-                                    )}
+                                    )
+                                ) : null}
 
                                     <div className="details-info">
                                         <ul>
-                                            {/* <li>
-                        <span>SKU:</span> 42725-AB-6
-                      </li>
-                      <li>
-                        <span>Categories: </span> Watch, Appie, UX
-                      </li> */}
                                             <li>
                                                 <span>Size:</span> {sizeName}
                                             </li>

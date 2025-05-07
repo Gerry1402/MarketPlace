@@ -3,6 +3,8 @@ import logo7 from "../../assets/images/logo-7.png";
 import logo from "../../assets/images/logo.png";
 import StickyMenu from "../../lib/StickyMenu.js";
 import Navigation from "../Navigation.jsx";
+import { Link } from "react-router-dom";
+import {useAuthContext} from '../../auth/useAuthContext.jsx';
 
 const HomeOneHeader = ({
   lang,
@@ -14,6 +16,9 @@ const HomeOneHeader = ({
   dark,
   className,
 }) => {
+
+    const { user } = useAuthContext();
+
   useEffect(() => {
     StickyMenu();
   });
@@ -98,12 +103,36 @@ const HomeOneHeader = ({
                       LTR
                     </span>
                   ))}
-                <a className="login-btn" href="#">
-                  <i className="fal fa-user" /> Login
-                </a>
-                <a className="main-btn ml-30" href="#">
+                  {/* <Link to="/login" className="login-btn">
+                    <i className="fal fa-user" /> Login
+                  </Link>
+                <a className="main-btn ml-30" href="">
                   Get Started
-                </a>
+                </a> */}
+                {user ? (
+                                    <>
+                                    <Link to="/Cart/index" className="login-btn">
+                                    <i
+                                        className="fal fa-shopping-cart"
+                                        style={{
+                                            fontSize: '18px',
+                                            marginRight: '5px',
+                                        }}></i>
+                                    <span style={{ fontWeight: 'bold', marginRight: '20px' }}>$0.00</span>
+                                </Link>
+                                
+                                    <Link to="#" className="login-btn">
+                                        <i className="fal fa-user"></i> {user.user_metadata.display_name}
+                                    </Link>
+                                    </>
+                                ) : (
+                                    <Link to="/login" className="main-btn ml-30">
+                                        Login
+                                    </Link>
+                                )}
+
+
+
                 <div
                   onClick={(e) => action(e)}
                   className="toggle-btn ml-30 canvas_open d-lg-none d-block"

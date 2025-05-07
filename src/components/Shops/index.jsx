@@ -27,7 +27,7 @@ const Shops = () => {
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
     const totalPages = Math.ceil(products.length / productsPerPage);
 
-    const fetchProducts = async (shopId = null, categoryId = null) => {
+    const fetchProducts = async (shopId = null, categoryId = null, handmadeOnly = null) => {
         let data, error;
 
         if (shopId && categoryId) {
@@ -40,6 +40,8 @@ const Shops = () => {
             ({ data, error } = await supabase.from('products').select('*').eq('shop_id', shopId));
         } else if (categoryId) {
             ({ data, error } = await supabase.from('products').select('*').eq('categories_id', categoryId));
+        }else if (handmadeOnly) {
+            ({ data, error } = await supabase.from('products').select('*').eq('handmade', true));
         } else {
             ({ data, error } = await supabase.from('products').select('*'));
         }
@@ -108,6 +110,12 @@ const Shops = () => {
         fetchProducts(null, categoryId);
     };
 
+    const handleHandmadeFilter = () => {
+    setSelectedCategory(null);
+    setSelectedShopId(null);
+    fetchProducts(null, null, true);
+};
+
     return (
         <>
             <Drawer drawer={drawer} action={drawerAction.toggle} />
@@ -149,6 +157,16 @@ const Shops = () => {
                                                 </a>
                                             </li>
                                         ))}
+                                        <li>
+                                            <a
+                                                href=""
+                                                onClick={e => {
+                                                    e.preventDefault();
+                                                    handleHandmadeFilter();
+                                                }}>
+                                                Handmade
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

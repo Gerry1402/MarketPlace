@@ -51,7 +51,8 @@ const Card = ({ cardData }) => {
                             <div className="discount-price">{cardData.price}$</div>
                         )}
                     </div>
-                    <div
+                    <div 
+                        style={{ color: 'green' }}
                         className={`${
                             cardData.handmade ? '' : 'invisible'
                         } handmade-icon green d-flex align-items-center justify-content-center gap-2 mt-2`}>

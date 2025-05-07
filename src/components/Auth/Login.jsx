@@ -38,7 +38,7 @@ const Login = () => {
             console.error('Error: ', error);
         } else {
             console.log('User: ', user);
-            goBack(e);
+            navigate('/');
         }
         setValidated(true);
     };
