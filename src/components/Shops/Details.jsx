@@ -137,23 +137,112 @@ const Details = () => {
     }, [idProduct]);
 
 
-    const addCart = quantityToAdd => {
-        if (!product || quantityToAdd <= 0) {
-            return;
-        }
+    // const addCart = quantityToAdd => {
+    //     if (!product || quantityToAdd <= 0) {
+    //         return;
+    //     }
 
-        if (quantityToAdd > product.stock) {
-            alert('No hay suficiente stock disponible.');
-            return;
-        }
+    //     if (quantityToAdd > product.stock) {
+    //         alert('No hay suficiente stock disponible.');
+    //         return;
+    //     }
 
-        const addToCart = async () => {
+    //     const addToCart = async () => {
+    //         const { data, error } = await supabase
+    //             .from('cart')
+    //             .insert([
+    //                 {
+    //                     product_id: idProduct,
+    //                     quantity: quantityToAdd,
+    //                 },
+    //             ])
+    //             .select('*');
+
+    //         if (error) {
+    //             console.error('Error al agregar producto al carrito:', error);
+    //             return;
+    //         }
+
+    //         const newStock = product.stock - quantityToAdd;
+
+    //         const { error: stockError } = await supabase
+    //             .from('products')
+    //             .update({ stock: newStock })
+    //             .eq('id', idProduct);
+
+    //         if (stockError) {
+    //             console.error('Error actualizando el stock del producto:', stockError);
+    //             return;
+    //         }
+
+    //         setProduct({ ...product, stock: newStock });
+    //         setQuantity(1);
+    //     };
+
+    //     addToCart();
+    // };
+
+
+
+const addCart = async (quantityToAdd) => {
+    if (!product || quantityToAdd <= 0) {
+        return;
+    }
+
+    if (quantityToAdd > product.stock) {
+        alert('No hay suficiente stock disponible.');
+        return;
+    }
+
+    if (!user) {
+        alert('Por favor, inicia sesión para agregar productos al carrito.');
+        return;
+    }
+
+    const { data: cartItems, error: cartError } = await supabase
+        .from('cart')
+        .select('quantity')
+        .eq('product_id', idProduct)
+        .eq('user_id', user.id);
+
+    if (cartError) {
+        console.error('Error al verificar el carrito:', cartError);
+        return;
+    }
+
+    let totalQuantityInCart = 0;
+
+    if (cartItems.length > 0) {
+        totalQuantityInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
+    }
+
+    if (quantityToAdd + totalQuantityInCart > product.stock) {
+        alert('No hay suficiente stock disponible.');
+        return;
+    }
+
+    const addToCart = async () => {
+        if (cartItems.length > 0) {
+            const { data, error } = await supabase
+                .from('cart')
+                .update({
+                    quantity: totalQuantityInCart + quantityToAdd,
+                })
+                .eq('product_id', idProduct)
+                .eq('user_id', user.id);
+
+            if (error) {
+                console.error('Error al actualizar el carrito:', error);
+                return;
+            }
+        } else {
             const { data, error } = await supabase
                 .from('cart')
                 .insert([
                     {
                         product_id: idProduct,
                         quantity: quantityToAdd,
+                        user_id: user.id,
                     },
                 ])
                 .select('*');
@@ -162,25 +251,34 @@ const Details = () => {
                 console.error('Error al agregar producto al carrito:', error);
                 return;
             }
+        }
 
-            const newStock = product.stock - quantityToAdd;
+        const newStock = product.stock - quantityToAdd;
+        
+        if (newStock < 0) {
+            alert('No hay suficiente stock disponible.');
+            return;
+        }
 
-            const { error: stockError } = await supabase
-                .from('products')
-                .update({ stock: newStock })
-                .eq('id', idProduct);
+        const { data: updatedProduct, error: stockError } = await supabase
+            .from('products')
+            .update({ stock: newStock })
+            .eq('id', idProduct)
+            .select('*');
 
-            if (stockError) {
-                console.error('Error actualizando el stock del producto:', stockError);
-                return;
-            }
+        if (stockError) {
+            console.error('Error actualizando el stock del producto:', stockError);
+            return;
+        }
 
-            setProduct({ ...product, stock: newStock });
-            setQuantity(1);
-        };
+        console.log('Producto actualizado con stock:', updatedProduct);
 
-        addToCart();
+        setProduct({ ...product, stock: newStock });
+        setQuantity(1);
     };
+
+    addToCart();
+};
 
     return (
         <>
@@ -267,7 +365,9 @@ const Details = () => {
                                                     +
                                                 </button>
                                             </div>
-                                            <Link to={'/Cart/index'} className="main-btn ml-10">
+                                            <div className="main-btn ml-10">
+                                            {/* <Link to={'/Cart/index'} className="main-btn ml-10"> */}
+
                                                 <button
                                                     onClick={() => addCart(quantity)}
                                                     style={{
@@ -279,7 +379,7 @@ const Details = () => {
                                                     }}>
                                                     Add to Cart
                                                 </button>
-                                            </Link>
+                                            </div>
                                         </div>
                                     ) : (
                                         <div

@@ -17,7 +17,7 @@ const HomeOneHeader = ({
   className,
 }) => {
 
-    const { user } = useAuthContext();
+  const { user } = useAuthContext();
 
   useEffect(() => {
     StickyMenu();

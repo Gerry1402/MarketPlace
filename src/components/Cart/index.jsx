@@ -11,13 +11,22 @@ import shape12 from '../../assets/images/shape/shape-12.png';
 import shape5 from '../../assets/images/shape/5.png';
 import { supabase } from '../../services/supabase.jsx';
 import { useEffect } from 'react';
+import HeaderNews from '../News/HeaderNews.jsx';
+import Drawer from '../Mobile/Drawer.jsx';
+import useToggle from '../../Hooks/useToggle.js';
+import {useAuthContext} from '../../auth/useAuthContext.jsx';
 
 const Cart = ({ value, action }) => {
     const [cart, setCart] = useState([]);
+    const [drawer, drawerAction] = useToggle(false);
+    const { user } = useAuthContext();
 
     useEffect(() => {
         const fetchCart = async () => {
-            const { data, error } = await supabase.from('cart').select('*, product:products(*)');
+            if (!user) {
+                return;
+            }
+            const { data, error } = await supabase.from('cart').select('*, product:products(*)').eq('user_id', user.id);
 
             if (error) {
                 console.error('Error al obtener el carrito:', error);
@@ -84,7 +93,9 @@ const Cart = ({ value, action }) => {
 
     return (
         <>
-            <section className="appie-blog-3-area appie-blog-8-area pt-90 pb-100">
+        <Drawer drawer={drawer} action={drawerAction.toggle} />
+            <HeaderNews action={drawerAction.toggle} />
+            <section className="appie-blog-3-area appie-blog-8-area pt-90 pb-100" style={{ paddingTop: '150px'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -98,7 +109,7 @@ const Cart = ({ value, action }) => {
                             <div className="col-lg-12" key={item.id}>
                                 <div className="appie-blog-item-3 appie-blog-item-8 mt-30">
                                     <div className="thumb">
-                                        <img src={blog4} alt="" />
+                                        <img src={item.product?.images.thumbnail} alt="" />
                                     </div>
                                     <div className="content">
                                         <h5 className="title">
