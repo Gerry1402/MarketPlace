@@ -11,19 +11,19 @@ import { supabaseAuth } from "../../services/supabase.jsx";
 const Backpack = () => {
   const [drawer, drawerAction] = useToggle(false);
 
-  // dynamic options
+
   const [categories, setCategories] = useState([]);
   const [sizes, setSizes] = useState([]);
   const [colors, setColors] = useState([]);
   const [shops, setShops] = useState([]);
 
-  // local items (sale only)
+
   const [sellItems, setSellItems] = useState([]);
 
-  // currently expanded item id
+
   const [expandedId, setExpandedId] = useState(null);
 
-  // form state
+
   const [form, setForm] = useState({
     title: "",
     description: "",
@@ -40,20 +40,19 @@ const Backpack = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  // Helper to find name by id
   const findName = (list, id) => {
     const found = list.find((x) => x.id === id);
     return found ? found.name : "—";
   };
 
-  // Initial load: selects & items
+
   useEffect(() => {
     const loadData = async () => {
       const sb = supabaseAuth;
       const { data: { user } } = await sb.auth.getUser();
       if (!user) return;
 
-      // load options
+      
       const [
         { data: cats },
         { data: szs },
@@ -78,7 +77,6 @@ const Backpack = () => {
         shop_id:       shs?.[0]?.id ?? "",
       }));
 
-      // load existing products
       const { data: prods, error } = await sb
         .from("products")
         .select("id,title,description,stock,price,weight,dimensions,handmade,images,categories_id,size_id,color_id,shop_id")
@@ -90,7 +88,6 @@ const Backpack = () => {
     loadData();
   }, []);
 
-  // generic input handler
   const handleChange = (e) => {
     let { name, value, type, checked } = e.target;
     if (name === "stock") {
@@ -103,12 +100,10 @@ const Backpack = () => {
     }));
   };
 
-  // toggle detail view
   const toggleExpand = (id) => {
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
-  // add product
   const handleAdd = async () => {
     const { data: { user }, error: userErr } = await supabaseAuth.auth.getUser();
     if (userErr || !user) {
@@ -175,7 +170,6 @@ const Backpack = () => {
     }
   };
 
-  // delete product
   const deleteProduct = async (item) => {
     if (!window.confirm("Delete this product?")) return;
     const { error } = await supabaseAuth
@@ -197,11 +191,9 @@ const Backpack = () => {
         <div className="container">
           <h2 className="mb-4">PRODUCTS</h2>
           <div className="row">
-            {/* Form */}
             <div className="col-12 mb-4">
               <div className="card p-3">
                 <div className="form-row">
-                  {/* Title */}
                   <div className="col-md-4 mb-3">
                     <label>Title</label>
                     <input
@@ -212,7 +204,6 @@ const Backpack = () => {
                       placeholder="e.g. Vintage Camera"
                     />
                   </div>
-                  {/* Description */}
                   <div className="col-md-8 mb-3">
                     <label>Description</label>
                     <input
@@ -223,7 +214,6 @@ const Backpack = () => {
                       placeholder="Describe your product…"
                     />
                   </div>
-                  {/* Stock */}
                   <div className="col-md-3 mb-3">
                     <label>Stock</label>
                     <input
@@ -233,7 +223,6 @@ const Backpack = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  {/* Price */}
                   <div className="col-md-3 mb-3">
                     <label>Price</label>
                     <input
@@ -243,7 +232,6 @@ const Backpack = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  {/* Weight */}
                   <div className="col-md-3 mb-3">
                     <label>Weight (kg)</label>
                     <input
@@ -253,7 +241,6 @@ const Backpack = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  {/* Dimensions */}
                   <div className="col-md-6 mb-3">
                     <label>Dimensions</label>
                     <input
@@ -264,7 +251,6 @@ const Backpack = () => {
                       placeholder="10x10x10 cm"
                     />
                   </div>
-                  {/* Handmade */}
                   <div className="col-12 mb-3">
                     <div className="form-check">
                       <input
@@ -278,7 +264,6 @@ const Backpack = () => {
                       </label>
                     </div>
                   </div>
-                  {/* Category */}
                   <div className="col-md-3 mb-3">
                     <label>Category</label>
                     <select
@@ -291,7 +276,6 @@ const Backpack = () => {
                       ))}
                     </select>
                   </div>
-                  {/* Size */}
                   <div className="col-md-3 mb-3">
                     <label>Size</label>
                     <select
@@ -304,7 +288,6 @@ const Backpack = () => {
                       ))}
                     </select>
                   </div>
-                  {/* Color */}
                   <div className="col-md-3 mb-3">  
                     <label>Color</label>
                     <select
@@ -317,7 +300,6 @@ const Backpack = () => {
                       ))}
                     </select>
                   </div>
-                  {/* Shop */}
                   <div className="col-md-3 mb-3">
                     <label>Shop</label>
                     <select
@@ -331,7 +313,6 @@ const Backpack = () => {
                       ))}
                     </select>
                   </div>
-                  {/* Image URL */}
                   <div className="col-12 mb-3">
                     <label>Image URL</label>
                     <input
@@ -342,7 +323,6 @@ const Backpack = () => {
                       placeholder="https://…/image.jpg"
                     />
                   </div>
-                  {/* Submit */}
                   <div className="col-12 text-right">
                     <button
                       className="btn btn-primary"
