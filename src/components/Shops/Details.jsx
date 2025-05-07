@@ -31,6 +31,7 @@ const Details = () => {
     const [sizeName, setSizeName] = useState('');
     const [colorName, setColorName] = useState('');
     const { user } = useAuthContext();
+    const [hover, setHover] = useState(false);
 
     const detailsTabHandler = (e, value) => {
         e.preventDefault();
@@ -297,7 +298,12 @@ const Details = () => {
                                     <img
                                         src={product.images?.thumbnail}
                                         alt={product.title}
-                                        style={{ maxWidth: '80%', height: 'auto', marginBottom: '20px' }}
+                                        style={{
+                                            maxWidth: '80%',
+                                            maxHeight: '500px',
+                                            objectFit: 'contain',
+                                            marginBottom: '20px'
+                                          }}
                                     />
                                 </>
                             ) : (
@@ -365,15 +371,21 @@ const Details = () => {
                                                         +
                                                     </button>
                                                 </div>
-                                                <div className="main-btn ml-10">
+                                                <div className="main-btn ml-10"
+                                                    onMouseEnter={() => setHover(true)}
+                                                    onMouseLeave={() => setHover(false)}
+                                                >
                                                     <button
                                                         onClick={() => addCart(quantity)}
+                                                        
                                                         style={{
                                                             background: 'none',
                                                             border: 'none',
                                                             padding: 0,
                                                             margin: 0,
                                                             cursor: 'pointer',
+                                                            color: hover ? '#2b70fa' : '#fff',
+                                                            transition: 'color 0.2s ease'
                                                         }}>
                                                         Add to Cart
                                                     </button>

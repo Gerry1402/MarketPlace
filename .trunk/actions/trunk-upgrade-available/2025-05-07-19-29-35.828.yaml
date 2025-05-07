@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2025-05-07 19:29:35
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\r9ViQ.yaml for details.
+  error_path: C:\Users\Cesar\OneDrive\Escritorio\CursoBoothCamp\MarketPlace\.trunk\out\r9ViQ.yaml
+timestamp: 1746646175
+full_timestamp:
+  nanos: 828076000
+  seconds: 1746646175
+trunk_version: 1.22.15
