@@ -9,31 +9,30 @@ const Forms = () => {
                         <div className="col-md-4">
                             <div className="contact--info-area">
                                 <h3>Get in touch</h3>
-                                <p>Looking for help? Fill the form and start a new adventure.</p>
                                 <div className="single-info">
                                     <h5>Headquaters</h5>
                                     <p>
                                         <i className="fal fa-home"></i>
-                                        744 New York Ave, Brooklyn, Kings,
-                                        <br /> New York 10224
+                                        1 Grafton Street, Dublin,
+                                        <br /> Ireland
                                     </p>
                                 </div>
                                 <div className="single-info">
                                     <h5>Phone</h5>
                                     <p>
                                         <i className="fal fa-phone"></i>
-                                        (+642) 245 356 432
+                                        921 543 122
                                         <br />
-                                        (+420) 336 476 328
+                                        919 432 791
                                     </p>
                                 </div>
                                 <div className="single-info">
                                     <h5>Support</h5>
                                     <p>
                                         <i className="fal fa-envelope"></i>
-                                        bisy@support.com
+                                        marquetplace@support.com
                                         <br />
-                                        help@education.com
+                                        jhonretrive@support.com
                                     </p>
                                 </div>
                                 <div className="ab-social">
@@ -55,8 +54,11 @@ const Forms = () => {
                         </div>
                         <div className="col-md-8">
                             <div className="contact-form">
-                                <h4>Let's Connect</h4>
-                                <p>Integer at lorem eget diam facilisis lacinia ac id massa.</p>
+                                <h4>Ask us anything</h4>
+                                <p>
+                                    We are Marketplace, here to help you find exactly what you're looking for.
+                                    Feel free to reach out with any questions!
+                                </p>
                                 <form action="#" method="post" className="row">
                                     <div className="col-md-6">
                                         <input type="text" name="f-name" placeholder="First Name" />
