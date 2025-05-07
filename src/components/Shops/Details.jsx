@@ -136,51 +136,6 @@ const Details = () => {
         }
     }, [idProduct]);
 
-    // const addCart = quantityToAdd => {
-    //     if (!product || quantityToAdd <= 0) {
-    //         return;
-    //     }
-
-    //     if (quantityToAdd > product.stock) {
-    //         alert('No hay suficiente stock disponible.');
-    //         return;
-    //     }
-
-    //     const addToCart = async () => {
-    //         const { data, error } = await supabase
-    //             .from('cart')
-    //             .insert([
-    //                 {
-    //                     product_id: idProduct,
-    //                     quantity: quantityToAdd,
-    //                 },
-    //             ])
-    //             .select('*');
-
-    //         if (error) {
-    //             console.error('Error al agregar producto al carrito:', error);
-    //             return;
-    //         }
-
-    //         const newStock = product.stock - quantityToAdd;
-
-    //         const { error: stockError } = await supabase
-    //             .from('products')
-    //             .update({ stock: newStock })
-    //             .eq('id', idProduct);
-
-    //         if (stockError) {
-    //             console.error('Error actualizando el stock del producto:', stockError);
-    //             return;
-    //         }
-
-    //         setProduct({ ...product, stock: newStock });
-    //         setQuantity(1);
-    //     };
-
-    //     addToCart();
-    // };
-
     const addCart = async quantityToAdd => {
         if (!product || quantityToAdd <= 0) {
             return;
@@ -303,8 +258,8 @@ const Details = () => {
                                             maxWidth: '80%',
                                             maxHeight: '500px',
                                             objectFit: 'contain',
-                                            marginBottom: '20px'
-                                          }}
+                                            marginBottom: '20px',
+                                        }}
                                     />
                                 </>
                             ) : (
@@ -372,13 +327,12 @@ const Details = () => {
                                                         +
                                                     </button>
                                                 </div>
-                                                <div className="main-btn ml-10"
+                                                <div
+                                                    className="main-btn ml-10"
                                                     onMouseEnter={() => setHover(true)}
-                                                    onMouseLeave={() => setHover(false)}
-                                                >
+                                                    onMouseLeave={() => setHover(false)}>
                                                     <button
                                                         onClick={() => addCart(quantity)}
-                                                        
                                                         style={{
                                                             background: 'none',
                                                             border: 'none',
@@ -386,7 +340,7 @@ const Details = () => {
                                                             margin: 0,
                                                             cursor: 'pointer',
                                                             color: hover ? '#2b70fa' : '#fff',
-                                                            transition: 'color 0.2s ease'
+                                                            transition: 'color 0.2s ease',
                                                         }}>
                                                         Add to Cart
                                                     </button>
