@@ -1,0 +1,80 @@
+trunk_cli_version: 1.22.15
+title: prettier exited with exit_code=0
+report:
+  - prettier exited with exit_code=0
+  - linter:
+      command: |
+        'C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules/.bin\prettier' -w 'src\App.jsx' 'src\Router.jsx' 'src\auth\Auth.jsx' 'src\auth\Context.jsx' 'src\auth\Provider.jsx' 'src\auth\useAuthContext.jsx' 'src\components\AboutUs\ServicesAbout.jsx' 'src\components\Auth\Login.jsx' 'src\components\Auth\SignUp.jsx' 'src\components\Cart\index.jsx' 'src\components\Contact\Forms.jsx' 'src\components\Error\Svg.jsx' 'src\components\Error\index.jsx' 'src\components\Helper\Layout.jsx' 'src\components\Helper\Loader.jsx' 'src\components\Helper\ScrollToTop.jsx' 'src\components\HomeDark\index.jsx' 'src\components\HomeEight\AboutHomeEight.jsx' 'src\components\HomeEight\BlogHomeEight.jsx' 'src\components\HomeEight\FaqHomeEight.jsx' 'src\components\HomeEight\FooterHomeEight.jsx' 'src\components\HomeEight\HeaderHomeEight.jsx' 'src\components\HomeEight\HeroHomeEight.jsx' 'src\components\HomeEight\TeamHomeEight.jsx' 'src\components\HomeEight\TestimonialHomeEight.jsx' 'src\components\HomeEight\WorkPartHomeEight.jsx' 'src\components\HomeEight\index.jsx' 'src\components\HomeFive\HeroHomeFive.jsx' 'src\components\HomeOne\HeroHomeOne.jsx' 'src\components\HomeOne\ProjectHomeOne.jsx' 'src\components\HomeOne\ProyectHighLight.jsx' 'src\components\HomeOne\ServicesHomeOne.jsx' 'src\components\HomeOne\TeamHomeOne.jsx' 'src\components\HomeOne\TrafficHomeOne.jsx' 'src\components\HomeOne\index.jsx' 'src\components\HomeThree\ProjectHomeThree.jsx' 'src\components\HomeTwo\PricingHomeTwo.jsx' 'src\components\HomeTwo\index.jsx' 'src\components\Mobile\Drawer.jsx' 'src\components\News\HeaderNews.jsx' 'src\components\Product\Card.jsx' 'src\components\Service\HeaderService.jsx' 'src\components\Shops\Details.jsx' 'src\components\Shops\SideBarFilter.jsx' 'src\components\Shops\index.jsx' 'src\main.jsx' 'src\services\supabase.jsx'
+      stdin_path: (none)
+      run_from: C:\Users\Cesar\AppData\Local\Temp\trunk\1yq1ri2\gzndfp3\
+      timeout: 10m
+      rerun: (cd C:\Users\Cesar\AppData\Local\Temp\trunk\1yq1ri2\gzndfp3\; env -i 'COMSPEC=C:\Windows\system32\cmd.exe' HOME= 'NODE_PATH=C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules' 'PATH=C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules/.bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8/bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\;C:\Users\Cesar\AppData\Local\Microsoft\WindowsApps;C:\Users\Cesar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cesar\AppData\Local\GitHubDesktop\bin;C:\Users\Cesar\AppData\Roaming\npm' 'C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules/.bin\prettier' -w 'src\App.jsx' 'src\Router.jsx' 'src\auth\Auth.jsx' 'src\auth\Context.jsx' 'src\auth\Provider.jsx' 'src\auth\useAuthContext.jsx' 'src\components\AboutUs\ServicesAbout.jsx' 'src\components\Auth\Login.jsx' 'src\components\Auth\SignUp.jsx' 'src\components\Cart\index.jsx' 'src\components\Contact\Forms.jsx' 'src\components\Error\Svg.jsx' 'src\components\Error\index.jsx' 'src\components\Helper\Layout.jsx' 'src\components\Helper\Loader.jsx' 'src\components\Helper\ScrollToTop.jsx' 'src\components\HomeDark\index.jsx' 'src\components\HomeEight\AboutHomeEight.jsx' 'src\components\HomeEight\BlogHomeEight.jsx' 'src\components\HomeEight\FaqHomeEight.jsx' 'src\components\HomeEight\FooterHomeEight.jsx' 'src\components\HomeEight\HeaderHomeEight.jsx' 'src\components\HomeEight\HeroHomeEight.jsx' 'src\components\HomeEight\TeamHomeEight.jsx' 'src\components\HomeEight\TestimonialHomeEight.jsx' 'src\components\HomeEight\WorkPartHomeEight.jsx' 'src\components\HomeEight\index.jsx' 'src\components\HomeFive\HeroHomeFive.jsx' 'src\components\HomeOne\HeroHomeOne.jsx' 'src\components\HomeOne\ProjectHomeOne.jsx' 'src\components\HomeOne\ProyectHighLight.jsx' 'src\components\HomeOne\ServicesHomeOne.jsx' 'src\components\HomeOne\TeamHomeOne.jsx' 'src\components\HomeOne\TrafficHomeOne.jsx' 'src\components\HomeOne\index.jsx' 'src\components\HomeThree\ProjectHomeThree.jsx' 'src\components\HomeTwo\PricingHomeTwo.jsx' 'src\components\HomeTwo\index.jsx' 'src\components\Mobile\Drawer.jsx' 'src\components\News\HeaderNews.jsx' 'src\components\Product\Card.jsx' 'src\components\Service\HeaderService.jsx' 'src\components\Shops\Details.jsx' 'src\components\Shops\SideBarFilter.jsx' 'src\components\Shops\index.jsx' 'src\main.jsx' 'src\services\supabase.jsx')
+      affects_cache:
+        - package.json
+      direct_configs:
+        - .prettierrc
+      exit_status: exited
+      exit_code: 0
+      stdout: |
+        src/App.jsx 135ms
+        src/Router.jsx 40ms
+        src/auth/Auth.jsx 9ms
+        src/auth/Context.jsx 3ms
+        src/auth/Provider.jsx 28ms
+        src/auth/useAuthContext.jsx 3ms
+        src/components/AboutUs/ServicesAbout.jsx 23ms
+        src/components/Auth/Login.jsx 25ms
+        src/components/Auth/SignUp.jsx 19ms
+        src/components/Cart/index.jsx 36ms
+        src/components/Contact/Forms.jsx 22ms
+        src/components/Error/Svg.jsx 20ms
+        src/components/Error/index.jsx 14ms
+        src/components/Helper/Layout.jsx 3ms
+        src/components/Helper/Loader.jsx 6ms
+        src/components/Helper/ScrollToTop.jsx 5ms
+        src/components/HomeDark/index.jsx 10ms
+        src/components/HomeEight/AboutHomeEight.jsx 8ms
+        src/components/HomeEight/BlogHomeEight.jsx 17ms
+        src/components/HomeEight/FaqHomeEight.jsx 33ms
+        src/components/HomeEight/FooterHomeEight.jsx 18ms
+        src/components/HomeEight/HeaderHomeEight.jsx 8ms
+        src/components/HomeEight/HeroHomeEight.jsx 8ms
+        src/components/HomeEight/TeamHomeEight.jsx 36ms
+        src/components/HomeEight/TestimonialHomeEight.jsx 33ms
+        src/components/HomeEight/WorkPartHomeEight.jsx 6ms
+        src/components/HomeEight/index.jsx 3ms
+        src/components/HomeFive/HeroHomeFive.jsx 3ms
+        src/components/HomeOne/HeroHomeOne.jsx 21ms
+        src/components/HomeOne/ProjectHomeOne.jsx 16ms
+        src/components/HomeOne/ProyectHighLight.jsx 8ms
+        src/components/HomeOne/ServicesHomeOne.jsx 8ms
+        src/components/HomeOne/TeamHomeOne.jsx 11ms
+        src/components/HomeOne/TrafficHomeOne.jsx 11ms
+        src/components/HomeOne/index.jsx 5ms
+        src/components/HomeThree/ProjectHomeThree.jsx 4ms
+        src/components/HomeTwo/PricingHomeTwo.jsx 49ms
+        src/components/HomeTwo/index.jsx 4ms
+        src/components/Mobile/Drawer.jsx 39ms
+        src/components/News/HeaderNews.jsx 6ms
+        src/components/Product/Card.jsx 8ms
+        src/components/Service/HeaderService.jsx 9ms
+        src/components/Shops/Details.jsx 87ms
+        src/components/Shops/SideBarFilter.jsx 19ms
+        src/components/Shops/index.jsx 24ms
+        src/main.jsx 3ms
+        src/services/supabase.jsx 2ms
+
+      stderr: (none)
+    parser:
+      command: |
+        'C:\Users\Cesar\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' C:/Users/Cesar/AppData/Local/trunk/plugins/https---github-com-trunk-io-plugins/v1.6.8-4ebadccd80b22638/linters/prettier/prettier_to_sarif.py 0
+      stdin_path: (none)
+      run_from: C:\Users\Cesar\AppData\Local\Temp\trunk\1yq1ri2\gzndfp3\
+      timeout: 10m
+      rerun: (cd C:\Users\Cesar\AppData\Local\Temp\trunk\1yq1ri2\gzndfp3\; env -i 'Path=C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\;C:\Users\Cesar\AppData\Local\Microsoft\WindowsApps;C:\Users\Cesar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cesar\AppData\Local\GitHubDesktop\bin;C:\Users\Cesar\AppData\Roaming\npm' 'COMSPEC=C:\Windows\system32\cmd.exe' 'NODE_PATH=C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules' 'PATH=C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/bin;C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/Scripts;C:\Users\Cesar\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\Cesar\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93/node_modules/.bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8/bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\;C:\Users\Cesar\AppData\Local\Microsoft\WindowsApps;C:\Users\Cesar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cesar\AppData\Local\GitHubDesktop\bin;C:\Users\Cesar\AppData\Roaming\npm' PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\Cesar\AppData\Local\trunk\tools\prettier\3.5.3-afa23eb4b60aa9697da1e4a090874b93' 'SYSTEMROOT=C:\Windows' HOME= 'HOMEPATH=\Users\Cesar' 'SystemRoot=C:\Windows' 'windir=C:\Windows' 'APPDATA=C:\Users\Cesar\AppData\Roaming' 'LOCALAPPDATA=C:\Users\Cesar\AppData\Local' 'USERPROFILE=C:\Users\Cesar' 'TMP=C:\Users\Cesar\AppData\Local\Temp' 'TEMP=C:\Users\Cesar\AppData\Local\Temp' 'C:\Users\Cesar\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' C:/Users/Cesar/AppData/Local/trunk/plugins/https---github-com-trunk-io-plugins/v1.6.8-4ebadccd80b22638/linters/prettier/prettier_to_sarif.py 0)
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        C:\Users\Cesar\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe: can't open file 'C:\\Users\\Cesar\\AppData\\Local\\trunk\\plugins\\https---github-com-trunk-io-plugins\\v1.6.8-4ebadccd80b22638\\linters\\prettier\\prettier_to_sarif.py': [Errno 2] No such file or directory
+

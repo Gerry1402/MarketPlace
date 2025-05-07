@@ -1,0 +1,33 @@
+trunk_cli_version: 1.22.15
+title: svgo exited with exit_code=1
+report:
+  - svgo exited with exit_code=1
+  - linter:
+      command: |
+        'C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1/node_modules/.bin\svgo' --multipass 'docs\assets\images\screenshort\carbon-2svg.svg'
+      stdin_path: (none)
+      run_from: C:\Users\Cesar\AppData\Local\Temp\trunk\onysb2k\ptwfjjl\
+      timeout: 10m
+      rerun: (cd C:\Users\Cesar\AppData\Local\Temp\trunk\onysb2k\ptwfjjl\; env -i HOME= 'COMSPEC=C:\Windows\system32\cmd.exe' 'NODE_PATH=C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1/node_modules' 'PATH=C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1/node_modules/.bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8/bin;C:\Users\Cesar\AppData\Local\trunk\tools\node\18.20.5-730a53566ca346270d1e9ab4c1afaea8;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Cesar\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Cesar\AppData\Local\Programs\Python\Python311\;C:\Users\Cesar\AppData\Local\Microsoft\WindowsApps;C:\Users\Cesar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cesar\AppData\Local\GitHubDesktop\bin;C:\Users\Cesar\AppData\Roaming\npm' 'C:/Users/Cesar/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin\sh.exe' 'C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1/node_modules/.bin\svgo' --multipass 'docs\assets\images\screenshort\carbon-2svg.svg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 1
+      stdout: (none)
+      stderr: |
+        [31mError: Pseudo-elements are not supported by css-select
+            at compileGeneralSelector (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\general.js:21:19)
+            at rules.reduce._a (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:137:55)
+            at Array.reduce (<anonymous>)
+            at compileRules (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:134:18)
+            at C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:125:16
+            at Array.map (<anonymous>)
+            at compileToken (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:109:10)
+            at compileUnsafe (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:49:12)
+            at compile (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\compile.js:43:16)
+            at is (C:\Users\Cesar\AppData\Local\trunk\tools\svgo\3.3.2-266d0518ddc88a894e3ffdda3af9dbd1\node_modules\css-select\lib\index.js:140:76)[39m
+
+    parser: |
+      (none)

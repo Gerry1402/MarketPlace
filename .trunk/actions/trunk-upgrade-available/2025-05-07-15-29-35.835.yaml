@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2025-05-07 15:29:35
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\zvLPp.yaml for details.
+  error_path: C:\Users\Cesar\OneDrive\Escritorio\CursoBoothCamp\MarketPlace\.trunk\out\zvLPp.yaml
+timestamp: 1746631775
+full_timestamp:
+  nanos: 835019000
+  seconds: 1746631775
+trunk_version: 1.22.15
