@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2025-05-07 11:29:35
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\F86M5.yaml for details.
+  error_path: C:\Users\Cesar\OneDrive\Escritorio\CursoBoothCamp\MarketPlace\.trunk\out\F86M5.yaml
+timestamp: 1746617375
+full_timestamp:
+  nanos: 834559000
+  seconds: 1746617375
+trunk_version: 1.22.15

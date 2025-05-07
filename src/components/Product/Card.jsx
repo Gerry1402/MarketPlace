@@ -23,19 +23,16 @@ const Card = ({ cardData }) => {
 
         <div className="cart-list-icon">
           <ul className="cart-list-icon-list m-0 p-0 list-unstyled">
-            {/* Add to Cart */}
             <li className="mx-1">
               <Link to="/Cart/index" className="icon-btn">
                 <i className="fal fa-shopping-bag"></i>
               </Link>
             </li>
-            {/* View Details */}
             <li className="mx-1">
               <Link to={`/shops/shop-details/${cardData.id}`} className="icon-btn">
                 <i className="fal fa-eye"></i>
               </Link>
             </li>
-            {/* Trade */}
             <li className="mx-1">
               <Link to="/trade" className="icon-btn">
                 <i className="fal fa-exchange-alt"></i>
