@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Loader = () => {
     return (
@@ -6,23 +6,15 @@ const Loader = () => {
             xmlns="http://www.w3.org/2000/svg"
             xlink="http://www.w3.org/1999/xlink"
             style={{
-                margin: "auto",
-                display: "block",
-                shapeRendering: "auto",
+                margin: 'auto',
+                display: 'block',
+                shapeRendering: 'auto',
             }}
             width="200px"
             height="200px"
             viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid"
-        >
-            <circle
-                cx="50"
-                cy="50"
-                r="0"
-                fill="none"
-                stroke="#e90c59"
-                strokeWidth="2"
-            >
+            preserveAspectRatio="xMidYMid">
+            <circle cx="50" cy="50" r="0" fill="none" stroke="#e90c59" strokeWidth="2">
                 <animate
                     attributeName="r"
                     repeatCount="indefinite"
@@ -31,8 +23,7 @@ const Loader = () => {
                     keyTimes="0;1"
                     keySplines="0 0.2 0.8 1"
                     calcMode="spline"
-                    begin="0s"
-                ></animate>
+                    begin="0s"></animate>
                 <animate
                     attributeName="opacity"
                     repeatCount="indefinite"
@@ -41,17 +32,9 @@ const Loader = () => {
                     keyTimes="0;1"
                     keySplines="0.2 0 0.8 1"
                     calcMode="spline"
-                    begin="0s"
-                ></animate>
+                    begin="0s"></animate>
             </circle>
-            <circle
-                cx="50"
-                cy="50"
-                r="0"
-                fill="none"
-                stroke="#46dff0"
-                strokeWidth="2"
-            >
+            <circle cx="50" cy="50" r="0" fill="none" stroke="#46dff0" strokeWidth="2">
                 <animate
                     attributeName="r"
                     repeatCount="indefinite"
@@ -60,8 +43,7 @@ const Loader = () => {
                     keyTimes="0;1"
                     keySplines="0 0.2 0.8 1"
                     calcMode="spline"
-                    begin="-0.5s"
-                ></animate>
+                    begin="-0.5s"></animate>
                 <animate
                     attributeName="opacity"
                     repeatCount="indefinite"
@@ -70,8 +52,7 @@ const Loader = () => {
                     keyTimes="0;1"
                     keySplines="0.2 0 0.8 1"
                     calcMode="spline"
-                    begin="-0.5s"
-                ></animate>
+                    begin="-0.5s"></animate>
             </circle>
         </svg>
     );

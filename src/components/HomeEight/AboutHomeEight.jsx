@@ -1,6 +1,6 @@
-import React from "react";
-import thumb4 from "../../assets/images/about-thumb-4.png";
-import thumb5 from "../../assets/images/about-thumb-5.png";
+import React from 'react';
+import thumb4 from '../../assets/images/about-thumb-4.png';
+import thumb5 from '../../assets/images/about-thumb-5.png';
 
 const AboutHomeEight = () => {
     return (
@@ -25,13 +25,11 @@ const AboutHomeEight = () => {
                                     Mobile Friendly
                                 </h3>
                                 <p>
-                                    A load of old tosh spiffing pear shaped show{" "}
-                                    <br />
+                                    A load of old tosh spiffing pear shaped show <br />
                                     off pick your nose and blow
                                 </p>
                                 <a className="main-btn" href="#">
-                                    Learn More{" "}
-                                    <i className="fal fa-arrow-right" />
+                                    Learn More <i className="fal fa-arrow-right" />
                                 </a>
                                 <div className="thumb">
                                     <img src={thumb4} alt="" />
@@ -45,13 +43,11 @@ const AboutHomeEight = () => {
                                     App Design
                                 </h3>
                                 <p>
-                                    A load of old tosh spiffing pear shaped show{" "}
-                                    <br />
+                                    A load of old tosh spiffing pear shaped show <br />
                                     off pick your nose and blow
                                 </p>
                                 <a className="main-btn" href="#">
-                                    Learn More{" "}
-                                    <i className="fal fa-arrow-right" />
+                                    Learn More <i className="fal fa-arrow-right" />
                                 </a>
                                 <div className="thumb mr-30">
                                     <img src={thumb5} alt="" />

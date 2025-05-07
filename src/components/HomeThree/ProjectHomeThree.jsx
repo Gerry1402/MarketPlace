@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ProjectHomeThree = ({ className }) => {
     return (
@@ -18,14 +18,13 @@ const ProjectHomeThree = ({ className }) => {
                 fadeInUp
               "
                                 data-wow-duration="2000ms"
-                                data-wow-delay="400ms"
-                            >
+                                data-wow-delay="400ms">
                                 <h4 className="title">
                                     Start your project <br />
                                     with Appie.
                                 </h4>
                                 <a className="main-btn" href="#">
-                                    Let’s Talk
+                                    Let's Talk
                                 </a>
                             </div>
                         </div>

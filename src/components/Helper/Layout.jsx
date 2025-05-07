@@ -1,6 +1,6 @@
-import React from "react";
-import ScrollToTop from "./ScrollToTop.jsx";
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import React from 'react';
+import ScrollToTop from './ScrollToTop.jsx';
 
 const Layout = () => {
     return (

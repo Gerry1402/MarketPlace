@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const SideBarFilter = () => {
     return (
@@ -63,7 +63,7 @@ const SideBarFilter = () => {
                             <img src="assets/images/shop-3.jpg" alt="" />
                         </div>
                         <div className="content">
-                            <a href="#">Mango Women’s Bag</a>
+                            <a href="#">Mango Women's Bag</a>
                             <span>$44.00</span>
                         </div>
                     </div>

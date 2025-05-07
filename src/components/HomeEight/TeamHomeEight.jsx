@@ -1,8 +1,8 @@
-import React from "react";
-import teamOne from "../../assets/images/team-1.jpg";
-import teamTwo from "../../assets/images/team-2.jpg";
-import teamThree from "../../assets/images/team-3.jpg";
-import teamFour from "../../assets/images/team-4.jpg";
+import React from 'react';
+import teamFour from '../../assets/images/team-4.jpg';
+import teamOne from '../../assets/images/team-1.jpg';
+import teamThree from '../../assets/images/team-3.jpg';
+import teamTwo from '../../assets/images/team-2.jpg';
 
 const TeamHomeEight = () => {
     return (
@@ -12,19 +12,13 @@ const TeamHomeEight = () => {
         appie-team-area appie-team-about-area appie-team-8-area
         pt-90
         pb-90
-      "
-            >
+      ">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    Meet our Team Members
-                                </h3>
-                                <p>
-                                    Different layouts and styles for team
-                                    sections.
-                                </p>
+                                <h3 className="appie-title">Meet our Team Members</h3>
+                                <p>Different layouts and styles for team sections.</p>
                             </div>
                         </div>
                     </div>
@@ -39,8 +33,7 @@ const TeamHomeEight = () => {
                 fadeInUp
               "
                                 data-wow-duration="2000ms"
-                                data-wow-delay="200ms"
-                            >
+                                data-wow-delay="200ms">
                                 <div className="thumb">
                                     <img src={teamOne} alt="" />
                                     <ul>
@@ -77,8 +70,7 @@ const TeamHomeEight = () => {
                 fadeInUp
               "
                                 data-wow-duration="2000ms"
-                                data-wow-delay="400ms"
-                            >
+                                data-wow-delay="400ms">
                                 <div className="thumb">
                                     <img src={teamTwo} alt="" />
                                     <ul>
@@ -115,8 +107,7 @@ const TeamHomeEight = () => {
                 fadeInUp
               "
                                 data-wow-duration="2000ms"
-                                data-wow-delay="600ms"
-                            >
+                                data-wow-delay="600ms">
                                 <div className="thumb">
                                     <img src={teamThree} alt="" />
                                     <ul>
@@ -153,8 +144,7 @@ const TeamHomeEight = () => {
                 fadeInUp
               "
                                 data-wow-duration="2000ms"
-                                data-wow-delay="800ms"
-                            >
+                                data-wow-delay="800ms">
                                 <div className="thumb">
                                     <img src={teamFour} alt="" />
                                     <ul>
@@ -184,8 +174,7 @@ const TeamHomeEight = () => {
                         <div className="col-lg-12">
                             <div className="team-btn text-center mt-50">
                                 <a className="main-btn" href="#">
-                                    View all Members{" "}
-                                    <i className="fal fa-arrow-right"></i>
+                                    View all Members <i className="fal fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
