@@ -16,7 +16,9 @@ const HeaderNews = ({ action }) => {
       .from('cart')
       .select('quantity')
       .eq('user_id', user.id);
-    if (!error) setCart(data);
+    if (!error) {
+      setCart(data);
+    }
   }, [user]);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const HeaderNews = ({ action }) => {
     };
     window.addEventListener('cartUpdated', onCartUpdated);
     return () => {
-      window.removeEventListener('cartUpdated', onCartUpdated);
+      window.removeEventListener('cartUpdated2', onCartUpdated);
     };
   }, [fetchCart]);
 
@@ -39,9 +41,12 @@ const HeaderNews = ({ action }) => {
       <div className="container">
         <div className="header-nav-box header-nav-box-3 header-nav-box-inner-page">
           <div className="row align-items-center">
+
             <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
               <div className="appie-logo-box">
-                <Link to="/"><img src={logo} alt="Site Logo" /></Link>
+                <Link to="/">
+                  <img src={logo} alt="Site Logo" />
+                </Link>
               </div>
             </div>
 
@@ -87,6 +92,7 @@ const HeaderNews = ({ action }) => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
