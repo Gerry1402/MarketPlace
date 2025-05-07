@@ -1,32 +1,48 @@
 // src/components/Backpack.jsx
-
 import React, { useState } from "react";
-import useToggle from "../../Hooks/useToggle.js";
-import Drawer from "../Mobile/Drawer.jsx";
-import HeaderNews from "../News/HeaderNews.jsx";
-import BackToTop from "../BackToTop.jsx";
+import useToggle     from "../../Hooks/useToggle.js";
+import Drawer        from "../Mobile/Drawer.jsx";
+import HeaderNews    from "../News/HeaderNews.jsx";
+import BackToTop     from "../BackToTop.jsx";
 import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
 
 const Backpack = () => {
   const [drawer, drawerAction] = useToggle(false);
 
   // Listas de artículos
-  const [sellItems, setSellItems] = useState([]);
+  const [sellItems,  setSellItems]  = useState([]);
   const [tradeItems, setTradeItems] = useState([]);
 
-  // Campos del formulario para añadir
-  const [newName, setNewName] = useState("");
-  const [newDesc, setNewDesc] = useState("");
+  // Campos del formulario
   const [section, setSection] = useState("sell"); // 'sell' o 'trade'
+  const [form, setForm] = useState({
+    title:       "",
+    description: "",
+    stock:       "",
+    price:       "",
+    weight:      "",
+    dimensions:  "",
+    handmade:    false,
+  });
+
+  const handleChange = (e) => {
+    let { name, value, type, checked } = e.target;
+
+    // Si es stock, evitar negativos
+    if (name === "stock") {
+      const num = parseInt(value, 10);
+      value = isNaN(num) ? "" : Math.max(0, num);
+    }
+
+    setForm((f) => ({
+      ...f,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
   const handleAdd = () => {
-    if (!newName.trim()) return;
-
-    const item = {
-      id: Date.now(),
-      name: newName.trim(),
-      desc: newDesc.trim(),
-    };
+    if (!form.title.trim()) return;
+    const item = { id: Date.now(), ...form };
 
     if (section === "sell") {
       setSellItems([item, ...sellItems]);
@@ -34,8 +50,16 @@ const Backpack = () => {
       setTradeItems([item, ...tradeItems]);
     }
 
-    setNewName("");
-    setNewDesc("");
+    // Limpiar formulario
+    setForm({
+      title:       "",
+      description: "",
+      stock:       "",
+      price:       "",
+      weight:      "",
+      dimensions:  "",
+      handmade:    false,
+    });
   };
 
   return (
@@ -47,11 +71,12 @@ const Backpack = () => {
         <div className="container">
           <h2 className="mb-4">Tu Mochila</h2>
           <div className="row">
+
             {/* Formulario común */}
             <div className="col-12 mb-4">
               <div className="card p-3">
                 <div className="d-flex align-items-center mb-3">
-                  <label className="mr-3">Sección:</label>
+                  <label className="mr-3 mb-0">Sección:</label>
                   <select
                     className="form-control w-auto"
                     value={section}
@@ -61,33 +86,102 @@ const Backpack = () => {
                     <option value="trade">Artículos de intercambio</option>
                   </select>
                 </div>
-                <div className="form-row align-items-end">
-                  <div className="col-md-4">
-                    <label>Nombre</label>
+
+                <div className="form-row">
+                  <div className="col-md-4 mb-3">
+                    <label>Título</label>
                     <input
+                      name="title"
                       type="text"
                       className="form-control"
-                      value={newName}
-                      onChange={e => setNewName(e.target.value)}
-                      placeholder="P. ej. Cámara vintage"
+                      value={form.title}
+                      onChange={handleChange}
+                      placeholder="p.ej. Cámara vintage"
                     />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-8 mb-3">
                     <label>Descripción</label>
                     <input
+                      name="description"
                       type="text"
                       className="form-control"
-                      value={newDesc}
-                      onChange={e => setNewDesc(e.target.value)}
-                      placeholder="P. ej. Funciona perfecto, poco uso..."
+                      value={form.description}
+                      onChange={handleChange}
+                      placeholder="p.ej. Funciona perfecto, poco uso..."
                     />
                   </div>
-                  <div className="col-md-2">
+
+                  <div className="col-md-3 mb-3">
+                    <label>Stock</label>
+                    <input
+                      name="stock"
+                      type="number"
+                      min="0"
+                      className="form-control"
+                      value={form.stock}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-md-3 mb-3">
+                    <label>Precio</label>
+                    <input
+                      name="price"
+                      type="number"
+                      step="0.01"
+                      className="form-control"
+                      value={form.price}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="col-md-3 mb-3">
+                    <label>Peso</label>
+                    <input
+                      name="weight"
+                      type="number"
+                      step="0.01"
+                      className="form-control"
+                      value={form.weight}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="col-md-6 mb-3">
+                    <label>Dimensiones</label>
+                    <input
+                      name="dimensions"
+                      type="text"
+                      className="form-control"
+                      value={form.dimensions}
+                      onChange={handleChange}
+                      placeholder="p.ej. 10x10x10"
+                    />
+                  </div>
+
+                  <div className="col-12 mb-3">
+                    <div className="form-check">
+                      <input
+                        name="handmade"
+                        type="checkbox"
+                        className="form-check-input"
+                        id="handmadeCheck"
+                        checked={form.handmade}
+                        onChange={handleChange}
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="handmadeCheck"
+                      >
+                        Producto hecho a mano
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="col-12 text-right">
                     <button
-                      className="btn btn-primary btn-block"
+                      className="btn btn-primary"
                       onClick={handleAdd}
                     >
-                      Añadir
+                      Añadir artículo
                     </button>
                   </div>
                 </div>
@@ -97,9 +191,7 @@ const Backpack = () => {
             {/* Sección de Artículos a vender */}
             <div className="col-md-6 mb-4">
               <div className="card h-100">
-                <div className="card-header bg-light">
-                  Artículos a vender
-                </div>
+                <div className="card-header bg-light">Artículos a vender</div>
                 <ul className="list-group list-group-flush">
                   {sellItems.length === 0 && (
                     <li className="list-group-item text-muted">
@@ -108,8 +200,8 @@ const Backpack = () => {
                   )}
                   {sellItems.map(item => (
                     <li key={item.id} className="list-group-item">
-                      <h6 className="mb-1">{item.name}</h6>
-                      <p className="mb-0">{item.desc}</p>
+                      <h6 className="mb-1">{item.title}</h6>
+                      <p className="mb-0">{item.description}</p>
                     </li>
                   ))}
                 </ul>
@@ -119,9 +211,7 @@ const Backpack = () => {
             {/* Sección de Artículos de intercambio */}
             <div className="col-md-6 mb-4">
               <div className="card h-100">
-                <div className="card-header bg-light">
-                  Artículos de intercambio
-                </div>
+                <div className="card-header bg-light">Artículos de intercambio</div>
                 <ul className="list-group list-group-flush">
                   {tradeItems.length === 0 && (
                     <li className="list-group-item text-muted">
@@ -130,8 +220,8 @@ const Backpack = () => {
                   )}
                   {tradeItems.map(item => (
                     <li key={item.id} className="list-group-item">
-                      <h6 className="mb-1">{item.name}</h6>
-                      <p className="mb-0">{item.desc}</p>
+                      <h6 className="mb-1">{item.title}</h6>
+                      <p className="mb-0">{item.description}</p>
                     </li>
                   ))}
                 </ul>
