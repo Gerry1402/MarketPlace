@@ -19,7 +19,7 @@ import { supabase } from '../../services/supabase.jsx';
 import testmonialUser from '../../assets/images/testimonial-user-1.png';
 import testmonialUser2 from '../../assets/images/testimonial-user-2.png';
 import useToggle from '../../Hooks/useToggle.js';
-import {useAuthContext} from '../../auth/useAuthContext.jsx';
+import { useAuthContext } from '../../auth/useAuthContext.jsx';
 
 const Details = () => {
     const [drawer, drawerAction] = useToggle(false);
@@ -31,7 +31,6 @@ const Details = () => {
     const [sizeName, setSizeName] = useState('');
     const [colorName, setColorName] = useState('');
     const { user } = useAuthContext();
-
 
     const detailsTabHandler = (e, value) => {
         e.preventDefault();
@@ -136,7 +135,6 @@ const Details = () => {
         }
     }, [idProduct]);
 
-
     // const addCart = quantityToAdd => {
     //     if (!product || quantityToAdd <= 0) {
     //         return;
@@ -182,103 +180,101 @@ const Details = () => {
     //     addToCart();
     // };
 
-
-
-const addCart = async (quantityToAdd) => {
-    if (!product || quantityToAdd <= 0) {
-        return;
-    }
-
-    if (quantityToAdd > product.stock) {
-        alert('No hay suficiente stock disponible.');
-        return;
-    }
-
-    if (!user) {
-        alert('Por favor, inicia sesión para agregar productos al carrito.');
-        return;
-    }
-
-    const { data: cartItems, error: cartError } = await supabase
-        .from('cart')
-        .select('quantity')
-        .eq('product_id', idProduct)
-        .eq('user_id', user.id);
-
-    if (cartError) {
-        console.error('Error al verificar el carrito:', cartError);
-        return;
-    }
-
-    let totalQuantityInCart = 0;
-
-    if (cartItems.length > 0) {
-        totalQuantityInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
-    }
-
-    if (quantityToAdd + totalQuantityInCart > product.stock) {
-        alert('No hay suficiente stock disponible.');
-        return;
-    }
-
-    const addToCart = async () => {
-        if (cartItems.length > 0) {
-            const { data, error } = await supabase
-                .from('cart')
-                .update({
-                    quantity: totalQuantityInCart + quantityToAdd,
-                })
-                .eq('product_id', idProduct)
-                .eq('user_id', user.id);
-
-            if (error) {
-                console.error('Error al actualizar el carrito:', error);
-                return;
-            }
-        } else {
-            const { data, error } = await supabase
-                .from('cart')
-                .insert([
-                    {
-                        product_id: idProduct,
-                        quantity: quantityToAdd,
-                        user_id: user.id,
-                    },
-                ])
-                .select('*');
-
-            if (error) {
-                console.error('Error al agregar producto al carrito:', error);
-                return;
-            }
+    const addCart = async quantityToAdd => {
+        if (!product || quantityToAdd <= 0) {
+            return;
         }
 
-        const newStock = product.stock - quantityToAdd;
-        
-        if (newStock < 0) {
+        if (quantityToAdd > product.stock) {
             alert('No hay suficiente stock disponible.');
             return;
         }
 
-        const { data: updatedProduct, error: stockError } = await supabase
-            .from('products')
-            .update({ stock: newStock })
-            .eq('id', idProduct)
-            .select('*');
-
-        if (stockError) {
-            console.error('Error actualizando el stock del producto:', stockError);
+        if (!user) {
+            alert('Por favor, inicia sesión para agregar productos al carrito.');
             return;
         }
 
-        console.log('Producto actualizado con stock:', updatedProduct);
+        const { data: cartItems, error: cartError } = await supabase
+            .from('cart')
+            .select('quantity')
+            .eq('product_id', idProduct)
+            .eq('user_id', user.id);
 
-        setProduct({ ...product, stock: newStock });
-        setQuantity(1);
+        if (cartError) {
+            console.error('Error al verificar el carrito:', cartError);
+            return;
+        }
+
+        let totalQuantityInCart = 0;
+
+        if (cartItems.length > 0) {
+            totalQuantityInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
+        }
+
+        if (quantityToAdd + totalQuantityInCart > product.stock) {
+            alert('No hay suficiente stock disponible.');
+            return;
+        }
+
+        const addToCart = async () => {
+            if (cartItems.length > 0) {
+                const { data, error } = await supabase
+                    .from('cart')
+                    .update({
+                        quantity: totalQuantityInCart + quantityToAdd,
+                    })
+                    .eq('product_id', idProduct)
+                    .eq('user_id', user.id);
+
+                if (error) {
+                    console.error('Error al actualizar el carrito:', error);
+                    return;
+                }
+            } else {
+                const { data, error } = await supabase
+                    .from('cart')
+                    .insert([
+                        {
+                            product_id: idProduct,
+                            quantity: quantityToAdd,
+                            user_id: user.id,
+                        },
+                    ])
+                    .select('*');
+
+                if (error) {
+                    console.error('Error al agregar producto al carrito:', error);
+                    return;
+                }
+            }
+
+            const newStock = product.stock - quantityToAdd;
+
+            if (newStock < 0) {
+                alert('No hay suficiente stock disponible.');
+                return;
+            }
+
+            const { data: updatedProduct, error: stockError } = await supabase
+                .from('products')
+                .update({ stock: newStock })
+                .eq('id', idProduct)
+                .select('*');
+
+            if (stockError) {
+                console.error('Error actualizando el stock del producto:', stockError);
+                return;
+            }
+
+            console.log('Producto actualizado con stock:', updatedProduct);
+
+            setProduct({ ...product, stock: newStock });
+            setQuantity(1);
+        };
+
+        addToCart();
     };
-
-    addToCart();
-};
 
     return (
         <>
@@ -330,71 +326,72 @@ const addCart = async (quantityToAdd) => {
                                     </div>
                                     <p>{product.description}</p>
                                     <div className="d-flex align-items-center gap-3 mt-2">
-                                    <p className="badge bg-secondary">Stock: {product.stock}</p>
-                                    {product.handmade && (
-                                        <p className="badge bg-success d-flex align-items-center gap-1">
-                                            <i className="fas fa-hands"></i> Handmade
-                                        </p>
-                                    )}
+                                        <p className="badge bg-secondary">Stock: {product.stock}</p>
+                                        {product.handmade && (
+                                            <p className="badge bg-success d-flex align-items-center gap-1">
+                                                <i className="fas fa-hands"></i> Handmade
+                                            </p>
+                                        )}
                                     </div>
-                                    
-                                    {user ? (
-                                    product.stock > 0 ? (
-                                        <div className="shop-buttons d-block d-sm-flex align-items-center">
-                                            <div className="product-quantity" id="quantity">
-                                                <button
-                                                    onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-                                                    type="button"
-                                                    id="sub"
-                                                    className="sub">
-                                                    -
-                                                </button>
-                                                <input
-                                                    onChange={e => quantityHandler(e)}
-                                                    type="text"
-                                                    id="1"
-                                                    value={quantity}
-                                                />
-                                                <button
-                                                    onClick={() =>
-                                                        quantity < product.stock && setQuantity(quantity + 1)
-                                                    }
-                                                    type="button"
-                                                    id="add"
-                                                    className="add">
-                                                    +
-                                                </button>
-                                            </div>
-                                            <div className="main-btn ml-10">
-                                            {/* <Link to={'/Cart/index'} className="main-btn ml-10"> */}
 
-                                                <button
-                                                    onClick={() => addCart(quantity)}
-                                                    style={{
-                                                        background: 'none',
-                                                        border: 'none',
-                                                        padding: 0,
-                                                        margin: 0,
-                                                        cursor: 'pointer',
-                                                    }}>
-                                                    Add to Cart
-                                                </button>
+                                    {user ? (
+                                        product.stock > 0 ? (
+                                            <div className="shop-buttons d-block d-sm-flex align-items-center">
+                                                <div className="product-quantity" id="quantity">
+                                                    <button
+                                                        onClick={() =>
+                                                            quantity > 1 && setQuantity(quantity - 1)
+                                                        }
+                                                        type="button"
+                                                        id="sub"
+                                                        className="sub">
+                                                        -
+                                                    </button>
+                                                    <input
+                                                        onChange={e => quantityHandler(e)}
+                                                        type="text"
+                                                        id="1"
+                                                        value={quantity}
+                                                    />
+                                                    <button
+                                                        onClick={() =>
+                                                            quantity < product.stock &&
+                                                            setQuantity(quantity + 1)
+                                                        }
+                                                        type="button"
+                                                        id="add"
+                                                        className="add">
+                                                        +
+                                                    </button>
+                                                </div>
+                                                <div className="main-btn ml-10">
+                                                    <button
+                                                        onClick={() => addCart(quantity)}
+                                                        style={{
+                                                            background: 'none',
+                                                            border: 'none',
+                                                            padding: 0,
+                                                            margin: 0,
+                                                            cursor: 'pointer',
+                                                        }}>
+                                                        Add to Cart
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ) : (
-                                        <div
-                                            className="alert alert-danger mt-3"
-                                            style={{
-                                                backgroundColor: '#f8d7da',
-                                                color: '#721c24',
-                                                padding: '10px',
-                                                borderRadius: '5px',
-                                                border: '1px solid #f5c6cb',
-                                            }}>
-                                            Producto agotado
-                                        </div>
-                                    )
-                                ) : null}
+                                        ) : (
+                                            <div
+                                                className="alert alert-danger mt-3"
+                                                style={{
+                                                    backgroundColor: '#f8d7da',
+                                                    color: '#721c24',
+                                                    padding: '10px',
+                                                    borderRadius: '5px',
+                                                    border: '1px solid #f5c6cb',
+                                                }}>
+                                                Producto agotado
+                                            </div>
+                                        )
+                                    ) : null}
 
                                     <div className="details-info">
                                         <ul>

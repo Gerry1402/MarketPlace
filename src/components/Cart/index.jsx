@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import HeaderNews from '../News/HeaderNews.jsx';
 import Drawer from '../Mobile/Drawer.jsx';
 import useToggle from '../../Hooks/useToggle.js';
-import {useAuthContext} from '../../auth/useAuthContext.jsx';
+import { useAuthContext } from '../../auth/useAuthContext.jsx';
 
 const Cart = ({ value, action }) => {
     const [cart, setCart] = useState([]);
@@ -26,7 +26,10 @@ const Cart = ({ value, action }) => {
             if (!user) {
                 return;
             }
-            const { data, error } = await supabase.from('cart').select('*, product:products(*)').eq('user_id', user.id);
+            const { data, error } = await supabase
+                .from('cart')
+                .select('*, product:products(*)')
+                .eq('user_id', user.id);
 
             if (error) {
                 console.error('Error al obtener el carrito:', error);
@@ -92,15 +95,17 @@ const Cart = ({ value, action }) => {
     };
 
     const total = cart.reduce((acc, item) => {
-    const price = item.product?.price || 0;
-    return acc + item.quantity * price;
+        const price = item.product?.price || 0;
+        return acc + item.quantity * price;
     }, 0);
 
     return (
         <>
-        <Drawer drawer={drawer} action={drawerAction.toggle} />
+            <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderNews action={drawerAction.toggle} />
-            <section className="appie-blog-3-area appie-blog-8-area pt-90 pb-100" style={{ paddingTop: '150px'}}>
+            <section
+                className="appie-blog-3-area appie-blog-8-area pt-90 pb-100"
+                style={{ paddingTop: '150px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -109,7 +114,7 @@ const Cart = ({ value, action }) => {
                             </div>
                         </div>
                     </div>
-                    
+
                     {cart && cart.length > 0 ? (
                         cart.map(item => (
                             <div className="col-lg-12" key={item.id}>
@@ -167,20 +172,19 @@ const Cart = ({ value, action }) => {
                         <p>Loading cart...</p>
                     )}
                     <div
-                    style={{
-                        position: 'fixed',
-                        bottom: 20,
-                        right: 20,
-                        backgroundColor: '#a3a3a3',
-                        borderRadius: '8px',
-                        padding: '12px 24px',
-                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                        zIndex: 9999,
-                        display: 'flex',
-                        gap: '10px',
-                        alignItems: 'center',
-                    }}
-                    >
+                        style={{
+                            position: 'fixed',
+                            bottom: 20,
+                            right: 20,
+                            backgroundColor: '#a3a3a3',
+                            borderRadius: '8px',
+                            padding: '12px 24px',
+                            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                            zIndex: 9999,
+                            display: 'flex',
+                            gap: '10px',
+                            alignItems: 'center',
+                        }}>
                         <h5 style={{ margin: 0 }}>Total:</h5>
                         <h5 style={{ margin: 0 }}>${total.toFixed(2)}</h5>
                     </div>

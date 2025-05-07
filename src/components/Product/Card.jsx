@@ -51,7 +51,7 @@ const Card = ({ cardData }) => {
                             <div className="discount-price">{cardData.price}$</div>
                         )}
                     </div>
-                    <div 
+                    <div
                         style={{ color: 'green' }}
                         className={`${
                             cardData.handmade ? '' : 'invisible'

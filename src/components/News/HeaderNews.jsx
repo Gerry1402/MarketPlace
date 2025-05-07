@@ -37,10 +37,9 @@ const HeaderNews = ({ action }) => {
     }, [user]);
 
     const total = cart.reduce((acc, item) => {
-    const price = item.product?.price || 0;
+        const price = item.product?.price || 0;
         return acc + item.quantity * price;
     }, 0);
-
 
     return (
         <header className="appie-header-area appie-header-page-area appie-sticky">
@@ -63,19 +62,21 @@ const HeaderNews = ({ action }) => {
                             <div className="appie-btn-box text-right">
                                 {user ? (
                                     <>
-                                    <Link to="/Cart/index" className="login-btn">
-                                    <i
-                                        className="fal fa-shopping-cart"
-                                        style={{
-                                            fontSize: '18px',
-                                            marginRight: '5px',
-                                        }}></i>
-                                    <span style={{ fontWeight: 'bold', marginRight: '20px' }}>${total.toFixed(2)}</span>
-                                </Link>
-                                
-                                    <Link to="#" className="login-btn">
-                                        <i className="fal fa-user"></i> {user.user_metadata.display_name}
-                                    </Link>
+                                        <Link to="/Cart/index" className="login-btn">
+                                            <i
+                                                className="fal fa-shopping-cart"
+                                                style={{
+                                                    fontSize: '18px',
+                                                    marginRight: '5px',
+                                                }}></i>
+                                            <span style={{ fontWeight: 'bold', marginRight: '20px' }}>
+                                                ${total.toFixed(2)}
+                                            </span>
+                                        </Link>
+
+                                        <Link to="#" className="login-btn">
+                                            <i className="fal fa-user"></i> {user.user_metadata.display_name}
+                                        </Link>
                                     </>
                                 ) : (
                                     <Link to="/login" className="main-btn ml-30">

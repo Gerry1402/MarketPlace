@@ -40,7 +40,7 @@ const Shops = () => {
             ({ data, error } = await supabase.from('products').select('*').eq('shop_id', shopId));
         } else if (categoryId) {
             ({ data, error } = await supabase.from('products').select('*').eq('categories_id', categoryId));
-        }else if (handmadeOnly) {
+        } else if (handmadeOnly) {
             ({ data, error } = await supabase.from('products').select('*').eq('handmade', true));
         } else {
             ({ data, error } = await supabase.from('products').select('*'));
@@ -111,10 +111,10 @@ const Shops = () => {
     };
 
     const handleHandmadeFilter = () => {
-    setSelectedCategory(null);
-    setSelectedShopId(null);
-    fetchProducts(null, null, true);
-};
+        setSelectedCategory(null);
+        setSelectedShopId(null);
+        fetchProducts(null, null, true);
+    };
 
     return (
         <>
