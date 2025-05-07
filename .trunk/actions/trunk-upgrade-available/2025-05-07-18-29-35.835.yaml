@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2025-05-07 18:29:35
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\Lfs4M.yaml for details.
+  error_path: C:\Users\Cesar\OneDrive\Escritorio\CursoBoothCamp\MarketPlace\.trunk\out\Lfs4M.yaml
+timestamp: 1746642575
+full_timestamp:
+  nanos: 835444000
+  seconds: 1746642575
+trunk_version: 1.22.15
