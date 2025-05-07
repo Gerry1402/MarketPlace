@@ -1,5 +1,5 @@
-import React from "react";
-import workThumb from "../../assets/images/how-it-work-thumb.png";
+import React from 'react';
+import workThumb from '../../assets/images/how-it-work-thumb.png';
 
 const WorkPartHomeEight = () => {
     return (
@@ -16,9 +16,8 @@ const WorkPartHomeEight = () => {
                             <div className="appie-how-it-work-content">
                                 <h2 className="title">How It works</h2>
                                 <p>
-                                    The little rotter harry butty lurgy spend a
-                                    peny spiffing skive off golly gosh baking
-                                    cakes.
+                                    The little rotter harry butty lurgy spend a peny spiffing skive off golly
+                                    gosh baking cakes.
                                 </p>
                                 <div className="row">
                                     <div className="col-sm-6">

@@ -7,13 +7,14 @@
     Author URI: site.com
     Version: 1.0
 
------------------------------------------------------------------------------------
-
-    CSS INDEX
+    -----------------------------------------------------------------------------------*/
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+    
+    /*CSS INDEX
     ===================
-
+    
     01. Theme default CSS
-	02. Header */  
+    02. Header */  
     /* 03. Hero */
     .appie-hero-area {
       position: relative;
@@ -95,7 +96,6 @@
     1. COMMON css 
 ===========================*/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 body {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
