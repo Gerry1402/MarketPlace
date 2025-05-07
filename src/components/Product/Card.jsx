@@ -107,7 +107,15 @@ const Card = ({ cardData }) => {
     };
     return (
         <>
-            <Link to={`/shops/shop-details/${cardData.id}`}>
+              <Link
+                to={`/shops/shop-details/${cardData.id}`}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  textDecoration: 'none'
+                }}
+            >
                 <div className="single-shop-box">
                     <div className="thumb text-center">
                         <img
