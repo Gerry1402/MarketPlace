@@ -22,6 +22,8 @@ import Layout from "./components/Helper/Layout.jsx";
 import Cart from "./components/Cart/index.jsx";
 import MessageInbox from"./components/Shops/MessageInbox"
 import Backpack from "./components/Shops/Backpack.jsx";
+import Login from './components/Auth/Login.jsx';
+import SignUp from './components/Auth/SignUp.jsx';
 
 
 const router = createBrowserRouter([
