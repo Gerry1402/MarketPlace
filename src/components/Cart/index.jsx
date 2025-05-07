@@ -244,9 +244,6 @@ const Cart = ({ value, action }) => {
                         <h5 style={{ margin: 0 }}>${total.toFixed(2)}</h5>
                     </div>
 
-                    <div>
-                        <button>hola</button>
-                    </div>
                 </div>
             </section>
         </>
