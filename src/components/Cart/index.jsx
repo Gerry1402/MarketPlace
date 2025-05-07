@@ -57,7 +57,7 @@ const Cart = ({ value, action }) => {
                 console.error('Error eliminando del carrito:', error);
             } else {
                 setCart(prev => prev.filter(i => i.id !== itemId));
-                window.dispatchEvent(new Event('cartUpdated'));
+                window.dispatchEvent(new Event('cartUpdated2'));
             }
         } else {
             const { error } = await supabase.from('cart').update({ quantity: newQuantity }).eq('id', itemId);
@@ -101,7 +101,7 @@ const Cart = ({ value, action }) => {
         }
 
         setCart(prev => prev.filter(i => i.id !== itemId));
-        window.dispatchEvent(new Event('cartUpdated'));
+        window.dispatchEvent(new Event('cartUpdated2'));
     };
 
     const total = cart.reduce((acc, item) => {
