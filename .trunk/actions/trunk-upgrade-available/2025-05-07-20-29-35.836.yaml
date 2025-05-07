@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2025-05-07 20:29:35
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\MzZJG.yaml for details.
+  error_path: C:\Users\Cesar\OneDrive\Escritorio\CursoBoothCamp\MarketPlace\.trunk\out\MzZJG.yaml
+timestamp: 1746649775
+full_timestamp:
+  nanos: 836739000
+  seconds: 1746649775
+trunk_version: 1.22.15
