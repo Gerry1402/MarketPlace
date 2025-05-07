@@ -27,10 +27,17 @@ const Shops = () => {
     const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
     const totalPages = Math.ceil(products.length / productsPerPage);
 
-    const fetchProducts = async (shopId = null, categoryId = null, handmadeOnly = null) => {
+    const fetchProducts = async (
+        shopId = null,
+        categoryId = null,
+        handmadeOnly = null,
+        onlyUserProducts = false
+    ) => {
         let data, error;
 
-        if (shopId && categoryId) {
+        if (onlyUserProducts) {
+            ({ data, error } = await supabase.from('products').select('*').is('shop_id', null));
+        } else if (shopId && categoryId) {
             ({ data, error } = await supabase
                 .from('products')
                 .select('*')
@@ -102,7 +109,12 @@ const Shops = () => {
         const selectedId = e.target.value;
         setSelectedShopId(selectedId);
         console.log('Selected shop ID:', selectedId);
-        fetchProducts(selectedId);
+
+        if (selectedId === 'only_users') {
+            fetchProducts(null, null, null, true);
+        } else {
+            fetchProducts(selectedId);
+        }
     };
 
     const handleCategoryFilter = categoryId => {
@@ -178,6 +190,7 @@ const Shops = () => {
                                 </span>
                                 <select id="shops" onChange={handleShopChange}>
                                     <option value="">All Shops</option>
+                                    <option value="only_users">Only Users (no shop)</option>
                                     {shops && shops.length > 0 ? (
                                         shops.map(shop => (
                                             <option key={shop.id} value={shop.id}>

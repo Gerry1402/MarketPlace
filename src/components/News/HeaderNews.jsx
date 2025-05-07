@@ -36,10 +36,12 @@ const HeaderNews = ({ action }) => {
         fetchCart();
     }, [user]);
 
-    const total = cart.reduce((acc, item) => {
-        const price = item.product?.price || 0;
-        return acc + item.quantity * price;
-    }, 0);
+    // const total = cart.reduce((acc, item) => {
+    //     const basePrice = item.product?.price || 0;
+    //     const discount = item.product?.discount || 0;
+    //     const finalPrice = basePrice * (1 - discount / 100);
+    //     return acc + item.quantity * finalPrice;
+    // }, 0);
 
     return (
         <header className="appie-header-area appie-header-page-area appie-sticky">
@@ -62,7 +64,7 @@ const HeaderNews = ({ action }) => {
                             <div className="appie-btn-box text-right">
                                 {user ? (
                                     <>
-                                        <Link to="/Cart/index" className="login-btn">
+                                        {/* <Link to="/Cart/index" className="login-btn">
                                             <i
                                                 className="fal fa-shopping-cart"
                                                 style={{
@@ -71,6 +73,32 @@ const HeaderNews = ({ action }) => {
                                                 }}></i>
                                             <span style={{ fontWeight: 'bold', marginRight: '20px' }}>
                                                 ${total.toFixed(2)}
+                                            </span>
+                                        </Link> */}
+                                        {/* <Link
+                                            to="/Cart/index"
+                                            className="main-btn ml-30"
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '8px',
+                                                marginRight: '20px',
+                                            }}>
+                                            <i className="fal fa-shopping-cart"></i>
+                                            <span style={{ marginLeft: '10px' }}>(18)</span>
+                                        </Link> */}
+                                        <Link
+                                            to="/Cart/index"
+                                            className="main-btn ml-30"
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '8px',
+                                                marginRight: '20px',
+                                            }}>
+                                            <i className="fal fa-shopping-cart"></i>
+                                            <span style={{ marginLeft: '10px' }}>
+                                                ({cart.reduce((acc, item) => acc + item.quantity, 0)})
                                             </span>
                                         </Link>
 

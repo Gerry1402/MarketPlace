@@ -15,6 +15,7 @@ import HeaderNews from '../News/HeaderNews.jsx';
 import Drawer from '../Mobile/Drawer.jsx';
 import useToggle from '../../Hooks/useToggle.js';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
+import product from '../../assets/images/shop-details-thumb-1.jpg';
 
 const Cart = ({ value, action }) => {
     const [cart, setCart] = useState([]);
@@ -94,9 +95,39 @@ const Cart = ({ value, action }) => {
         }
     };
 
+    const deleteItem = async itemId => {
+        const item = cart.find(i => i.id === itemId);
+        if (!item) return;
+
+        const productId = item.product.id;
+        const currentStock = item.product.stock;
+        const quantityToRestore = item.quantity;
+
+        const { error: stockError } = await supabase
+            .from('products')
+            .update({ stock: currentStock + quantityToRestore })
+            .eq('id', productId);
+
+        if (stockError) {
+            console.error('Error restaurando el stock:', stockError);
+            return;
+        }
+
+        const { error: deleteError } = await supabase.from('cart').delete().eq('id', itemId);
+
+        if (deleteError) {
+            console.error('Error eliminando del carrito:', deleteError);
+            return;
+        }
+
+        setCart(prev => prev.filter(i => i.id !== itemId));
+    };
+
     const total = cart.reduce((acc, item) => {
-        const price = item.product?.price || 0;
-        return acc + item.quantity * price;
+        const basePrice = item.product?.price || 0;
+        const discount = item.product?.discount || 0;
+        const finalPrice = basePrice * (1 - discount / 100);
+        return acc + item.quantity * finalPrice;
     }, 0);
 
     return (
@@ -129,7 +160,38 @@ const Cart = ({ value, action }) => {
                                         <div className="meta-item">
                                             <ul>
                                                 <li>
-                                                    <p>Price: ${item.product?.price}</p>
+                                                    <p
+                                                        style={{
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            gap: '10px',
+                                                        }}>
+                                                        {item.product.discount ? (
+                                                            <>
+                                                                <span className="discount-price">
+                                                                    {Math.round(
+                                                                        item.product.price *
+                                                                            (1 -
+                                                                                item.product.discount / 100) *
+                                                                            100
+                                                                    ) / 100}
+                                                                    $
+                                                                </span>
+                                                                <span
+                                                                    className="regular-price"
+                                                                    style={{
+                                                                        textDecoration: 'line-through',
+                                                                        color: '#888',
+                                                                    }}>
+                                                                    {item.product.price}$
+                                                                </span>
+                                                            </>
+                                                        ) : (
+                                                            <span className="discount-price">
+                                                                {item.product.price}$
+                                                            </span>
+                                                        )}
+                                                    </p>
                                                 </li>
                                                 <li>
                                                     <p>Stock: {item.product?.stock}</p>
@@ -161,6 +223,17 @@ const Cart = ({ value, action }) => {
                                                     type="button"
                                                     className="add">
                                                     +
+                                                </button>
+                                                <button
+                                                    onClick={() => deleteItem(item.id)}
+                                                    style={{
+                                                        background: 'none',
+                                                        border: 'none',
+                                                        color: '#dc3545',
+                                                        cursor: 'pointer',
+                                                        fontSize: '18px',
+                                                    }}>
+                                                    <i className="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
