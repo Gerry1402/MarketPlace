@@ -25,7 +25,7 @@ const TeamHomeOne = ({ className }) => {
                 <div className="row justify-content-center">
                     {[
                         { img: teamOne, name: "Cesar Lira", role: "FrontEnd" },
-                        { img: teamTwo, name: "Oriol Morell", role: "Full-stack" },
+                        { img: "/oriol-img.png", name: "Oriol Morell", role: "Full-stack" },
                         { img: teamThree, name: "Gerard Vello", role: "Full-stack" }
                     ].map((member, idx) => (
                         <div key={idx} className="col-lg-4 col-md-6">
