@@ -91,6 +91,11 @@ const Cart = ({ value, action }) => {
         }
     };
 
+    const total = cart.reduce((acc, item) => {
+    const price = item.product?.price || 0;
+    return acc + item.quantity * price;
+    }, 0);
+
     return (
         <>
         <Drawer drawer={drawer} action={drawerAction.toggle} />
@@ -104,6 +109,7 @@ const Cart = ({ value, action }) => {
                             </div>
                         </div>
                     </div>
+                    
                     {cart && cart.length > 0 ? (
                         cart.map(item => (
                             <div className="col-lg-12" key={item.id}>
@@ -160,6 +166,24 @@ const Cart = ({ value, action }) => {
                     ) : (
                         <p>Loading cart...</p>
                     )}
+                    <div
+                    style={{
+                        position: 'fixed',
+                        bottom: 20,
+                        right: 20,
+                        backgroundColor: '#a3a3a3',
+                        borderRadius: '8px',
+                        padding: '12px 24px',
+                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                        zIndex: 9999,
+                        display: 'flex',
+                        gap: '10px',
+                        alignItems: 'center',
+                    }}
+                    >
+                        <h5 style={{ margin: 0 }}>Total:</h5>
+                        <h5 style={{ margin: 0 }}>${total.toFixed(2)}</h5>
+                    </div>
                 </div>
             </section>
         </>

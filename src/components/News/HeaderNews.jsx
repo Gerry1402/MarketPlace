@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation.jsx';
 import StickyMenu from '../../lib/StickyMenu.js';
 import logo from '../../assets/images/logo.png';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
+import { supabase } from '../../services/supabase.jsx';
 
 const HeaderNews = ({ action }) => {
     const { user } = useAuthContext();
@@ -12,6 +13,35 @@ const HeaderNews = ({ action }) => {
     useEffect(() => {
         StickyMenu();
     });
+
+    const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+        const fetchCart = async () => {
+            if (!user) return;
+
+            const { data, error } = await supabase
+                .from('cart')
+                .select('*, product:products(*)')
+                .eq('user_id', user.id);
+
+            if (error) {
+                console.error('Error al obtener el carrito:', error);
+                return;
+            }
+
+            setCart(data);
+        };
+
+        fetchCart();
+    }, [user]);
+
+    const total = cart.reduce((acc, item) => {
+    const price = item.product?.price || 0;
+        return acc + item.quantity * price;
+    }, 0);
+
+
     return (
         <header className="appie-header-area appie-header-page-area appie-sticky">
             <div className="container">
@@ -40,7 +70,7 @@ const HeaderNews = ({ action }) => {
                                             fontSize: '18px',
                                             marginRight: '5px',
                                         }}></i>
-                                    <span style={{ fontWeight: 'bold', marginRight: '20px' }}>$0.00</span>
+                                    <span style={{ fontWeight: 'bold', marginRight: '20px' }}>${total.toFixed(2)}</span>
                                 </Link>
                                 
                                     <Link to="#" className="login-btn">

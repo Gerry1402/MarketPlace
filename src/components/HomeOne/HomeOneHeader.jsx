@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import {useEffect, useState} from 'react';
 import logo7 from "../../assets/images/logo-7.png";
 import logo from "../../assets/images/logo.png";
 import StickyMenu from "../../lib/StickyMenu.js";
 import Navigation from "../Navigation.jsx";
 import { Link } from "react-router-dom";
 import {useAuthContext} from '../../auth/useAuthContext.jsx';
+import {supabase} from '../../services/supabase.jsx';
 
 const HomeOneHeader = ({
   lang,
@@ -18,10 +19,39 @@ const HomeOneHeader = ({
 }) => {
 
   const { user } = useAuthContext();
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     StickyMenu();
   });
+
+  
+    useEffect(() => {
+        const fetchCart = async () => {
+            if (!user) return;
+
+            const { data, error } = await supabase
+                .from('cart')
+                .select('*, product:products(*)')
+                .eq('user_id', user.id);
+
+            if (error) {
+                console.error('Error al obtener el carrito:', error);
+                return;
+            }
+
+            setCart(data);
+        };
+
+        fetchCart();
+    }, [user]);
+
+    const total = cart.reduce((acc, item) => {
+    const price = item.product?.price || 0;
+        return acc + item.quantity * price;
+    }, 0);
+
+
   return (
     <header className={`appie-header-area appie-sticky ${className || ""}`}>
       <div className="container">
@@ -103,35 +133,28 @@ const HomeOneHeader = ({
                       LTR
                     </span>
                   ))}
-                  {/* <Link to="/login" className="login-btn">
-                    <i className="fal fa-user" /> Login
-                  </Link>
-                <a className="main-btn ml-30" href="">
-                  Get Started
-                </a> */}
                 {user ? (
-                                    <>
-                                    <Link to="/Cart/index" className="login-btn">
-                                    <i
-                                        className="fal fa-shopping-cart"
-                                        style={{
-                                            fontSize: '18px',
-                                            marginRight: '5px',
-                                        }}></i>
-                                    <span style={{ fontWeight: 'bold', marginRight: '20px' }}>$0.00</span>
-                                </Link>
+                  <>
+                    <Link to="/Cart/index" className="login-btn">
+                      <i
+                        className="fal fa-shopping-cart"
+                        style={{
+                            fontSize: '18px',
+                            marginRight: '5px',
+                        }}>
+                      </i>
+                      <span style={{ fontWeight: 'bold', marginRight: '20px' }}>${total.toFixed(2)}</span>
+                    </Link>
                                 
-                                    <Link to="#" className="login-btn">
-                                        <i className="fal fa-user"></i> {user.user_metadata.display_name}
-                                    </Link>
-                                    </>
-                                ) : (
-                                    <Link to="/login" className="main-btn ml-30">
-                                        Login
-                                    </Link>
-                                )}
-
-
+                    <Link to="#" className="login-btn">
+                        <i className="fal fa-user"></i> {user.user_metadata.display_name}
+                    </Link>
+                  </>
+                  ) : (
+                    <Link to="/login" className="main-btn ml-30">
+                      Login
+                    </Link>
+                  )}
 
                 <div
                   onClick={(e) => action(e)}
