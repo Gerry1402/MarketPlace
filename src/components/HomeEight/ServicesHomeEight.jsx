@@ -1,24 +1,16 @@
-import React from "react";
-import serviceThumb from "../../assets/images/service-thumb-1.png";
+import React from 'react';
+import serviceThumb from '../../assets/images/service-thumb-1.png';
 
 const ServicesHomeEight = () => {
     return (
         <>
-            <section
-                className="appie-services-2-area appie-services-8-area pt-90 pb-55"
-                id="service"
-            >
+            <section className="appie-services-2-area appie-services-8-area pt-90 pb-55" id="service">
                 <div className="container">
                     <div className="row align-items-end">
                         <div className="col-lg-6 col-md-8">
                             <div className="appie-section-title">
-                                <h3 className="appie-title">
-                                    Solution for every need.
-                                </h3>
-                                <p>
-                                    The app provides design and digital
-                                    marketing.
-                                </p>
+                                <h3 className="appie-title">Solution for every need.</h3>
+                                <p>The app provides design and digital marketing.</p>
                             </div>
                         </div>
                     </div>
@@ -35,18 +27,12 @@ const ServicesHomeEight = () => {
                     fadeInUp
                   "
                                         data-wow-duration="2000ms"
-                                        data-wow-delay="200ms"
-                                    >
+                                        data-wow-delay="200ms">
                                         <div className="icon">
                                             <i className="fal fa-tv" />
                                         </div>
-                                        <h4 className="title">
-                                            Carefully designed
-                                        </h4>
-                                        <p>
-                                            He lost his bottle loo don't get
-                                            shirty with me ruddy.
-                                        </p>
+                                        <h4 className="title">Carefully designed</h4>
+                                        <p>He lost his bottle loo don't get shirty with me ruddy.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -60,18 +46,12 @@ const ServicesHomeEight = () => {
                     fadeInUp
                   "
                                         data-wow-duration="2000ms"
-                                        data-wow-delay="400ms"
-                                    >
+                                        data-wow-delay="400ms">
                                         <div className="icon">
                                             <i className="fal fa-code" />
                                         </div>
-                                        <h4 className="title">
-                                            Clean Modern Code
-                                        </h4>
-                                        <p>
-                                            He lost his bottle loo don't get
-                                            shirty with me ruddy.
-                                        </p>
+                                        <h4 className="title">Clean Modern Code</h4>
+                                        <p>He lost his bottle loo don't get shirty with me ruddy.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -85,18 +65,12 @@ const ServicesHomeEight = () => {
                     fadeInUp
                   "
                                         data-wow-duration="2000ms"
-                                        data-wow-delay="600ms"
-                                    >
+                                        data-wow-delay="600ms">
                                         <div className="icon">
                                             <i className="fal fa-user-friends" />
                                         </div>
-                                        <h4 className="title">
-                                            User Interactive
-                                        </h4>
-                                        <p>
-                                            He lost his bottle loo don't get
-                                            shirty with me ruddy.
-                                        </p>
+                                        <h4 className="title">User Interactive</h4>
+                                        <p>He lost his bottle loo don't get shirty with me ruddy.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -110,16 +84,12 @@ const ServicesHomeEight = () => {
                     fadeInUp
                   "
                                         data-wow-duration="2000ms"
-                                        data-wow-delay="200ms"
-                                    >
+                                        data-wow-delay="200ms">
                                         <div className="icon">
                                             <i className="fal fa-mobile" />
                                         </div>
                                         <h4 className="title">Choose a App</h4>
-                                        <p>
-                                            He lost his bottle loo don't get
-                                            shirty with me ruddy.
-                                        </p>
+                                        <p>He lost his bottle loo don't get shirty with me ruddy.</p>
                                     </div>
                                 </div>
                             </div>

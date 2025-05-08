@@ -18,8 +18,8 @@ import smProductImg4 from '../../assets/images/shop-details-small-4.jpg';
 import { supabase } from '../../services/supabase.jsx';
 import testmonialUser from '../../assets/images/testimonial-user-1.png';
 import testmonialUser2 from '../../assets/images/testimonial-user-2.png';
-import useToggle from '../../Hooks/useToggle.js';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
+import useToggle from '../../Hooks/useToggle.js';
 
 const Details = () => {
     const [drawer, drawerAction] = useToggle(false);
@@ -238,11 +238,11 @@ const Details = () => {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderNews action={drawerAction.toggle} />
             <HeroNews
-                title="Product Title"
+                title={product ? product.title : ''}
                 breadcrumb={[
                     { link: '/', title: 'Home' },
-                    { link: '/shops', title: 'Shop Products' },
-                    { link: '/shops/shop-details', title: 'Shop Details' },
+                    { link: '/products', title: 'All Products' },
+                    { link: '/products/product-details', title: product ? product.title : '' },
                 ]}
             />
             <section className="shop-details-area pt-100 pb-100">

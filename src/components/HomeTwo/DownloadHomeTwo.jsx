@@ -1,16 +1,12 @@
-import React from "react";
-import shape13 from "../../assets/images/shape/shape-13.png";
-import shape14 from "../../assets/images/shape/shape-14.png";
-import shape15 from "../../assets/images/shape/shape-15.png";
+import React from 'react';
+import shape13 from '../../assets/images/shape/shape-13.png';
+import shape14 from '../../assets/images/shape/shape-14.png';
+import shape15 from '../../assets/images/shape/shape-15.png';
 
 const DownloadHomeTwo = ({ className }) => {
     return (
         <>
-            <section
-                className={`appie-download-area pt-150 pb-160 mb-90 ${
-                    className || ""
-                }`}
-            >
+            <section className={`appie-download-area pt-150 pb-160 mb-90 ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-5">
@@ -21,8 +17,8 @@ const DownloadHomeTwo = ({ className }) => {
                                     for free on app store
                                 </h3>
                                 <p>
-                                    Jolly good quaint james bond victoria sponge
-                                    happy days cras arse over blatant.
+                                    Jolly good quaint james bond victoria sponge happy days cras arse over
+                                    blatant.
                                 </p>
                                 <ul>
                                     <li>
@@ -37,8 +33,7 @@ const DownloadHomeTwo = ({ className }) => {
                                         <a className="item-2" href="#">
                                             <i className="fab fa-google-play" />
                                             <span>
-                                                Download for{" "}
-                                                <span>Android</span>
+                                                Download for <span>Android</span>
                                             </span>
                                         </a>
                                     </li>

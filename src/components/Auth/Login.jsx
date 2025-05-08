@@ -44,7 +44,7 @@ const Login = () => {
     };
 
     return (
-        <Container className="mt-5">
+        <Container className="mt-4">
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row>
                     {inputs.map((input, index) => (

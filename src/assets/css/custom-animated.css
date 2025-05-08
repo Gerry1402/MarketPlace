@@ -114,7 +114,6 @@
     }
 }
 
-
 @-webkit-keyframes scale-upOne {
     0% {
         -webkit-transform: scale(1);
@@ -200,7 +199,6 @@
         opacity: 0.7;
     }
 }
-
 
 @keyframes hvr-ripple-out {
     0% {
@@ -340,7 +338,6 @@
     }
 }
 
-
 @keyframes animationFramesOne {
     0% {
         transform: translate(0px, 0px) rotate(0deg);
@@ -366,7 +363,6 @@
         transform: translate(0px, 0px) rotate(0deg);
     }
 }
-
 
 @-webkit-keyframes animationFramesOne {
     0% {
@@ -420,7 +416,6 @@
     }
 }
 
-
 @-webkit-keyframes animationFramesTwo {
     0% {
         -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1);
@@ -447,7 +442,6 @@
     }
 }
 
-
 @keyframes animationFramesThree {
     0% {
         transform: translate(165px, -179px);
@@ -457,7 +451,6 @@
         transform: translate(-346px, 617px);
     }
 }
-
 
 @-webkit-keyframes animationFramesThree {
     0% {
@@ -469,7 +462,6 @@
     }
 }
 
-
 @keyframes animationFramesFour {
     0% {
         transform: translate(-300px, 151px) rotate(0deg);
@@ -480,7 +472,6 @@
     }
 }
 
-
 @-webkit-keyframes animationFramesFour {
     0% {
         -webkit-transform: translate(-300px, 151px) rotate(0deg);
@@ -490,7 +481,6 @@
         -webkit-transform: translate(251px, -200px) rotate(180deg);
     }
 }
-
 
 @keyframes animationFramesFive {
     0% {
@@ -517,7 +507,6 @@
         transform: translate(-1px, 0px) rotate(180deg);
     }
 }
-
 
 @-webkit-keyframes animationFramesFive {
     0% {

@@ -1,21 +1,19 @@
 /* (1366x768) WXGA Display */
 
-@media screen and (min-width: 1200px) and (max-width: 2000px) {}
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+}
 
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1197.98px) {
-    
 }
 
 @media (max-width: 991.98px) {
-    
 }
 
 /* Normal desktop :991px. */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    
 }
 
 /*mobile :320px. */
@@ -23,7 +21,7 @@
 @media (max-width: 767.98px) {
     .main-container {
         padding: 0;
-    }    
+    }
     .sidebar-wrap {
         position: static;
         width: 100%;
@@ -41,12 +39,11 @@
         border-bottom: 1px solid #e5e5e5;
         width: 100%;
     }
-    .logo{
+    .logo {
         margin: 0;
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
-   
 }
 
 /* small mobile :480px. */

@@ -9,14 +9,18 @@ import StickyMenu from '../../lib/StickyMenu.js';
 import logo from '../../assets/images/logo.png';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
 
-const HeaderNews = ({ action }) => {
+const HeaderNews = ({ action, updateCart }) => {
     const { user } = useAuthContext();
     const [cart, setCart] = useState([]);
 
     const fetchCart = useCallback(async () => {
-        if (!user) return;
-        const { data, error } = await supabase.from('cart').select('quantity').eq('user_id', user.id);
-        if (!error) setCart(data);
+        if (!user) {
+            return;
+        }
+        const { data, error } = await supabase.from('cart').select('*').eq('user_id', user.id);
+        if (!error) {
+            setCart(data);
+        }
     }, [user]);
 
     useEffect(() => {
@@ -39,7 +43,7 @@ const HeaderNews = ({ action }) => {
             <Container>
                 <div className="header-nav-box header-nav-box-3 header-nav-box-inner-page">
                     <Row className="align-items-center">
-                        <Col className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
+                        <Col lg="2" md="4" sm="5" className="col-6 order-1 order-sm-1">
                             <div className="appie-logo-box">
                                 <Link to="/">
                                     <img src={logo} alt="Site Logo" />
@@ -47,16 +51,18 @@ const HeaderNews = ({ action }) => {
                             </div>
                         </Col>
 
-                        <Col className="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
+                        <Col lg="6" md="1" sm="1" className="order-3 order-sm-2">
                             <div className="appie-header-main-menu">
                                 <Navigation />
                             </div>
                         </Col>
-                        <Col className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
-                            <div className="appie-btn-box text-right d-flex align-items-center">
+                        <Col lg="4" md="7" sm="6" className="col-6 order-2 order-sm-3">
+                            <div className="appie-btn-box text-right d-flex align-items-center justify-content-end">
                                 {user ? (
                                     <div className="d-flex align-items-center gap-3">
-                                        <Link to="/Cart/index" className="btn d-flex align-items-center gap-1 btn-primary">
+                                        <Link
+                                            to="/Cart/index"
+                                            className="btn d-flex align-items-center gap-1 btn-primary">
                                             <i className="fal fa-shopping-cart" />
                                             <span>({cart.reduce((sum, i) => sum + i.quantity, 0)})</span>
                                         </Link>
@@ -79,9 +85,16 @@ const HeaderNews = ({ action }) => {
                                         </Dropdown>
                                     </div>
                                 ) : (
-                                    <Link to="/login" className="main-btn ml-30">
-                                        Login
-                                    </Link>
+                                    <div className="d-flex align-items-center gap-3">
+                                        <Link
+                                            to="/login"
+                                            className="btn d-flex align-items-center gap-1 btn-primary">
+                                            Login
+                                        </Link>
+                                        <Link to="/signup" className="btn btn-primary text-nowrap">
+                                            Sign Up
+                                        </Link>
+                                    </div>
                                 )}
                                 <div
                                     onClick={e => action(e)}

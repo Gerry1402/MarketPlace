@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const PricingHomeRtl = ({ className }) => {
     const [toggleSwitch, setSwitchValue] = useState(true);
     return (
         <>
-            <section
-                className={`appie-pricing-area pt-90 pb-90 ${className || ""}`}
-            >
+            <section className={`appie-pricing-area pt-90 pb-90 ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -17,32 +15,18 @@ const PricingHomeRtl = ({ className }) => {
                             <ul
                                 className="list-inline text-center switch-toggler-list"
                                 role="tablist"
-                                id="switch-toggle-tab"
-                            >
-                                <li
-                                    className={`month ${
-                                        toggleSwitch ? "active" : ""
-                                    }`}
-                                >
+                                id="switch-toggle-tab">
+                                <li className={`month ${toggleSwitch ? 'active' : ''}`}>
                                     <a href="#">سنوي</a>
                                 </li>
                                 <li>
                                     <label
-                                        onClick={() =>
-                                            setSwitchValue(!toggleSwitch)
-                                        }
-                                        className={`switch ${
-                                            toggleSwitch ? "on" : "off"
-                                        }`}
-                                    >
+                                        onClick={() => setSwitchValue(!toggleSwitch)}
+                                        className={`switch ${toggleSwitch ? 'on' : 'off'}`}>
                                         <span className="slider round" />
                                     </label>
                                 </li>
-                                <li
-                                    className={`year ${
-                                        toggleSwitch === false ? "active" : ""
-                                    }`}
-                                >
+                                <li className={`year ${toggleSwitch === false ? 'active' : ''}`}>
                                     <a href="#">شهريا</a>
                                 </li>
                             </ul>
@@ -60,16 +44,12 @@ const PricingHomeRtl = ({ className }) => {
                                                     <sup>$</sup> <span>04</span>
                                                     <p>/شهر</p>
                                                 </div>
-                                                <p>
-                                                    احصل على نسخة تجريبية مجانية
-                                                    لمدة 14 يومًا
-                                                </p>
+                                                <p>احصل على نسخة تجريبية مجانية لمدة 14 يومًا</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
                                                         <i className="fal fa-check" />
@@ -77,10 +57,7 @@ const PricingHomeRtl = ({ className }) => {
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>
@@ -95,31 +72,22 @@ const PricingHomeRtl = ({ className }) => {
                                                     <sup>$</sup> <span>16</span>
                                                     <p>/شهر</p>
                                                 </div>
-                                                <p>
-                                                    دفع 276 دولارًا لكل موقع
-                                                    سنويًا.
-                                                </p>
+                                                <p>دفع 276 دولارًا لكل موقع سنويًا.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        50 جيجا تخزين سحابي
+                                                        <i className="fal fa-check" /> 50 جيجا تخزين سحابي
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 دعم
+                                                        <i className="fal fa-check" /> 24/7 دعم
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>
@@ -137,36 +105,26 @@ const PricingHomeRtl = ({ className }) => {
                                                     <sup>$</sup> <span>27</span>
                                                     <p>/شهر</p>
                                                 </div>
-                                                <p>
-                                                    دفع 276 دولارًا لكل موقع
-                                                    سنويًا.
-                                                </p>
+                                                <p>دفع 276 دولارًا لكل موقع سنويًا.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        أمن البيانات
+                                                        <i className="fal fa-check" /> أمن البيانات
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        100 جيجا بايت تخزين
+                                                        <i className="fal fa-check" /> 100 جيجا بايت تخزين
                                                         سحابي
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 دعم
+                                                        <i className="fal fa-check" /> 24/7 دعم
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>
@@ -186,16 +144,12 @@ const PricingHomeRtl = ({ className }) => {
                                                     <sup>$</sup> <span>32</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    احصل على نسخة تجريبية مجانية
-                                                    لمدة 14 يومًا
-                                                </p>
+                                                <p>احصل على نسخة تجريبية مجانية لمدة 14 يومًا</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
                                                         <i className="fal fa-check" />
@@ -203,10 +157,7 @@ const PricingHomeRtl = ({ className }) => {
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>
@@ -218,35 +169,25 @@ const PricingHomeRtl = ({ className }) => {
                                             <div className="pricig-heading">
                                                 <h6>حلو</h6>
                                                 <div className="price-range">
-                                                    <sup>$</sup>{" "}
-                                                    <span>116</span>
+                                                    <sup>$</sup> <span>116</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    دفع 276 دولارًا لكل موقع
-                                                    سنويًا.
-                                                </p>
+                                                <p>دفع 276 دولارًا لكل موقع سنويًا.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        50 جيجا تخزين سحابي
+                                                        <i className="fal fa-check" /> 50 جيجا تخزين سحابي
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 دعم
+                                                        <i className="fal fa-check" /> 24/7 دعم
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>
@@ -261,40 +202,29 @@ const PricingHomeRtl = ({ className }) => {
                                             <div className="pricig-heading">
                                                 <h6>كثير العصارة</h6>
                                                 <div className="price-range">
-                                                    <sup>$</sup>{" "}
-                                                    <span>227</span>
+                                                    <sup>$</sup> <span>227</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    دفع 276 دولارًا لكل موقع
-                                                    سنويًا.
-                                                </p>
+                                                <p>دفع 276 دولارًا لكل موقع سنويًا.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        سجل الدردشة 60 يومًا
+                                                        <i className="fal fa-check" /> سجل الدردشة 60 يومًا
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        أمن البيانات
+                                                        <i className="fal fa-check" /> أمن البيانات
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        100 جيجا بايت تخزين
+                                                        <i className="fal fa-check" /> 100 جيجا بايت تخزين
                                                         سحابي
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 دعم
+                                                        <i className="fal fa-check" /> 24/7 دعم
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         اختر الخطة
                                                     </a>
                                                 </div>

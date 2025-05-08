@@ -1,5 +1,5 @@
-import { common_inputs } from "./Common";
-import { extractDefaultValuesInputs } from "../Extra";
+import { common_inputs } from './Common';
+import { extractDefaultValuesInputs } from '../Extra';
 
 export const inputs = [
     {

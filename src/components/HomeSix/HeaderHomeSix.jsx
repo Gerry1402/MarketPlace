@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import logo from "../../assets/images/logo-8.png";
-import StickyMenu from "../../lib/StickyMenu.js";
-import Navigation from "../Navigation.jsx";
+import React, { useEffect } from 'react';
+import logo from '../../assets/images/logo-8.png';
+import StickyMenu from '../../lib/StickyMenu.js';
+import Navigation from '../Navigation.jsx';
 
 const HeaderHomeSix = ({ action }) => {
     useEffect(() => {
@@ -33,16 +33,12 @@ const HeaderHomeSix = ({ action }) => {
                                     <form action="#">
                                         <div className="input-box">
                                             <i className="fal fa-search"></i>
-                                            <input
-                                                type="text"
-                                                placeholder="Search..."
-                                            />
+                                            <input type="text" placeholder="Search..." />
                                         </div>
                                     </form>
                                     <div
-                                        onClick={(e) => action(e)}
-                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block"
-                                    >
+                                        onClick={e => action(e)}
+                                        className="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                         <i className="fa fa-bars"></i>
                                     </div>
                                 </div>

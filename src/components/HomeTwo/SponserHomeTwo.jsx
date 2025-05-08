@@ -1,15 +1,15 @@
-import React from "react";
-import Sponser1 from "../../assets/images/sponser-1.png";
-import Sponser10 from "../../assets/images/sponser-10.png";
-import Sponser2 from "../../assets/images/sponser-2.png";
-import Sponser3 from "../../assets/images/sponser-3.png";
-import Sponser4 from "../../assets/images/sponser-4.png";
-import Sponser5 from "../../assets/images/sponser-5.png";
-import Sponser6 from "../../assets/images/sponser-6.png";
-import Sponser7 from "../../assets/images/sponser-7.png";
-import Sponser8 from "../../assets/images/sponser-8.png";
-import Sponser9 from "../../assets/images/sponser-9.png";
-import sponserShape from "../../assets/images/sponser-shape.png";
+import React from 'react';
+import Sponser1 from '../../assets/images/sponser-1.png';
+import Sponser10 from '../../assets/images/sponser-10.png';
+import Sponser2 from '../../assets/images/sponser-2.png';
+import Sponser3 from '../../assets/images/sponser-3.png';
+import Sponser4 from '../../assets/images/sponser-4.png';
+import Sponser5 from '../../assets/images/sponser-5.png';
+import Sponser6 from '../../assets/images/sponser-6.png';
+import Sponser7 from '../../assets/images/sponser-7.png';
+import Sponser8 from '../../assets/images/sponser-8.png';
+import Sponser9 from '../../assets/images/sponser-9.png';
+import sponserShape from '../../assets/images/sponser-shape.png';
 
 const SponserHomeTwo = ({ className }) => {
     return (

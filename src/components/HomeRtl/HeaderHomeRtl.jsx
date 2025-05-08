@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import logo from "../../assets/images/logo.png";
-import StickyMenu from "../../lib/StickyMenu.js";
-import Navigation from "../Navigation.jsx";
+import React, { useEffect } from 'react';
+import logo from '../../assets/images/logo.png';
+import StickyMenu from '../../lib/StickyMenu.js';
+import Navigation from '../Navigation.jsx';
 
 const HeaderHomeRtl = ({ action, className, lang, changeModeLan }) => {
     useEffect(() => {
         StickyMenu();
     });
     return (
-        <header className={`appie-header-area appie-sticky ${className || ""}`}>
+        <header className={`appie-header-area appie-sticky ${className || ''}`}>
             <div className="container">
                 <div className="header-nav-box">
                     <div className="row align-items-center">
@@ -29,15 +29,13 @@ const HeaderHomeRtl = ({ action, className, lang, changeModeLan }) => {
                                 {lang ? (
                                     <span
                                         className="align-content-center ml-3"
-                                        onClick={(e) => changeModeLan(e)}
-                                    >
+                                        onClick={e => changeModeLan(e)}>
                                         RTL
                                     </span>
                                 ) : (
                                     <span
                                         className="align-content-center mr-3"
-                                        onClick={(e) => changeModeLan(e)}
-                                    >
+                                        onClick={e => changeModeLan(e)}>
                                         LTR
                                     </span>
                                 )}
@@ -49,9 +47,8 @@ const HeaderHomeRtl = ({ action, className, lang, changeModeLan }) => {
                                     البدء
                                 </a>
                                 <div
-                                    onClick={(e) => action(e)}
-                                    className="toggle-btn ml-30 canvas_open d-lg-none d-block"
-                                >
+                                    onClick={e => action(e)}
+                                    className="toggle-btn ml-30 canvas_open d-lg-none d-block">
                                     <i className="fa fa-bars" />
                                 </div>
                             </div>

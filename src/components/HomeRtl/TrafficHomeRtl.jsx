@@ -1,23 +1,18 @@
-import React from "react";
-import thumb from "../../assets/images/traffic-thumb.png";
+import React from 'react';
+import thumb from '../../assets/images/traffic-thumb.png';
 
 const TrafficHomeRtl = ({ className }) => {
     return (
-        <section
-            className={`appie-traffic-area pt-140 pb-180 ${className || ""}`}
-        >
+        <section className={`appie-traffic-area pt-140 pb-180 ${className || ''}`}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7">
                         <div className="appie-traffic-title text-right">
                             <span>مرور</span>
-                            <h3 className="title">
-                                إعداد التقارير مع 50 ألف استفسار.
-                            </h3>
+                            <h3 className="title">إعداد التقارير مع 50 ألف استفسار.</h3>
                             <p>
-                                لقد قام بتجسيدها بوو هاري ذا كراش بارج تشاب هري
-                                سبيفينج تنفق فلسا واحدا على مونتي بورك باتي
-                                الكامل.
+                                لقد قام بتجسيدها بوو هاري ذا كراش بارج تشاب هري سبيفينج تنفق فلسا واحدا على
+                                مونتي بورك باتي الكامل.
                             </p>
                         </div>
                         <div className="row">
@@ -60,8 +55,7 @@ const TrafficHomeRtl = ({ className }) => {
                             <div className="col-lg-12">
                                 <div className="traffic-btn mt-50">
                                     <a className="main-btn" href="#">
-                                        يتعلم أكثر{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        يتعلم أكثر <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const PopupVideo = ({ videoSrc, handler }) => {
     /* 
@@ -10,17 +10,11 @@ const PopupVideo = ({ videoSrc, handler }) => {
             <div
                 className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready"
                 tabIndex="-1"
-                style={{ overflow: " hidden auto" }}
-            >
+                style={{ overflow: ' hidden auto' }}>
                 <div className="mfp-container mfp-s-ready mfp-iframe-holder">
                     <div className="mfp-content">
                         <div className="mfp-iframe-scaler">
-                            <button
-                                onClick={handler}
-                                title="Close (Esc)"
-                                type="button"
-                                className="mfp-close"
-                            >
+                            <button onClick={handler} title="Close (Esc)" type="button" className="mfp-close">
                                 ×
                             </button>
                             <iframe

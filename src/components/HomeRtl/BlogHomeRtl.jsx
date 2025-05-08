@@ -1,21 +1,17 @@
-import React from "react";
-import blogOne from "../../assets/images/blog-1.jpg";
-import blogTwo from "../../assets/images/blog-2.jpg";
-import blogThree from "../../assets/images/blog-3.jpg";
+import React from 'react';
+import blogOne from '../../assets/images/blog-1.jpg';
+import blogTwo from '../../assets/images/blog-2.jpg';
+import blogThree from '../../assets/images/blog-3.jpg';
 
 const BlogHomeRtl = ({ className }) => {
     return (
         <>
-            <section
-                className={`appie-blog-area pt-90 pb-95 ${className || ""}`}
-            >
+            <section className={`appie-blog-area pt-90 pb-95 ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    أحدث مشاركات المدونة
-                                </h3>
+                                <h3 className="appie-title">أحدث مشاركات المدونة</h3>
                                 <p>تخطيطات وأنماط مختلفة لأقسام الفريق.</p>
                             </div>
                         </div>
@@ -25,8 +21,7 @@ const BlogHomeRtl = ({ className }) => {
                             <div
                                 className="appie-blog-item text-right mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="200ms"
-                            >
+                                data-wow-delay="200ms">
                                 <div className="thumb">
                                     <img src={blogOne} alt="" />
                                 </div>
@@ -41,13 +36,11 @@ const BlogHomeRtl = ({ className }) => {
                                     </div>
                                     <h3 className="title">
                                         <a href="/news/single-news">
-                                            تقديم تصميم تطبيقات جديد لتطبيق iOS
-                                            الخاص بنا
+                                            تقديم تصميم تطبيقات جديد لتطبيق iOS الخاص بنا
                                         </a>
                                     </h3>
                                     <a href="#">
-                                        يتعلم أكثر{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        يتعلم أكثر <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>
@@ -56,8 +49,7 @@ const BlogHomeRtl = ({ className }) => {
                             <div
                                 className="appie-blog-item text-right mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="400ms"
-                            >
+                                data-wow-delay="400ms">
                                 <div className="thumb">
                                     <img src={blogTwo} alt="" />
                                 </div>
@@ -71,13 +63,10 @@ const BlogHomeRtl = ({ className }) => {
                                         </ul>
                                     </div>
                                     <h3 className="title">
-                                        <a href="/news/single-news">
-                                            كيفية إحضار Dolce إلى شركتك
-                                        </a>
+                                        <a href="/news/single-news">كيفية إحضار Dolce إلى شركتك</a>
                                     </h3>
                                     <a href="#">
-                                        يتعلم أكثر{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        يتعلم أكثر <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>
@@ -86,8 +75,7 @@ const BlogHomeRtl = ({ className }) => {
                             <div
                                 className="appie-blog-item text-right mt-30 wow animated fadeInUp"
                                 data-wow-duration="3000ms"
-                                data-wow-delay="600ms"
-                            >
+                                data-wow-delay="600ms">
                                 <div className="thumb">
                                     <img src={blogThree} alt="" />
                                 </div>
@@ -101,14 +89,10 @@ const BlogHomeRtl = ({ className }) => {
                                         </ul>
                                     </div>
                                     <h3 className="title">
-                                        <a href="/news/single-news">
-                                            17 طريقة فعالة لاستثمار تطبيقات
-                                            الجوال
-                                        </a>
+                                        <a href="/news/single-news">17 طريقة فعالة لاستثمار تطبيقات الجوال</a>
                                     </h3>
                                     <a href="#">
-                                        يتعلم أكثر{" "}
-                                        <i className="fal fa-arrow-right" />
+                                        يتعلم أكثر <i className="fal fa-arrow-right" />
                                     </a>
                                 </div>
                             </div>

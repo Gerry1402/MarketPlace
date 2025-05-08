@@ -1,18 +1,18 @@
 // import React, { useState } from 'react';
-import useToggle from "../../Hooks/useToggle.js";
-import BackToTop from "../BackToTop.jsx";
-import Cart from "../Cart/index.jsx";
-import TestimonialHomeOne from "../HomeOne/TestimonialHomeOne.jsx";
-import DownloadHomeThree from "../HomeThree/DownloadHomeThree.jsx";
-import ServicesHomeThree from "../HomeThree/ServicesHomeThree.jsx";
-import ShowCaseHomeThree from "../HomeThree/ShowCaseHomeThree.jsx";
-import FeaturesHomeTwo from "../HomeTwo/FeaturesHomeTwo.jsx";
-import SponserHomeTwo from "../HomeTwo/SponserHomeTwo.jsx";
-import Drawer from "../Mobile/Drawer.jsx";
-import SearchModule from "../SearchModule/index.jsx";
-import FooterHomeFive from "./FooterHomeFive.jsx";
-import HeaderHomeFive from "./HeaderHomeFive.jsx";
-import HeroHomeFive from "./HeroHomeFive.jsx";
+import useToggle from '../../Hooks/useToggle.js';
+import BackToTop from '../BackToTop.jsx';
+import Cart from '../Cart/index.jsx';
+import TestimonialHomeOne from '../HomeOne/TestimonialHomeOne.jsx';
+import DownloadHomeThree from '../HomeThree/DownloadHomeThree.jsx';
+import ServicesHomeThree from '../HomeThree/ServicesHomeThree.jsx';
+import ShowCaseHomeThree from '../HomeThree/ShowCaseHomeThree.jsx';
+import FeaturesHomeTwo from '../HomeTwo/FeaturesHomeTwo.jsx';
+import SponserHomeTwo from '../HomeTwo/SponserHomeTwo.jsx';
+import Drawer from '../Mobile/Drawer.jsx';
+import SearchModule from '../SearchModule/index.jsx';
+import FooterHomeFive from './FooterHomeFive.jsx';
+import HeaderHomeFive from './HeaderHomeFive.jsx';
+import HeroHomeFive from './HeroHomeFive.jsx';
 
 const HomeFive = () => {
     const [search, searchAction] = useToggle(false);

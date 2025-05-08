@@ -1,53 +1,32 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const PricingHomeOne = ({ className }) => {
     const [toggleSwitch, setSwitchValue] = useState(true);
     return (
         <>
-            <section
-                className={`appie-pricing-area pt-90 pb-90 ${className || ""}`}
-            >
+            <section className={`appie-pricing-area pt-90 pb-90 ${className || ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="appie-section-title text-center">
-                                <h3 className="appie-title">
-                                    Choose your plan
-                                </h3>
-                                <p>
-                                    Different layouts and styles for team
-                                    sections.
-                                </p>
+                                <h3 className="appie-title">Choose your plan</h3>
+                                <p>Different layouts and styles for team sections.</p>
                             </div>
                             <ul
                                 className="list-inline text-center switch-toggler-list"
                                 role="tablist"
-                                id="switch-toggle-tab"
-                            >
-                                <li
-                                    className={`month ${
-                                        toggleSwitch ? "active" : ""
-                                    }`}
-                                >
+                                id="switch-toggle-tab">
+                                <li className={`month ${toggleSwitch ? 'active' : ''}`}>
                                     <a href="#">Monthly</a>
                                 </li>
                                 <li>
                                     <label
-                                        onClick={() =>
-                                            setSwitchValue(!toggleSwitch)
-                                        }
-                                        className={`switch ${
-                                            toggleSwitch ? "on" : "off"
-                                        }`}
-                                    >
+                                        onClick={() => setSwitchValue(!toggleSwitch)}
+                                        className={`switch ${toggleSwitch ? 'on' : 'off'}`}>
                                         <span className="slider round" />
                                     </label>
                                 </li>
-                                <li
-                                    className={`year ${
-                                        toggleSwitch === false ? "active" : ""
-                                    }`}
-                                >
+                                <li className={`year ${toggleSwitch === false ? 'active' : ''}`}>
                                     <a href="#">Annualy</a>
                                 </li>
                             </ul>
@@ -65,26 +44,19 @@ const PricingHomeOne = ({ className }) => {
                                                     <sup>$</sup> <span>04</span>
                                                     <p>/month</p>
                                                 </div>
-                                                <p>
-                                                    Get your 14 day free trial
-                                                </p>
+                                                <p>Get your 14 day free trial</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        15 GB cloud storage
+                                                        <i className="fal fa-check" /> 15 GB cloud storage
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>
@@ -99,31 +71,22 @@ const PricingHomeOne = ({ className }) => {
                                                     <sup>$</sup> <span>16</span>
                                                     <p>/month</p>
                                                 </div>
-                                                <p>
-                                                    Billed $276 per website
-                                                    annually.
-                                                </p>
+                                                <p>Billed $276 per website annually.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        50 GB cloud storage
+                                                        <i className="fal fa-check" /> 50 GB cloud storage
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 Support
+                                                        <i className="fal fa-check" /> 24/7 Support
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>
@@ -141,35 +104,25 @@ const PricingHomeOne = ({ className }) => {
                                                     <sup>$</sup> <span>27</span>
                                                     <p>/month</p>
                                                 </div>
-                                                <p>
-                                                    Billed $276 per website
-                                                    annually.
-                                                </p>
+                                                <p>Billed $276 per website annually.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        Data security
+                                                        <i className="fal fa-check" /> Data security
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        100 GB cloud storage
+                                                        <i className="fal fa-check" /> 100 GB cloud storage
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 Support
+                                                        <i className="fal fa-check" /> 24/7 Support
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>
@@ -189,26 +142,19 @@ const PricingHomeOne = ({ className }) => {
                                                     <sup>$</sup> <span>32</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    Get your 14 day free trial
-                                                </p>
+                                                <p>Get your 14 day free trial</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        15 GB cloud storage
+                                                        <i className="fal fa-check" /> 15 GB cloud storage
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>
@@ -220,35 +166,25 @@ const PricingHomeOne = ({ className }) => {
                                             <div className="pricig-heading">
                                                 <h6>Sweet</h6>
                                                 <div className="price-range">
-                                                    <sup>$</sup>{" "}
-                                                    <span>116</span>
+                                                    <sup>$</sup> <span>116</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    Billed $276 per website
-                                                    annually.
-                                                </p>
+                                                <p>Billed $276 per website annually.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        50 GB cloud storage
+                                                        <i className="fal fa-check" /> 50 GB cloud storage
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 Support
+                                                        <i className="fal fa-check" /> 24/7 Support
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>
@@ -263,39 +199,28 @@ const PricingHomeOne = ({ className }) => {
                                             <div className="pricig-heading">
                                                 <h6>Juicy</h6>
                                                 <div className="price-range">
-                                                    <sup>$</sup>{" "}
-                                                    <span>227</span>
+                                                    <sup>$</sup> <span>227</span>
                                                     <p>/Yearly</p>
                                                 </div>
-                                                <p>
-                                                    Billed $276 per website
-                                                    annually.
-                                                </p>
+                                                <p>Billed $276 per website annually.</p>
                                             </div>
                                             <div className="pricig-body">
                                                 <ul>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        60-day chat history
+                                                        <i className="fal fa-check" /> 60-day chat history
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        Data security
+                                                        <i className="fal fa-check" /> Data security
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        100 GB cloud storage
+                                                        <i className="fal fa-check" /> 100 GB cloud storage
                                                     </li>
                                                     <li>
-                                                        <i className="fal fa-check" />{" "}
-                                                        24/7 Support
+                                                        <i className="fal fa-check" /> 24/7 Support
                                                     </li>
                                                 </ul>
                                                 <div className="pricing-btn mt-35">
-                                                    <a
-                                                        className="main-btn"
-                                                        href="#"
-                                                    >
+                                                    <a className="main-btn" href="#">
                                                         Choose plan
                                                     </a>
                                                 </div>

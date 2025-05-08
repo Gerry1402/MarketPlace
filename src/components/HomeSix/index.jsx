@@ -1,17 +1,17 @@
-import React from "react";
-import useToggle from "../../Hooks/useToggle.js";
-import BackToTop from "../BackToTop.jsx";
-import FeaturesHomeOne from "../HomeOne/FeaturesHomeOne.jsx";
-import PricingHomeOne from "../HomeOne/PricingHomeOne.jsx";
-import BlogHomeThree from "../HomeThree/BlogHomeThree.jsx";
-import DownloadHomeThree from "../HomeThree/DownloadHomeThree.jsx";
-import CounterArea from "../HomeTwo/CounterArea.jsx";
-import ServicesHomeTwo from "../HomeTwo/ServicesHomeTwo.jsx";
-import VideoPlayerHomeTwo from "../HomeTwo/VideoPlayerHomeTwo.jsx";
-import Drawer from "../Mobile/Drawer.jsx";
-import FooterHomeSix from "./FooterHomeSix.jsx";
-import HeaderHomeSix from "./HeaderHomeSix.jsx";
-import HeroHomeSix from "./HeroHomeSix.jsx";
+import React from 'react';
+import useToggle from '../../Hooks/useToggle.js';
+import BackToTop from '../BackToTop.jsx';
+import FeaturesHomeOne from '../HomeOne/FeaturesHomeOne.jsx';
+import PricingHomeOne from '../HomeOne/PricingHomeOne.jsx';
+import BlogHomeThree from '../HomeThree/BlogHomeThree.jsx';
+import DownloadHomeThree from '../HomeThree/DownloadHomeThree.jsx';
+import CounterArea from '../HomeTwo/CounterArea.jsx';
+import ServicesHomeTwo from '../HomeTwo/ServicesHomeTwo.jsx';
+import VideoPlayerHomeTwo from '../HomeTwo/VideoPlayerHomeTwo.jsx';
+import Drawer from '../Mobile/Drawer.jsx';
+import FooterHomeSix from './FooterHomeSix.jsx';
+import HeaderHomeSix from './HeaderHomeSix.jsx';
+import HeroHomeSix from './HeroHomeSix.jsx';
 
 const HomeSix = () => {
     const [drawer, drawerAction] = useToggle(false);

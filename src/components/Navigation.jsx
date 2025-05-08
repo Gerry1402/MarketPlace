@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 const Navigation = () => {
     return (
@@ -9,7 +9,7 @@ const Navigation = () => {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <Link to="/shops">Shops</Link>
+                    <Link to="/products">Products</Link>
                 </li>
                 <li>
                     <Link to="/contact">Contact</Link>

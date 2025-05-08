@@ -6,9 +6,9 @@ function useToggle(initValue = false) {
         value,
         {
             set: setValue,
-            toggle: (e) => {
+            toggle: e => {
                 e.preventDefault();
-                setValue((flag) => !flag);
+                setValue(flag => !flag);
             },
         },
     ];

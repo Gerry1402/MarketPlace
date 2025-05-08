@@ -1,10 +1,10 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { fetchTable, supabase } from '../../services/supabase.jsx';
 
 import Accordion from 'react-bootstrap/Accordion';
 import BackToTop from '../BackToTop.jsx';
-import Card from '../Product/Card.jsx';
+import Card from './Card.jsx';
 import Drawer from '../Mobile/Drawer.jsx';
 import FooterHomeOne from '../HomeOne/FooterHomeOne.jsx';
 import HeaderNews from '../News/HeaderNews.jsx';
@@ -13,7 +13,7 @@ import SideBarFilter from './SideBarFilter.jsx';
 import productImg from '../../assets/images/shop-grid-1.jpg';
 import useToggle from '../../Hooks/useToggle.js';
 
-const Shops = () => {
+const Products = () => {
     const [drawer, drawerAction] = useToggle(false);
     const [products, setProducts] = useState([]);
     const [currentProducts, setCurrentProducts] = useState([]);
@@ -41,6 +41,7 @@ const Shops = () => {
         handmade: null,
     });
     const [selectedShopId, setSelectedShopId] = useState(null);
+    const shop = useRef(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -116,10 +117,10 @@ const Shops = () => {
             <Drawer drawer={drawer} action={drawerAction.toggle} />
             <HeaderNews action={drawerAction.toggle} />
             <HeroNews
-                title="Shop Products"
+                title={shop.current?.options[shop.current?.selectedIndex]?.text}
                 breadcrumb={[
                     { link: '/', title: 'Home' },
-                    { link: '/shops', title: 'Shop Products' },
+                    { link: '/products', title: 'All Shops' },
                 ]}
             />
             <div className="appie-shop-grid-area pt-100 pb-50">
@@ -147,12 +148,12 @@ const Shops = () => {
                                 <span>
                                     Showing all <span>{products.length}</span> results
                                 </span>
-                                <select id="shops" onChange={handleShopChange}>
+                                <select id="shops" ref={shop} onChange={handleShopChange}>
                                     <option value="">All Shops</option>
                                     <option value="undefined">Only Users (no shop)</option>
                                     {shops && shops.length > 0 ? (
                                         shops.map(shop => (
-                                            <option key={shop.id} value={shop.id}>
+                                            <option key={shop.id} value={shop.id} data-name={shop.name}>
                                                 {shop.name}
                                             </option>
                                         ))
@@ -216,4 +217,4 @@ const Shops = () => {
     );
 };
 
-export default Shops;
+export default Products;

@@ -108,7 +108,7 @@ const Card = ({ cardData, shops }) => {
     };
     return (
         <Link
-            to={`/shops/shop-details/${cardData.id}`}
+            to={`/products/product-details/${cardData.id}`}
             style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -129,8 +129,13 @@ const Card = ({ cardData, shops }) => {
                     <div className="cart-list-icon">
                         <ul>
                             <li>
-                                <button onClick={addCart} style={{ background: 'none', border: 'none' }}>
-                                    <i className="fal fa-shopping-bag"></i>
+                                <button
+                                    onClick={addCart}
+                                    type="button"
+                                    className="btn btn-light"
+                                    aria-label="Add to Cart" // Accessibility improvement
+                                >
+                                    <i className="fal fa-shopping-bag" aria-hidden="true"></i>
                                 </button>
                             </li>
                         </ul>

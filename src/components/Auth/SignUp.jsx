@@ -50,7 +50,7 @@ const SignUp = () => {
     };
 
     return (
-        <Container>
+        <Container className="mt-4">
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
                 <Row>
                     {inputs.map((input, index) => (
