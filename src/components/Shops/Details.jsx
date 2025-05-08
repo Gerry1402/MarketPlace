@@ -31,6 +31,7 @@ const Details = () => {
     const [sizeName, setSizeName] = useState('');
     const [colorName, setColorName] = useState('');
     const { user } = useAuthContext();
+    const [hover, setHover] = useState(false);
 
     const detailsTabHandler = (e, value) => {
         e.preventDefault();
@@ -135,51 +136,6 @@ const Details = () => {
         }
     }, [idProduct]);
 
-    // const addCart = quantityToAdd => {
-    //     if (!product || quantityToAdd <= 0) {
-    //         return;
-    //     }
-
-    //     if (quantityToAdd > product.stock) {
-    //         alert('No hay suficiente stock disponible.');
-    //         return;
-    //     }
-
-    //     const addToCart = async () => {
-    //         const { data, error } = await supabase
-    //             .from('cart')
-    //             .insert([
-    //                 {
-    //                     product_id: idProduct,
-    //                     quantity: quantityToAdd,
-    //                 },
-    //             ])
-    //             .select('*');
-
-    //         if (error) {
-    //             console.error('Error al agregar producto al carrito:', error);
-    //             return;
-    //         }
-
-    //         const newStock = product.stock - quantityToAdd;
-
-    //         const { error: stockError } = await supabase
-    //             .from('products')
-    //             .update({ stock: newStock })
-    //             .eq('id', idProduct);
-
-    //         if (stockError) {
-    //             console.error('Error actualizando el stock del producto:', stockError);
-    //             return;
-    //         }
-
-    //         setProduct({ ...product, stock: newStock });
-    //         setQuantity(1);
-    //     };
-
-    //     addToCart();
-    // };
-
     const addCart = async quantityToAdd => {
         if (!product || quantityToAdd <= 0) {
             return;
@@ -271,6 +227,7 @@ const Details = () => {
 
             setProduct({ ...product, stock: newStock });
             setQuantity(1);
+            window.dispatchEvent(new Event('cartUpdated'));
         };
 
         addToCart();
@@ -297,7 +254,12 @@ const Details = () => {
                                     <img
                                         src={product.images?.thumbnail}
                                         alt={product.title}
-                                        style={{ maxWidth: '80%', height: 'auto', marginBottom: '20px' }}
+                                        style={{
+                                            maxWidth: '80%',
+                                            maxHeight: '500px',
+                                            objectFit: 'contain',
+                                            marginBottom: '20px',
+                                        }}
                                     />
                                 </>
                             ) : (
@@ -309,6 +271,7 @@ const Details = () => {
                                 <div className="shop-product-details-content pl-70 mt-35">
                                     <span>{product.stock > 0 ? 'In stock' : 'Out of stock'}</span>
                                     <h2 className="title">{product.title}</h2>
+                                    <p>{product.shop_id}</p>
                                     <div className="pricing">
                                         {product.discount ? (
                                             <>
@@ -364,7 +327,10 @@ const Details = () => {
                                                         +
                                                     </button>
                                                 </div>
-                                                <div className="main-btn ml-10">
+                                                <div
+                                                    className="main-btn ml-10"
+                                                    onMouseEnter={() => setHover(true)}
+                                                    onMouseLeave={() => setHover(false)}>
                                                     <button
                                                         onClick={() => addCart(quantity)}
                                                         style={{
@@ -373,6 +339,8 @@ const Details = () => {
                                                             padding: 0,
                                                             margin: 0,
                                                             cursor: 'pointer',
+                                                            color: hover ? '#2b70fa' : '#fff',
+                                                            transition: 'color 0.2s ease',
                                                         }}>
                                                         Add to Cart
                                                     </button>
@@ -623,284 +591,6 @@ const Details = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="shop-related-area pt-90 pb-170">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="appie-section-title text-center">
-                                <h3 className="appie-title">Related products</h3>
-                                <p>So I said knees up cuppa such a fibber jeffrey a bit of how's your.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="shop-related-product-slider-active">
-                        <Slider {...rlProductSettings} dots>
-                            <div className="px-3">
-                                <div className="single-shop-box">
-                                    <div className="thumb text-center">
-                                        <img src={product} alt="" />
-                                        <div className="reborn">
-                                            <span>Sale</span>
-                                        </div>
-                                        <div className="cart-list-icon">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-shopping-bag"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <ul>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star-half-alt"></i>
-                                            </li>
-                                        </ul>
-                                        <a href="#">Smartwatch with Music</a>
-                                        <div className="pricing">
-                                            <div className="discount-price">$158.00</div>
-                                            <div className="regular-price">$180.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-3">
-                                <div className="single-shop-box">
-                                    <div className="thumb text-center">
-                                        <img src={product} alt="" />
-                                        <div className="reborn"></div>
-                                        <div className="cart-list-icon">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-shopping-bag"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <ul>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star-half-alt"></i>
-                                            </li>
-                                        </ul>
-                                        <a href="#">Smartwatch with Music</a>
-                                        <div className="pricing">
-                                            <div className="discount-price">$158.00</div>
-                                            <div className="regular-price">$180.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-3">
-                                <div className="single-shop-box">
-                                    <div className="thumb text-center">
-                                        <img src={product} alt="" />
-                                        <div className="reborn">
-                                            <span>Hot</span>
-                                        </div>
-                                        <div className="cart-list-icon">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-shopping-bag"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <ul>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star-half-alt"></i>
-                                            </li>
-                                        </ul>
-                                        <a href="#">Smartwatch with Music</a>
-                                        <div className="pricing">
-                                            <div className="discount-price">$158.00</div>
-                                            <div className="regular-price">$180.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-3">
-                                <div className="single-shop-box">
-                                    <div className="thumb text-center">
-                                        <img src={product} alt="" />
-                                        <div className="reborn"></div>
-                                        <div className="cart-list-icon">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-shopping-bag"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <ul>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star-half-alt"></i>
-                                            </li>
-                                        </ul>
-                                        <a href="#">Smartwatch with Music</a>
-                                        <div className="pricing">
-                                            <div className="discount-price">$158.00</div>
-                                            <div className="regular-price">$180.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-3">
-                                <div className="single-shop-box">
-                                    <div className="thumb text-center">
-                                        <img src={product} alt="" />
-                                        <div className="reborn">
-                                            <span>New</span>
-                                        </div>
-                                        <div className="cart-list-icon">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-shopping-bag"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i className="fal fa-eye"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <ul>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i className="fas fa-star-half-alt"></i>
-                                            </li>
-                                        </ul>
-                                        <a href="#">Smartwatch with Music</a>
-                                        <div className="pricing">
-                                            <div className="discount-price">$158.00</div>
-                                            <div className="regular-price">$180.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Slider>
                     </div>
                 </div>
             </div>

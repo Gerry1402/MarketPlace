@@ -180,6 +180,7 @@ const Shops = () => {
                                 </span>
                                 <select id="shops" onChange={handleShopChange}>
                                     <option value="">All Shops</option>
+                                    <option value="only_users">Only Users (no shop)</option>
                                     {shops && shops.length > 0 ? (
                                         shops.map(shop => (
                                             <option key={shop.id} value={shop.id}>
