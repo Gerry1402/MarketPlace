@@ -24,7 +24,7 @@ const ServicesHomeOne = ({ className }) => {
       <div className="container">
         <div className="row justify-content-center mb-50">
           <div className="col-12 text-center">
-            <h3 className="appie-title">Technologies used</h3>
+            <h1 className="appie-title">Technologies used</h1>
             <p>FrontEnd, BackEnd and Language</p>
           </div>
         </div>

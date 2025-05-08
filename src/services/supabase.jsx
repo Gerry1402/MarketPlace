@@ -7,4 +7,17 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 // export const supabase = createClient(supabaseUrl, supabaseRoleKey);
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-export const supabaseAuth = createClient(supabaseUrl, supabaseAnonKey);
+export const supabaseAuth = createClient(supabaseUrl, supabaseRoleKey);
+
+
+export const signOut = async () => await supabase.auth.signOut();
+
+export const fetchTable = async (tableName) => {
+    const {data, error} = await supabase.from(tableName).select('*');
+    if (error) {
+        console.error(`Error fetching ${tableName}:`, error);
+        return null;
+    }
+    // console.log(data)
+    return data;
+};

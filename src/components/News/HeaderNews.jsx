@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
+import { signOut, supabase } from '../../services/supabase.jsx';
+
+import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation.jsx';
 import StickyMenu from '../../lib/StickyMenu.js';
 import logo from '../../assets/images/logo.png';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
-import { supabase } from '../../services/supabase.jsx';
 
 const HeaderNews = ({ action }) => {
     const { user } = useAuthContext();
@@ -49,9 +51,8 @@ const HeaderNews = ({ action }) => {
                                 <Navigation />
                             </div>
                         </div>
-
-                        <div className="col-lg-4 col-md-7 col-sm-6 col-6 order-2 order-sm-3">
-                            <div className="appie-btn-box text-right d-flex align-items-center justify-content-end">
+                        <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                            <div className="appie-btn-box text-right d-flex align-items-center">
                                 {user ? (
                                     <>
                                         <Link
@@ -67,9 +68,20 @@ const HeaderNews = ({ action }) => {
                                             style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                                             <i className="fal fa-store" />
                                         </Link>
-                                        <Link to="" className="login-btn ml-30">
-                                            <i className="fal fa-user" /> {user.user_metadata.display_name}
-                                        </Link>
+                                        <Dropdown>
+                                            <Dropdown.Toggle variant="primary">
+                                                <i className="fal fa-user"></i>{' '}
+                                                {user.user_metadata.display_name}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2">
+                                                    Shops & Products
+                                                </Dropdown.Item>
+                                                <Dropdown.Item onClick={signOut}>Sign Out</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </>
                                 ) : (
                                     <Link to="/login" className="main-btn ml-30">

@@ -1,6 +1,8 @@
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
+import { fetchTable, supabase } from '../../services/supabase.jsx';
 
+import Accordion from 'react-bootstrap/Accordion';
 import BackToTop from '../BackToTop.jsx';
 import Card from '../Product/Card.jsx';
 import Drawer from '../Mobile/Drawer.jsx';
@@ -9,111 +11,85 @@ import HeaderNews from '../News/HeaderNews.jsx';
 import HeroNews from '../News/HeroNews.jsx';
 import SideBarFilter from './SideBarFilter.jsx';
 import productImg from '../../assets/images/shop-grid-1.jpg';
-import { supabase } from '../../services/supabase.jsx';
 import useToggle from '../../Hooks/useToggle.js';
 
 const Shops = () => {
     const [drawer, drawerAction] = useToggle(false);
     const [products, setProducts] = useState([]);
-    const [shops, setShops] = useState([]);
+    const [currentProducts, setCurrentProducts] = useState([]);
+    const [shops, setShops] = useState(null);
+    const [categories, setCategories] = useState(null);
+    const [filters, setFilters] = useState([
+        { name: 'Categories', value: [] },
+        { name: 'Materials', value: [] },
+        { name: 'Colors', value: [] },
+        { name: 'Sizes', value: [] },
+        { name: 'Sources', value: [] },
+        { name: 'Targets', value: [] },
+        { name: 'Sustainability', value: [] },
+    ]);
+
+    const [selectedFilters, setSelectedFilters] = useState({
+        categories: new Set(),
+        shops: new Set(),
+        materials: new Set(),
+        colors: new Set(),
+        sizes: new Set(),
+        sources: new Set(),
+        targets: new Set(),
+        sustainability: new Set(),
+        handmade: null,
+    });
     const [selectedShopId, setSelectedShopId] = useState(null);
-    const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 21;
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+    const productsPerPage = 24;
     const totalPages = Math.ceil(products.length / productsPerPage);
 
-    const fetchProducts = async (
-        shopId = null,
-        categoryId = null,
-        handmadeOnly = null,
-        onlyUserProducts = false
-    ) => {
-        let data, error;
-
-        if (onlyUserProducts) {
-            ({ data, error } = await supabase.from('products').select('*').is('shop_id', null));
-        } else if (shopId && categoryId) {
-            ({ data, error } = await supabase
-                .from('products')
-                .select('*')
-                .eq('shop_id', shopId)
-                .eq('categories_id', categoryId));
-        } else if (shopId) {
-            ({ data, error } = await supabase.from('products').select('*').eq('shop_id', shopId));
-        } else if (categoryId) {
-            ({ data, error } = await supabase.from('products').select('*').eq('categories_id', categoryId));
-        } else if (handmadeOnly) {
-            ({ data, error } = await supabase.from('products').select('*').eq('handmade', true));
-        } else {
-            ({ data, error } = await supabase.from('products').select('*'));
-        }
-
-        if (error) {
-            console.error('Error al obtener los productos:', error.message || error);
-            return;
-        }
-
-        console.log('Productos:', data);
-
-        setProducts(data);
-        setCurrentPage(1);
-    };
-
-    const fetchCategories = async () => {
-        const { data, error } = await supabase.from('categories').select('*');
-
-        if (error) {
-            console.error('Error al obtener las categorias:', error.message || error);
-            return;
-        }
-
-        console.log('Categorías:', data);
-
-        setCategories(data);
-    };
-
     useEffect(() => {
-        const fetchShops = async () => {
-            const { data, error } = await supabase.from('shops').select('*');
-
-            if (error) {
-                console.error('Error al obtener las tiendas:', error);
-                return;
-            }
-
-            console.log('Tiendas:', data);
-            setShops(data);
+        const fetchFilters = async () => {
+            const resolvedFilters = await Promise.all(
+                filters.map(async item => ({
+                    name: item?.name ?? '',
+                    value: item?.name ? await fetchTable(item.name.toLowerCase()) : null,
+                }))
+            );
+            setFilters(resolvedFilters);
         };
 
-        fetchShops();
-        fetchProducts();
-        fetchCategories();
+        fetchTable('products').then(setProducts);
+        fetchTable('categories').then(setCategories);
+        fetchTable('shops').then(setShops);
+        fetchFilters();
+        setCurrentProducts(
+            products.slice(productsPerPage * (currentPage - 1), productsPerPage * currentPage)
+        );
     }, []);
+    const allProducts = products;
 
     const handlePageClick = pageNum => {
-        setCurrentPage(pageNum);
-    };
-
-    const handleNextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
+        if (pageNum >= 1 && totalPages >= pageNum) {
+            setCurrentPage(pageNum);
+            setCurrentProducts(products.slice(productsPerPage * (pageNum - 1), productsPerPage * pageNum));
         }
     };
 
     const handleShopChange = e => {
-        const selectedId = e.target.value;
-        setSelectedShopId(selectedId);
-        console.log('Selected shop ID:', selectedId);
+        setProducts(allProducts.filter(product => product.shop_id === e.target.value));
+    };
 
-        if (selectedId === 'only_users') {
-            fetchProducts(null, null, null, true);
+    const handleChangeFilters = (filterType, filterValue, add) => {
+        if (!add) {
+            setSelectedFilters({
+                ...selectedFilters,
+                [filterType]: selectedFilters[filterType].delete(filterValue),
+            });
         } else {
-            fetchProducts(selectedId);
+            setSelectedFilters({
+                ...selectedFilters,
+                [filterType]: selectedFilters[filterType].add(filterValue),
+            });
         }
     };
 
@@ -140,12 +116,25 @@ const Shops = () => {
                 ]}
             />
             <div className="appie-shop-grid-area pt-100 pb-50">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3 order-2 order-lg-1">
+                <Container>
+                    <Row>
+                        <Col lg="3" className="order-2 order-lg-1">
                             <div className="appie-shop-sidebar">
                                 <div className="shop-category-widget">
-                                    <h4 className="title">Product Categories</h4>
+                                    <Accordion>
+                                        {filters &&
+                                            filters.map((filter, i) => (
+                                                <Accordion.Item eventKey={i} key={i}>
+                                                    <Accordion.Header>{filter.name}</Accordion.Header>
+                                                    <Accordion.Body>
+                                                        {filter.value?.map(item => (
+                                                            <p key={item.id}>{item.name}</p>
+                                                        ))}
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            ))}
+                                    </Accordion>
+                                    {/* <h4 className="title">Product Categories</h4>
                                     <ul>
                                         <li>
                                             <a
@@ -157,18 +146,19 @@ const Shops = () => {
                                                 Show all
                                             </a>
                                         </li>
-                                        {categories.map(category => (
-                                            <li key={category.id}>
-                                                <a
-                                                    href=""
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        handleCategoryFilter(category.id);
-                                                    }}>
-                                                    {category.name}
-                                                </a>
-                                            </li>
-                                        ))}
+                                        {categories &&
+                                            categories.map(category => (
+                                                <li key={category.id}>
+                                                    <a
+                                                        href=""
+                                                        onClick={e => {
+                                                            e.preventDefault();
+                                                            handleCategoryFilter(category.id);
+                                                        }}>
+                                                        {category.name}
+                                                    </a>
+                                                </li>
+                                            ))}
                                         <li>
                                             <a
                                                 href=""
@@ -179,10 +169,10 @@ const Shops = () => {
                                                 Handmade
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
-                        </div>
+                        </Col>
                         <div className="col-lg-9 order-1 order-lg-2">
                             <div className="shop-grid-topbar d-flex justify-content-between align-items-center">
                                 <span>
@@ -203,18 +193,25 @@ const Shops = () => {
                                 </select>
                             </div>
                             <Row>
-                                {currentProducts && currentProducts.length > 0 ? (
-                                    currentProducts.map(value => (
+                                {currentProducts &&
+                                    currentProducts.map(data => (
                                         <Col lg="4" md="6">
-                                            <Card cardData={value} />
+                                            <Card cardData={data} shops={shops} />
+                                            {/* <Card cardData={data} /> */}
                                         </Col>
-                                    ))
-                                ) : (
-                                    <div>No hay productos</div>
-                                )}
+                                    ))}
 
                                 <div className="col-lg-12">
                                     <div className="bisylms-pagination">
+                                        <a
+                                            className={currentPage != 1 ? '' : 'pe-none'}
+                                            href="#"
+                                            onClick={e => {
+                                                e.preventDefault();
+                                                handlePageClick(currentPage - 1);
+                                            }}>
+                                            <i className="fal fa-arrow-left"></i>
+                                        </a>
                                         {[...Array(totalPages)].map((_, index) => (
                                             <a
                                                 key={index}
@@ -227,23 +224,22 @@ const Shops = () => {
                                                 {index + 1}
                                             </a>
                                         ))}
-                                        {currentPage < totalPages && (
-                                            <a
-                                                className="next"
-                                                href="#"
-                                                onClick={e => {
-                                                    e.preventDefault();
-                                                    handleNextPage();
-                                                }}>
-                                                next <i className="fal fa-arrow-right"></i>
-                                            </a>
-                                        )}
+
+                                        <a
+                                            className={currentPage != totalPages ? '' : 'pe-none'}
+                                            href="#"
+                                            onClick={e => {
+                                                e.preventDefault();
+                                                handlePageClick(currentPage + 1);
+                                            }}>
+                                            <i className="fal fa-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </Row>
                         </div>
-                    </div>
-                </div>
+                    </Row>
+                </Container>
             </div>
             <FooterHomeOne />
             <BackToTop />
