@@ -20,30 +20,30 @@ const Products = () => {
     const [shops, setShops] = useState(null);
     const [categories, setCategories] = useState(null);
     const [filters, setFilters] = useState([
-        { name: 'categories', value: [], table:"single", key:"category_id"},
-        { name: 'materials', value: [], table:"multiple", key:"material_id"},
-        { name: 'colors', value: [], table:"single", key:"color_id"},
-        { name: 'sizes', value: [], table:"single", key:"size_id"},
-        { name: 'sources', value: [], table:"multiple", key:"source_id"},
-        { name: 'targets', value: [], table:"multiple", key:"target_id"},
-        { name: 'sustainability', value: [], table:"multiple", key:"sustainability_id"},
-        { name: 'conditions', value: [], table:"multiple", key:"condition_id"},
+        { name: 'categories', value: [], table: 'single' },
+        { name: 'materials', value: [], table: 'multiple' },
+        { name: 'colors', value: [], table: 'single' },
+        { name: 'sizes', value: [], table: 'single' },
+        { name: 'sources', value: [], table: 'multiple' },
+        { name: 'targets', value: [], table: 'multiple' },
+        { name: 'sustainability', value: [], table: 'multiple' },
+        { name: 'conditions', value: [], table: 'multiple' },
     ]);
-    
+
     const shop = useRef(null);
     const [selectedFilters, setSelectedFilters] = useState({
-        multiple: {
-            "product-material": new Set(),
-            "product-source": new Set(),
-            "product-target": new Set(),
-            "product-sustainability": new Set(),
-            "product-condition": new Set(),
-        },
-        single :{
-            category_id: new Set(),
-            color_id: new Set(),
-            size_id: new Set(),
-        }
+        multiple: [
+            { materials: new Set(), key: 'material_id' },
+            { sources: new Set(), key: 'source_id' },
+            { targets: new Set(), key: 'target_id' },
+            { sustainability: new Set(), key: 'sustainability_id' },
+            { conditions: new Set(), key: 'condition_id' },
+        ],
+        single: [
+            { categories: new Set(), key: 'category_id' },
+            { colors: new Set(), key: 'color_id' },
+            { sizes: new Set(), key: 'size_id' },
+        ],
     });
     const [selectedShopId, setSelectedShopId] = useState(null);
 
@@ -101,8 +101,11 @@ const Products = () => {
         handlePageClick(1); // Reset to the first page
     };
 
-    const handleChangeFilters = (filterType, filterValue) => {
-        const valueFilter = selectedFilters[filterType];
+    const handleChangeFilters = (filterType, filterTable, filterValue) => {
+        const destTable = filterTable === 'multiple' ? 'multiple' : 'single';
+        const otherTable = destTable === 'multiple' ? 'single' : 'multiple';
+        
+        const valueFilter = selectedFilters[destTable];
 
         if (valueFilter.has(filterValue)) {
             valueFilter.delete(filterValue);
@@ -111,13 +114,12 @@ const Products = () => {
         }
 
         setSelectedFilters({
-            ...selectedFilters,
-            [filterType]: valueFilter,
+            [otherTable]: selectedFilters[otherTable],
+            [destTable]: [...valueFilter.filter(item => item.name !== filterType), { [filterType]: valueFilter }],
         });
     };
 
     const handleApplyFilters = () => {
-        
         setCurrentProducts(filteredProducts);
         handlePageClick(1);
     };
@@ -138,9 +140,13 @@ const Products = () => {
                     <Row>
                         <Col lg="3" className="order-2 order-lg-1">
                             <div className="appie-shop-sidebar">
-                                <ButtonGroup className='w-100' aria-label="Basic example">
-                                    <Button onClick={handleApplyFilters} variant="primary" className='w-100'>Apply Filter</Button>
-                                    <Button variant="primary"><i className="fas fa-trash-alt"></i></Button>
+                                <ButtonGroup className="w-100" aria-label="Basic example">
+                                    <Button onClick={handleApplyFilters} variant="primary" className="w-100">
+                                        Apply Filter
+                                    </Button>
+                                    <Button variant="primary">
+                                        <i className="fas fa-trash-alt"></i>
+                                    </Button>
                                 </ButtonGroup>
                                 <Accordion>
                                     {filters &&
@@ -185,7 +191,8 @@ const Products = () => {
                         <Col lg="9" className="order-1 order-lg-2">
                             <div className="shop-grid-topbar d-flex justify-content-between align-items-center">
                                 <span>
-                                    Showing all <span>{products.length}</span> results
+                                    Showing <span>{currentProducts.length}</span> of{' '}
+                                    <span>{products.length}</span> results
                                 </span>
                                 <select id="shops" ref={shop} onChange={handleShopChange}>
                                     <option value="">All Shops</option>

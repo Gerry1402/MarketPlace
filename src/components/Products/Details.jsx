@@ -271,7 +271,6 @@ const Details = () => {
                                 <div className="shop-product-details-content pl-70 mt-35">
                                     <span>{product.stock > 0 ? 'In stock' : 'Out of stock'}</span>
                                     <h2 className="title">{product.title}</h2>
-                                    <p>{product.shop_id}</p>
                                     <div className="pricing">
                                         {product.discount ? (
                                             <>

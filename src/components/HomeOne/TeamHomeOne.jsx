@@ -1,7 +1,4 @@
 import React from 'react';
-import teamOne from '../../assets/images/cesar.jpg';
-import teamTwo from '../../assets/images/team-2.jpg';
-import teamThree from '../../assets/images/team-3.jpg';
 
 const TeamHomeOne = ({ className }) => {
     return (
@@ -17,9 +14,9 @@ const TeamHomeOne = ({ className }) => {
                 </div>
                 <div className="row justify-content-center">
                     {[
-                        { img: teamOne, name: 'Cesar Lira', role: 'Full-Stack' },
+                        { img: '/cesar.jpg', name: 'Cesar Lira', role: 'Full-Stack' },
                         { img: '/oriol-img.png', name: 'Oriol Morell', role: 'Full-Stack' },
-                        { img: teamThree, name: 'Gerard Vello', role: 'Full-Stack' },
+                        { img: '/gerard.jpg', name: 'Gerard Vello', role: 'Full-Stack' },
                     ].map((member, idx) => (
                         <div key={idx} className="col-lg-4 col-md-6">
                             <div

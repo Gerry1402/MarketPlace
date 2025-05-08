@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import slide1 from '../../assets/images/ecomerce1.jpg';
 import slide2 from '../../assets/images/ecomerce2.png';
 import slide3 from '../../assets/images/ecomerce3.png';
@@ -19,15 +20,14 @@ const HeroHomeOne = ({ className }) => {
         display: 'inline-block',
         backgroundColor: '#1c2f5f', // azul oscuro
         color: '#fff',
-        padding: '0.5rem 1rem',
+        padding: '1rem',
         borderRadius: '0.25rem',
-        margin: '0.25rem 0',
         fontSize: '2rem',
         lineHeight: 1.2,
     };
 
     return (
-        <section className={`appie-hero-area ${className || ''}`}>
+        <section className={`appie-hero-area ${className || ''}`} style={{paddingTop: "500px"}}>
             <div className="hero-slides">
                 {slides.map((img, i) => (
                     <div
@@ -37,20 +37,19 @@ const HeroHomeOne = ({ className }) => {
                     />
                 ))}
             </div>
-            <div className="hero-overlay">
-                <h2 style={{ margin: 0 }}>
+            <div className="hero-overlay top-50 left-50 d-flex align-items-center justify-content-end flex-column gap-5">
+                <h2 style={{ margin: 0 }} className='d-flex flex-column align-items-center gap-6'>
                     <span style={lineStyle}>Everything you need with</span>
                     <br />
                     <span style={lineStyle}>just one CLICK</span>
                 </h2>
-                <p style={{ color: '#fff', marginTop: '1rem' }}>Visit our website for more information!</p>
+                <p style={{ color: '#fff'}}>Visit our website for more information!</p>
                 <a
                     href="#equipo"
                     className="main-btn"
                     style={{
                         color: '#fff',
                         borderColor: '#fff',
-                        marginTop: '1.5rem',
                     }}>
                     VIEW
                 </a>
