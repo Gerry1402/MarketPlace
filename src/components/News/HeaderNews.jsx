@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import React, { useCallback, useEffect, useState } from 'react';
 import { signOut, supabase } from '../../services/supabase.jsx';
 
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -35,37 +36,31 @@ const HeaderNews = ({ action }) => {
 
     return (
         <header className="appie-header-area appie-header-page-area appie-sticky">
-            <div className="container">
+            <Container>
                 <div className="header-nav-box header-nav-box-3 header-nav-box-inner-page">
-                    <div className="row align-items-center">
-                        <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
+                    <Row className="align-items-center">
+                        <Col className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
                             <div className="appie-logo-box">
                                 <Link to="/">
                                     <img src={logo} alt="Site Logo" />
                                 </Link>
                             </div>
-                        </div>
+                        </Col>
 
-                        <div className="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
+                        <Col className="col-lg-6 col-md-1 col-sm-1 order-3 order-sm-2">
                             <div className="appie-header-main-menu">
                                 <Navigation />
                             </div>
-                        </div>
-                        <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
+                        </Col>
+                        <Col className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                             <div className="appie-btn-box text-right d-flex align-items-center">
                                 {user ? (
-                                    <>
-                                        <Link
-                                            to="/Cart/index"
-                                            className="main-btn ml-30"
-                                            style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                                    <div className="d-flex align-items-center gap-3">
+                                        <Link to="/Cart/index" className="btn d-flex align-items-center gap-1 btn-primary">
                                             <i className="fal fa-shopping-cart" />
                                             <span>({cart.reduce((sum, i) => sum + i.quantity, 0)})</span>
                                         </Link>
-                                        <Link
-                                            to="/BackPack"
-                                            className="main-btn ml-30"
-                                            style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                                        <Link to="/BackPack" className="btn btn-primary">
                                             <i className="fal fa-store" />
                                         </Link>
                                         <Dropdown>
@@ -82,7 +77,7 @@ const HeaderNews = ({ action }) => {
                                                 <Dropdown.Item onClick={signOut}>Sign Out</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>
-                                    </>
+                                    </div>
                                 ) : (
                                     <Link to="/login" className="main-btn ml-30">
                                         Login
@@ -94,10 +89,10 @@ const HeaderNews = ({ action }) => {
                                     <i className="fa fa-bars"></i>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                 </div>
-            </div>
+            </Container>
         </header>
     );
 };

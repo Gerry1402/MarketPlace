@@ -66,17 +66,35 @@ const Shops = () => {
             products.slice(productsPerPage * (currentPage - 1), productsPerPage * currentPage)
         );
     }, []);
-    const allProducts = products;
+    let allProducts = fetchTable('products').then(data => (allProducts = data));
+
+    useEffect(() => {
+        setCurrentProducts(
+            products.slice(productsPerPage * (currentPage - 1), productsPerPage * currentPage)
+        );
+    }, [currentPage, products]);
 
     const handlePageClick = pageNum => {
         if (pageNum >= 1 && totalPages >= pageNum) {
             setCurrentPage(pageNum);
-            setCurrentProducts(products.slice(productsPerPage * (pageNum - 1), productsPerPage * pageNum));
         }
     };
 
     const handleShopChange = e => {
-        setProducts(allProducts.filter(product => product.shop_id === e.target.value));
+        const shopId = e.target.value;
+
+        if (shopId === 'undefined') {
+            setSelectedShopId(undefined);
+            setProducts(allProducts.filter(product => product.shop_id === null));
+        } else if (shopId === '') {
+            setSelectedShopId(null);
+            setProducts(allProducts);
+        } else {
+            setSelectedShopId(shopId);
+            setProducts(allProducts.filter(product => product.shop_id == shopId));
+        }
+
+        handlePageClick(1); // Reset to the first page
     };
 
     const handleChangeFilters = (filterType, filterValue, add) => {
@@ -91,17 +109,6 @@ const Shops = () => {
                 [filterType]: selectedFilters[filterType].add(filterValue),
             });
         }
-    };
-
-    const handleCategoryFilter = categoryId => {
-        setSelectedCategory(categoryId);
-        fetchProducts(null, categoryId);
-    };
-
-    const handleHandmadeFilter = () => {
-        setSelectedCategory(null);
-        setSelectedShopId(null);
-        fetchProducts(null, null, true);
     };
 
     return (
@@ -120,67 +127,29 @@ const Shops = () => {
                     <Row>
                         <Col lg="3" className="order-2 order-lg-1">
                             <div className="appie-shop-sidebar">
-                                <div className="shop-category-widget">
-                                    <Accordion>
-                                        {filters &&
-                                            filters.map((filter, i) => (
-                                                <Accordion.Item eventKey={i} key={i}>
-                                                    <Accordion.Header>{filter.name}</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        {filter.value?.map(item => (
-                                                            <p key={item.id}>{item.name}</p>
-                                                        ))}
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            ))}
-                                    </Accordion>
-                                    {/* <h4 className="title">Product Categories</h4>
-                                    <ul>
-                                        <li>
-                                            <a
-                                                href=""
-                                                onClick={e => {
-                                                    e.preventDefault();
-                                                    handleCategoryFilter(null);
-                                                }}>
-                                                Show all
-                                            </a>
-                                        </li>
-                                        {categories &&
-                                            categories.map(category => (
-                                                <li key={category.id}>
-                                                    <a
-                                                        href=""
-                                                        onClick={e => {
-                                                            e.preventDefault();
-                                                            handleCategoryFilter(category.id);
-                                                        }}>
-                                                        {category.name}
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        <li>
-                                            <a
-                                                href=""
-                                                onClick={e => {
-                                                    e.preventDefault();
-                                                    handleHandmadeFilter();
-                                                }}>
-                                                Handmade
-                                            </a>
-                                        </li>
-                                    </ul> */}
-                                </div>
+                                <Accordion>
+                                    {filters &&
+                                        filters.map((filter, i) => (
+                                            <Accordion.Item eventKey={i} key={i}>
+                                                <Accordion.Header>{filter.name}</Accordion.Header>
+                                                <Accordion.Body>
+                                                    {filter.value?.map(item => (
+                                                        <p key={item.id}>{item.name}</p>
+                                                    ))}
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        ))}
+                                </Accordion>
                             </div>
                         </Col>
-                        <div className="col-lg-9 order-1 order-lg-2">
+                        <Col lg="9" className="order-1 order-lg-2">
                             <div className="shop-grid-topbar d-flex justify-content-between align-items-center">
                                 <span>
                                     Showing all <span>{products.length}</span> results
                                 </span>
                                 <select id="shops" onChange={handleShopChange}>
                                     <option value="">All Shops</option>
-                                    <option value="only_users">Only Users (no shop)</option>
+                                    <option value="undefined">Only Users (no shop)</option>
                                     {shops && shops.length > 0 ? (
                                         shops.map(shop => (
                                             <option key={shop.id} value={shop.id}>
@@ -195,7 +164,7 @@ const Shops = () => {
                             <Row>
                                 {currentProducts &&
                                     currentProducts.map(data => (
-                                        <Col lg="4" md="6">
+                                        <Col lg="4" md="6" key={data.id}>
                                             <Card cardData={data} shops={shops} />
                                             {/* <Card cardData={data} /> */}
                                         </Col>
@@ -237,7 +206,7 @@ const Shops = () => {
                                     </div>
                                 </div>
                             </Row>
-                        </div>
+                        </Col>
                     </Row>
                 </Container>
             </div>

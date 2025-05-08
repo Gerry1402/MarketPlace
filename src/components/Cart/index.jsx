@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
+import BackToTop from '../BackToTop.jsx';
 import Drawer from '../Mobile/Drawer.jsx';
+import FooterHomeOne from '../HomeOne/FooterHomeOne.jsx';
 import HeaderNews from '../News/HeaderNews.jsx';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import carrito from '../../assets/images/carritoVacio.png';
 import { supabase } from '../../services/supabase.jsx';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
-import { useEffect } from 'react';
-import HeaderNews from '../News/HeaderNews.jsx';
-import Drawer from '../Mobile/Drawer.jsx';
 import useToggle from '../../Hooks/useToggle.js';
-import { useAuthContext } from '../../auth/useAuthContext.jsx';
-import BackToTop from "../BackToTop.jsx";
-import FooterHomeOne from "../HomeOne/FooterHomeOne.jsx";
-import carrito from "../../assets/images/carritoVacio.png";
 
 const Cart = ({ value, action }) => {
     const [cart, setCart] = useState([]);
@@ -233,27 +227,25 @@ const Cart = ({ value, action }) => {
                         ))
                     ) : (
                         <div
-                        style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          marginTop:"15px",
-                          
-                        }}
-                      >
-                        <img
-                          src={carrito}
-                          alt="Carrito vacío"
-                          style={{
-                            width: '450px',
-                            height: 'auto',
-                            marginBottom: '24px',
-                            marginRight: '50px'
-                          }}
-                        />
-                        <p style={{ fontSize: '1.25rem', color: '#555' }}>Your cart is empty</p>
-                      </div>
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                marginTop: '15px',
+                            }}>
+                            <img
+                                src={carrito}
+                                alt="Carrito vacío"
+                                style={{
+                                    width: '450px',
+                                    height: 'auto',
+                                    marginBottom: '24px',
+                                    marginRight: '50px',
+                                }}
+                            />
+                            <p style={{ fontSize: '1.25rem', color: '#555' }}>Your cart is empty</p>
+                        </div>
                     )}
 
                     <div
@@ -273,7 +265,6 @@ const Cart = ({ value, action }) => {
                         <h5 style={{ margin: 0 }}>Total:</h5>
                         <h5 style={{ margin: 0 }}>${total.toFixed(2)}</h5>
                     </div>
-
                 </div>
             </section>
             <FooterHomeOne />

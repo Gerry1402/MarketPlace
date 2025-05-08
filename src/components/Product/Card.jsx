@@ -5,7 +5,7 @@ import productImg from '../../assets/images/shop-grid-1.jpg';
 import { supabase } from '../../services/supabase.jsx';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
 
-const Card = ({ cardData }) => {
+const Card = ({ cardData, shops }) => {
     const { user } = useAuthContext();
     const [quantity, setQuantity] = useState(1);
 
@@ -73,7 +73,7 @@ const Card = ({ cardData }) => {
                             user_id: user.id,
                         },
                     ])
-                    .select('*');
+                    .select();
 
                 if (error) {
                     console.error('Error al agregar producto al carrito:', error);
@@ -92,7 +92,7 @@ const Card = ({ cardData }) => {
                 .from('products')
                 .update({ stock: newStock })
                 .eq('id', cardData.id)
-                .select('*');
+                .select();
 
             if (stockError) {
                 console.error('Error actualizando el stock del producto:', stockError);
@@ -107,62 +107,57 @@ const Card = ({ cardData }) => {
         addToCart();
     };
     return (
-
-            <Link
-                to={`/shops/shop-details/${cardData.id}`}
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100%',
-                    textDecoration: 'none',
-                }}>
-                <div className="single-shop-box">
-                    <div className="thumb text-center">
-                        <img
-                            className="appie-card-img"
-                            onError={handleError}
-                            src={cardData.images.thumbnail}
-                            alt=""
-                        />
-                        <div className="reborn">
-                            <span>{cardData.stock > 0 ? 'Sale' : 'No stock'}</span>
-                        </div>
-                        <div className="cart-list-icon">
-                            <ul>
-                                <li>
-                                    <Link>
-                                        <button
-                                            onClick={addCart}
-                                            style={{ background: 'none', border: 'none' }}>
-                                            <i className="fal fa-shopping-bag"></i>
-                                        </button>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+        <Link
+            to={`/shops/shop-details/${cardData.id}`}
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                textDecoration: 'none',
+            }}>
+            <div className="single-shop-box">
+                <div className="thumb text-center">
+                    <img
+                        className="appie-card-img"
+                        onError={handleError}
+                        src={cardData.images.thumbnail}
+                        alt=""
+                    />
+                    <div className="reborn">
+                        <span>{cardData.stock > 0 ? 'Sale' : 'No stock'}</span>
                     </div>
-                    <div className="content">
-                        <br />
-                        <div href="#" className="text-nowrap text-truncate">
-                            <i
-                                className={`fas fa-hands ${cardData.handmade ? '' : 'd-none'}`}
-                                style={{ color: 'green' }}></i>{' '}
-                            {cardData.title}
+                    <div className="cart-list-icon">
+                        <ul>
+                            <li>
+                                <button onClick={addCart} style={{ background: 'none', border: 'none' }}>
+                                    <i className="fal fa-shopping-bag"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="content">
+                    <br />
+                    <div href="#" className="text-nowrap text-truncate text-dark">
+                        <i
+                            className={`fas fa-hands ${cardData.handmade ? '' : 'd-none'}`}
+                            style={{ color: 'green' }}></i>{' '}
+                        {cardData.title}
+                    </div>
+                    <div href="#" className="text-nowrap text-truncate text-dark">
+                        {shops.find(shop => shop.id == cardData.shop_id)?.name || "User's product"}
+                    </div>
+                    <div className="pricing">
+                        <div className="discount-price mr-15">
+                            {Math.round(cardData.price * (1 - cardData.discount / 100) * 100) / 100}$
                         </div>
-                        <div href="#" className="text-nowrap text-truncate">
-                            {shops.find(shop => shop.id == cardData.shop_id)?.name || "User's product"}
-                        </div>
-                        <div className="pricing">
-                            <div className="discount-price mr-15">
-                                {Math.round(cardData.price * (1 - cardData.discount / 100) * 100) / 100}$
-                            </div>
-                            <div className={`regular-price ${cardData.discount == 0 ? 'd-none' : ''}`}>
-                                {cardData.price}$
-                            </div>
+                        <div className={`regular-price ${cardData.discount == 0 ? 'd-none' : ''}`}>
+                            {cardData.price}$
                         </div>
                     </div>
                 </div>
-            </Link>
+            </div>
+        </Link>
     );
 };
 
