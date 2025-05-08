@@ -107,40 +107,40 @@ const Card = ({ cardData, shops }) => {
         addToCart();
     };
     return (
-        <Link
-            to={`/products/product-details/${cardData.id}`}
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
-                textDecoration: 'none',
-            }}>
-            <div className="single-shop-box">
-                <div className="thumb text-center">
-                    <img
-                        className="appie-card-img"
-                        onError={handleError}
-                        src={cardData.images.thumbnail}
-                        alt=""
-                    />
-                    <div className="reborn">
-                        <span>{cardData.stock > 0 ? 'Sale' : 'No stock'}</span>
-                    </div>
-                    <div className="cart-list-icon">
-                        <ul>
-                            <li>
-                                <button
-                                    onClick={addCart}
-                                    type="button"
-                                    className="btn btn-light"
-                                    aria-label="Add to Cart" // Accessibility improvement
-                                >
-                                    <i className="fal fa-shopping-bag" aria-hidden="true"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+        <div className="single-shop-box">
+            <div className="thumb text-center">
+                <img
+                    className="appie-card-img"
+                    onError={handleError}
+                    src={cardData.images.thumbnail}
+                    alt=""
+                />
+                <div className="reborn">
+                    <span>{cardData.stock > 0 ? 'Sale' : 'No stock'}</span>
                 </div>
+                <div className="cart-list-icon">
+                    <ul>
+                        <li>
+                            <button
+                                onClick={addCart}
+                                type="button"
+                                className="btn btn-light"
+                                aria-label="Add to Cart" // Accessibility improvement
+                            >
+                                <i className="fal fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <Link
+                to={`/products/product-details/${cardData.id}`}
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    textDecoration: 'none',
+                }}>
                 <div className="content">
                     <br />
                     <div href="#" className="text-nowrap text-truncate text-dark">
@@ -161,8 +161,8 @@ const Card = ({ cardData, shops }) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     );
 };
 

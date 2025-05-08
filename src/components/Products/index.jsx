@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, ButtonGroup, Col, Container, Row } from 'react-bootstrap';
 import React, { useEffect, useRef, useState } from 'react';
 import { fetchTable, supabase } from '../../services/supabase.jsx';
 
@@ -20,29 +20,32 @@ const Products = () => {
     const [shops, setShops] = useState(null);
     const [categories, setCategories] = useState(null);
     const [filters, setFilters] = useState([
-        { name: 'Categories', value: [] },
-        { name: 'Materials', value: [] },
-        { name: 'Colors', value: [] },
-        { name: 'Sizes', value: [] },
-        { name: 'Sources', value: [] },
-        { name: 'Targets', value: [] },
-        { name: 'Sustainability', value: [] },
+        { name: 'categories', value: [], table:"single", key:"category_id"},
+        { name: 'materials', value: [], table:"multiple", key:"material_id"},
+        { name: 'colors', value: [], table:"single", key:"color_id"},
+        { name: 'sizes', value: [], table:"single", key:"size_id"},
+        { name: 'sources', value: [], table:"multiple", key:"source_id"},
+        { name: 'targets', value: [], table:"multiple", key:"target_id"},
+        { name: 'sustainability', value: [], table:"multiple", key:"sustainability_id"},
+        { name: 'conditions', value: [], table:"multiple", key:"condition_id"},
     ]);
-
+    
+    const shop = useRef(null);
     const [selectedFilters, setSelectedFilters] = useState({
-        categories: new Set(),
-        shops: new Set(),
-        materials: new Set(),
-        colors: new Set(),
-        sizes: new Set(),
-        sources: new Set(),
-        targets: new Set(),
-        sustainability: new Set(),
-        handmade: null,
+        multiple: {
+            "product-material": new Set(),
+            "product-source": new Set(),
+            "product-target": new Set(),
+            "product-sustainability": new Set(),
+            "product-condition": new Set(),
+        },
+        single :{
+            category_id: new Set(),
+            color_id: new Set(),
+            size_id: new Set(),
+        }
     });
     const [selectedShopId, setSelectedShopId] = useState(null);
-    const shop = useRef(null);
-    const [selectedCategory, setSelectedCategory] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 24;
@@ -53,7 +56,7 @@ const Products = () => {
             const resolvedFilters = await Promise.all(
                 filters.map(async item => ({
                     name: item?.name ?? '',
-                    value: item?.name ? await fetchTable(item.name.toLowerCase()) : null,
+                    value: item?.name ? await fetchTable(item.name) : null,
                 }))
             );
             setFilters(resolvedFilters);
@@ -98,18 +101,25 @@ const Products = () => {
         handlePageClick(1); // Reset to the first page
     };
 
-    const handleChangeFilters = (filterType, filterValue, add) => {
-        if (!add) {
-            setSelectedFilters({
-                ...selectedFilters,
-                [filterType]: selectedFilters[filterType].delete(filterValue),
-            });
+    const handleChangeFilters = (filterType, filterValue) => {
+        const valueFilter = selectedFilters[filterType];
+
+        if (valueFilter.has(filterValue)) {
+            valueFilter.delete(filterValue);
         } else {
-            setSelectedFilters({
-                ...selectedFilters,
-                [filterType]: selectedFilters[filterType].add(filterValue),
-            });
+            valueFilter.add(filterValue);
         }
+
+        setSelectedFilters({
+            ...selectedFilters,
+            [filterType]: valueFilter,
+        });
+    };
+
+    const handleApplyFilters = () => {
+        
+        setCurrentProducts(filteredProducts);
+        handlePageClick(1);
     };
 
     return (
@@ -128,15 +138,44 @@ const Products = () => {
                     <Row>
                         <Col lg="3" className="order-2 order-lg-1">
                             <div className="appie-shop-sidebar">
+                                <ButtonGroup className='w-100' aria-label="Basic example">
+                                    <Button onClick={handleApplyFilters} variant="primary" className='w-100'>Apply Filter</Button>
+                                    <Button variant="primary"><i className="fas fa-trash-alt"></i></Button>
+                                </ButtonGroup>
                                 <Accordion>
                                     {filters &&
                                         filters.map((filter, i) => (
                                             <Accordion.Item eventKey={i} key={i}>
-                                                <Accordion.Header>{filter.name}</Accordion.Header>
+                                                <Accordion.Header>
+                                                    {filter.name.charAt(0).toUpperCase() +
+                                                        filter.name.slice(1)}
+                                                </Accordion.Header>
                                                 <Accordion.Body>
-                                                    {filter.value?.map(item => (
-                                                        <p key={item.id}>{item.name}</p>
-                                                    ))}
+                                                    <fieldset>
+                                                        {filter.value?.map(item => (
+                                                            <p key={item.id}>
+                                                                <label>
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name={filter.name}
+                                                                        value={item.id}
+                                                                        onChange={() =>
+                                                                            handleChangeFilters(
+                                                                                filter.name,
+                                                                                item.id
+                                                                            )
+                                                                        }
+                                                                        defaultChecked={
+                                                                            selectedFilters[
+                                                                                filter.name
+                                                                            ]?.has?.(item.id) || false
+                                                                        }
+                                                                    />{' '}
+                                                                    {item.name}
+                                                                </label>
+                                                            </p>
+                                                        ))}
+                                                    </fieldset>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         ))}
