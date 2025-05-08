@@ -63,6 +63,7 @@ const ProjectHomeOne = ({ className }) => {
                             className="main-btn"
                             style={{
                               width: "100%",
+                              background: "#2B70FA"
                             }}
                           >
                             Send
