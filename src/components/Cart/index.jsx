@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Drawer from '../Mobile/Drawer.jsx';
+import HeaderNews from '../News/HeaderNews.jsx';
 import { Link } from 'react-router-dom';
 import blog4 from '../../assets/images/blog-4.jpg';
 import blog5 from '../../assets/images/blog-5.jpg';
@@ -10,11 +12,9 @@ import cart2 from '../../assets/images/cart-2.jpg';
 import shape12 from '../../assets/images/shape/shape-12.png';
 import shape5 from '../../assets/images/shape/5.png';
 import { supabase } from '../../services/supabase.jsx';
-import { useEffect } from 'react';
-import HeaderNews from '../News/HeaderNews.jsx';
-import Drawer from '../Mobile/Drawer.jsx';
-import useToggle from '../../Hooks/useToggle.js';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
+import { useEffect } from 'react';
+import useToggle from '../../Hooks/useToggle.js';
 
 const Cart = ({ value, action }) => {
     const [cart, setCart] = useState([]);
@@ -169,7 +169,7 @@ const Cart = ({ value, action }) => {
                             </div>
                         ))
                     ) : (
-                        <p>Loading cart...</p>
+                        <p className="text-center">There are no products</p>
                     )}
                     <div
                         style={{

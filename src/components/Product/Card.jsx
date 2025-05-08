@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import productImg from '../../assets/images/shop-grid-1.jpg';
 
-const Card = ({ cardData }) => {
+const Card = ({ cardData, shops }) => {
     const handleError = e => {
         e.target.src = productImg;
     };
@@ -17,7 +17,7 @@ const Card = ({ cardData }) => {
                         alt=""
                     />
                     <div className="reborn">
-                        <span>{cardData.stock > 0 ? 'Sale' : 'No Sale'}</span>
+                        <span>{cardData.stock > 0 ? 'Sale' : 'No stock'}</span>
                     </div>
                     <div className="cart-list-icon">
                         <ul>
@@ -37,27 +37,21 @@ const Card = ({ cardData }) => {
                 <div className="content">
                     <br />
                     <div href="#" className="text-nowrap text-truncate">
+                        <i
+                            className={`fas fa-hands ${cardData.handmade ? '' : 'd-none'}`}
+                            style={{ color: 'green' }}></i>{' '}
                         {cardData.title}
                     </div>
-                    <div className="pricing">
-                        {cardData.discount ? (
-                            <>
-                                <div className="discount-price mr-15">
-                                    {Math.round(cardData.price * (1 - cardData.discount / 100) * 100) / 100}$
-                                </div>
-                                <div className="regular-price">{cardData.price}$</div>
-                            </>
-                        ) : (
-                            <div className="discount-price">{cardData.price}$</div>
-                        )}
+                    <div href="#" className="text-nowrap text-truncate">
+                        {shops.find(shop => shop.id == cardData.shop_id)?.name || "User's product"}
                     </div>
-                    <div
-                        style={{ color: 'green' }}
-                        className={`${
-                            cardData.handmade ? '' : 'invisible'
-                        } handmade-icon green d-flex align-items-center justify-content-center gap-2 mt-2`}>
-                        <i className="fas fa-hands" style={{ fontSize: '1rem' }}></i>
-                        <span>Handmade Product</span>
+                    <div className="pricing">
+                        <div className="discount-price mr-15">
+                            {Math.round(cardData.price * (1 - cardData.discount / 100) * 100) / 100}$
+                        </div>
+                        <div className={`regular-price ${cardData.discount == 0 ? 'd-none' : ''}`}>
+                            {cardData.price}$
+                        </div>
                     </div>
                 </div>
             </div>

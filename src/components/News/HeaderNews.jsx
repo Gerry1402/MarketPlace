@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { signOut, supabase } from '../../services/supabase.jsx';
 
+import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation.jsx';
 import StickyMenu from '../../lib/StickyMenu.js';
 import logo from '../../assets/images/logo.png';
 import { useAuthContext } from '../../auth/useAuthContext.jsx';
-import { supabase } from '../../services/supabase.jsx';
 
 const HeaderNews = ({ action }) => {
     const { user } = useAuthContext();
@@ -59,7 +60,7 @@ const HeaderNews = ({ action }) => {
                             </div>
                         </div>
                         <div className="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
-                            <div className="appie-btn-box text-right">
+                            <div className="appie-btn-box text-right d-flex align-items-center">
                                 {user ? (
                                     <>
                                         <Link to="/Cart/index" className="login-btn">
@@ -73,10 +74,20 @@ const HeaderNews = ({ action }) => {
                                                 ${total.toFixed(2)}
                                             </span>
                                         </Link>
+                                        <Dropdown>
+                                            <Dropdown.Toggle variant="primary">
+                                                <i className="fal fa-user"></i>{' '}
+                                                {user.user_metadata.display_name}
+                                            </Dropdown.Toggle>
 
-                                        <Link to="#" className="login-btn">
-                                            <i className="fal fa-user"></i> {user.user_metadata.display_name}
-                                        </Link>
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2">
+                                                    Shops & Products
+                                                </Dropdown.Item>
+                                                <Dropdown.Item onClick={signOut}>Sign Out</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </>
                                 ) : (
                                     <Link to="/login" className="main-btn ml-30">

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import logo7 from '../../assets/images/logo-7.png';
-import logo from '../../assets/images/logo.png';
-import StickyMenu from '../../lib/StickyMenu.js';
-import Navigation from '../Navigation.jsx';
+
 import { Link } from 'react-router-dom';
-import { useAuthContext } from '../../auth/useAuthContext.jsx';
+import Navigation from '../Navigation.jsx';
+import StickyMenu from '../../lib/StickyMenu.js';
+import logo from '../../assets/images/logo.png';
+import logo7 from '../../assets/images/logo-7.png';
 import { supabase } from '../../services/supabase.jsx';
+import { useAuthContext } from '../../auth/useAuthContext.jsx';
 
 const HomeOneHeader = ({
     lang,
